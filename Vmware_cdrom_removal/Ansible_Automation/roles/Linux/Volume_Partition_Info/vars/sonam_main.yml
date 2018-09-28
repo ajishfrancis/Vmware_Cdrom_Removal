@@ -1,0 +1,6 @@
+---
+# vars file for LinuxPartition
+disksize_required: 40GB
+#criteria_match: criteriasuccess
+#criteria_not_match: criterianotsuccess
+

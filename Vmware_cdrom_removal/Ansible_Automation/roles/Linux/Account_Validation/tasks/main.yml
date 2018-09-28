@@ -1,0 +1,21 @@
+---
+- include_tasks: /home/Ansible_Automation/start_mail.yml
+- block:
+    - name: Ping all Linux hosts
+      win_ping:
+      register: result
+
+    - name: Sending the success mail
+      include_tasks: /home/Ansible_Automation/success_mail.yml
+      when: result is success
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for the role called   {{ role_name }}  of hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
+     register: output
+
+   - name: setting the facts
+     set_fact:
+        failmsg: "{{ output }}"
+
+   - name: Task failed
+     include_tasks: /home/Ansible_Automation/failure_mail.yml

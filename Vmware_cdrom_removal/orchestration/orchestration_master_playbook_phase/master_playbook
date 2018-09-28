@@ -1,0 +1,8 @@
+---
+- name: Execution of MasterPlaybook starts
+  hosts: server
+  sudo: yes
+  roles:
+    - linux_tz
+#    - LinuxPartition
+

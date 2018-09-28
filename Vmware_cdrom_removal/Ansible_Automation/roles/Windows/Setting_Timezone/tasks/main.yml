@@ -1,0 +1,13 @@
+---
+
+- block:
+
+    - name: Setting Timezone for windows server
+      win_timezone:
+          timezone: "{{timezone}}"
+      register: new_tz
+      
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
+

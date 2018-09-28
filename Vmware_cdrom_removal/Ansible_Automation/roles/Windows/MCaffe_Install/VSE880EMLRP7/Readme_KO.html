@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml2-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href=""/>
+<title>McAfee® VirusScan® Enterprise 8.8 릴리스 노트</title>
+<style>
+<!-- Body Paragraphs-->
+body{
+    font-family: Verdana;
+    }
+p {
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 12pt;
+    margin-left: 1in;
+    margin-bottom: 8pt;
+    margin-top: 0pt;
+    }
+.p{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 12pt;
+    margin-left: 1in;
+    margin-bottom: 8pt;
+    margin-top: 0pt;
+    }
+div.section{
+        font-family: Verdana;
+        margin-left: 1in;
+        margin-bottom: 8pt;
+        }        
+.section p{
+        font-family: Verdana;
+        font-size: 9pt;
+        margin-left: 0in;
+        margin-bottom: 8pt;
+        margin-top: 0pt;
+        }
+.section div.p{
+    margin-left: 0in;
+    }
+ol li .p{
+    margin-top: 8pt;
+    }
+.p ol li p{
+    margin-top: 8pt;
+    }
+ul li .p{
+    margin-top: 8pt;
+    margin-left:  0in;
+    }
+.p ul li p{
+    margin-left: 0in;
+    }
+<!-- Unordered Lists -->
+ul{
+    list-style-type: disc;
+    }
+ul li{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 12pt;
+    margin-bottom: 8pt;
+    }
+ul li ul li{
+    margin-top: 8pt;
+    }
+div.maptoc{
+    margin-bottom: 8pt;
+    margin-left: .75in;
+    margin-top: 8pt;
+    }
+div.topiclevel1 li{
+    margin-left: .75in;
+    margin-bottom: 8pt;
+    }
+div.section ul li{
+    margin-bottom: 8pt;
+    margin-left: -.25in;
+    }
+div.p ul li{
+    margin-left: -.25in;
+    margin-bottom: 8pt;
+    }
+.section ul{
+    margin-top: 3pt;
+    }
+<!-- Ordered Lists -->
+ol{
+    list-style-type: decimal;
+    }
+ol li{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 12pt;
+    margin-bottom: 8pt;
+    }
+.p ol li{
+    margin-left: -.25in;
+    }
+.section ol li{
+    margin-bottom: 8pt;
+    margin-left: -8pt;
+    }
+li ol li{
+    margin-left: -.75pt;
+    margin-top: 8pt;
+    }
+div.p ol li{
+    margin-left: 0in;
+    margin-bottom: 11pt;
+    margin-top: -5pt;
+    }
+<!-- Chap/App Title -->
+h1{
+    font-family: Verdana;
+	font-size: 20pt;
+    font-weight: bold;
+    line-height: 22pt;
+    }
+h1{
+    font-family: Verdana;
+	color: #c41e3a; 
+    }
+<!-- Heading 1 -->
+.topictitle2{
+    font-size: 15pt;
+    font-weight: bold;
+    line-height: 16pt;
+    }
+div.topiclevel1 h2{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-weight: bold;
+    margin-bottom: 5pt;
+    }
+.topictitle2{
+    border-top: 1pt solid #c41e3a;
+    margin-top: 40pt;
+    }
+ <!-- Heading 2 -->
+.topictitle3{
+    font-size: 13pt;
+    font-weight: bold;
+    line-height: 14pt;
+    margin-top: 16pt;
+    }
+h3{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-weight: bold;
+    margin-left: 1in;
+    margin-bottom: 3pt;
+    margin-top: 16pt;
+    }
+    <!-- Heading 3 -->
+.topictitle4{
+    font-size: 11pt;
+    font-weight: bold;
+    line-height: 12pt;
+    margin-top: 14pt;
+    }
+h4{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-weight: bold;
+    margin-bottom: 3pt;
+    margin-left: 1in;
+    }
+<!-- Heading 4 -->
+.topictitle5{
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-top: 12pt;
+    }
+h5{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-weight: bold;
+    margin-left: 1in;
+    }
+    <!-- Heading 5 -->
+.topictitle6{
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 12pt;
+    margin-bottom: 3pt;
+    margin-top: 12pt;
+    }
+h6{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-weight: bold;
+    margin-left: 1in;
+    }
+    <!-- Subheading -->
+    .sectiontitle{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-top: 12pt;
+    }    
+    div.section h2{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-top: 12pt;
+    }
+    div.section h3{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-left: 0in;
+    margin-top: 12pt;
+    }
+    h2.sectiontitle{
+    font-family: Verdana;
+    }
+    .subheading{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    }
+    .p .subheading{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-left: 0in;
+    margin-top: 12pt;
+    }
+    p .subheading{
+    color: purple;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-left: 0in;
+    margin-top: 12pt;
+    }
+<!-- Font Styles -->
+strong, b{
+    font-weight:bold;
+    }
+span.uicontrol {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 8pt;
+    }
+p sup{
+    font-size: 6pt;
+    line-height:12pt;
+    }
+.copyright b{
+    color: #c41e3a;
+    font-weight: bold;
+    }
+<!-- Tables -->
+table.tableborder th p{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 10pt
+    margin-bottom: 0pt;
+    margin-left: 0in;
+    }
+table.tableborder td p{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;    
+    margin-left: 0in;
+    }
+table.tableborder ul li{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 10pt;
+    margin-left: -.25in;
+    margin-bottom: 6pt;
+    }
+table.tableborder ol li{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 10pt;
+    margin-left: -.25in;
+    margin-bottom: 6pt;
+    }
+table.tableborder tbody{
+    margin-bottom: 8pt;
+    }
+table.tableborder td, table.tableborder th{
+    padding: 2pt;
+    border: 1pt solid black;
+    }
+table.tableborder th{
+    padding:2pt;
+    background-color:#f3f3f3;
+    }
+<!-- Simple Table -->
+table.simpletablenoborder{
+    margin-left: -2pt;
+    padding: 0pt;
+    }
+
+    
+div.tablenoborder{
+	margin: 8px 0px 0px 0px;
+	width: 100%;	
+    }
+div.tablenoborder table{
+	width: 100%;
+	font-size:9pt;
+	line-height: 10pt;
+	border: 1px solid #e0e0e0;	
+	border-right: 1px solid #e0e0e0;
+}
+div.tablenoborder caption{
+	font-size: 10px;
+	color: #333;
+	padding-bottom:3px;
+}
+div.tablenoborder thead{
+	background-color: #ededed;
+	border: 0px;
+}
+div.tablenoborder th{
+	border: 0px;
+	border-left: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	color:#4B4B4B;
+	font-weight: bold;
+	height:24px;
+	white-space:nowrap;
+	vertical-align:middle;
+	padding: 0px 15px 0px 8px;	
+}
+div.tablenoborder tr, div.tablenoborder tbody{
+	border:0px;
+}
+div.tablenoborder tr{
+	border-right:1px solid #e0e0e0;
+}
+div.tablenoborder td{
+	border:0px;
+	border-left: 1px solid #e0e0e0;
+	color:#4B4B4B;
+	height:8pt;
+	vertical-align:top;
+	padding: 10px;	
+}
+
+<!-- Note Label -->
+.note{
+    background-color:#f3f3f3;
+    }
+div.note{
+    background-color:#f3f3f3;
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 1in;
+    }
+div.note p{
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-left: 0in;
+    }
+ .section .note{
+    margin-bottom: 6pt;
+    margin-left: 0in;
+     margin-top: 8pt;
+     }
+span.notetitle{
+    font-weight:bold;
+    }
+<!-- Caution  Label -->
+.caution{
+    background-color:#f3f3f3;
+    }
+div.caution{
+    background-color:#f3f3f3;
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 1in;
+    }
+div.caution p {
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    margin-top: 4pt;
+    }
+.section .caution{
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    margin-top: 8pt;
+    }
+span.cautiontitle{
+    font-weight:bold;
+    }
+<!-- Tip Label  -->
+.tip{
+    background-color:#f3f3f3;
+    }
+div.tip{
+    background-color:#f3f3f3;
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 1in;
+    }
+div.tip p {
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    }
+.section .tip{
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    margin-top: 8pt;
+    }
+span.tiptitle{
+    font-weight:bold;
+    }
+    <!-- Warning Table -->
+.danger{
+    background-color:#f3f3f3;
+    }
+div.danger{
+    background-color:#f3f3f3;
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 1in;
+    }
+div.danger p {
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    }
+.section .danger{
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    margin-top: 8pt;
+    }
+span.dangertitle{
+    font-weight:bold;
+    }
+</style>
+</head><body>
+<h1>McAfee® VirusScan® Enterprise 8.8 릴리스 노트</h1><div class="maptoc"><ul><li><a href="#unique_1">이 문서 정보</a></li><li><a href="#unique_2">새로운 기능</a></li><li><a href="#unique_3">알려진 문제</a></li><li><a href="#unique_4"><span>McAfee</span> Enterprise 제품 정보 얻기</a></li><li><a href="#unique_6">라이선스 인증</a></li></ul></div><div class="topiclevel1"><a name="unique_1"/> 
+	 <h2 class="topictitle2">이 문서 정보</h2>
+ 
+	 <div> 
+		<p><span>VirusScan Enterprise</span> 소프트웨어를 사용해 주셔서 감사합니다. 이 문서에는 현재 릴리스에 대한 중요한 정보가 들어 있습니다. 문서 전체를 완전히 읽고 이해하는 것이 좋습니다. 
+		</p>
+ 
+		<div class="caution"><span class="cautiontitle">주의:</span> 이 소프트웨어의 릴리스 이전 버전은 자동 업그레이드가 지원되지 않습니다. 소프트웨어의 제품 릴리스 버전으로 업그레이드하려면 소프트웨어의 기존 버전을 먼저 제거해야 합니다. 
+		</div>
+ 
+		<p><span>VirusScan Enterprise 8.8</span> 릴리스에는 다음 항목이 사용됩니다.
+		</p>
+
+		<a name="unique_1__ul_FDAF8933190E422B8048EEC510258B2D"><!-- --></a><ul id="unique_1__ul_FDAF8933190E422B8048EEC510258B2D"> 
+		  <li id="unique_1__li_A5C08D6B1E79450A9DFAE6650C6340CE"><a name="unique_1__li_A5C08D6B1E79450A9DFAE6650C6340CE"><!-- --></a>엔진 버전: 5400.1158 
+		  </li>
+
+		  <li id="unique_1__li_6D53699C546B45559A2B197F9D94DF1F"><a name="unique_1__li_6D53699C546B45559A2B197F9D94DF1F"><!-- --></a>탐지 정의(DAT): 이 버전의 <span>VirusScan Enterprise</span> 소프트웨어는 소프트웨어가 설치될 때 최신 버전의 DAT 파일을 자동으로 다운로드합니다. 이전에 DAT 파일은 설치 실행 파일에 포함되어 있었습니다.
+		  </li>
+ 
+		</ul>
+
+		<div class="section" id="unique_1__section_2BFE6DCA6C144F73B8684D160BEC0FBE"><a name="unique_1__section_2BFE6DCA6C144F73B8684D160BEC0FBE"><!-- --></a> 
+		</div>
+ 
+	 </div>
+ 
+  </div><div class="topiclevel1"><a name="unique_2"/> 
+	 <h2 class="topictitle2">새로운 기능</h2>
+ 
+	 <div> 
+		<p><span>VirusScan Enterprise 8.8</span> 소프트웨어 릴리스의 새로운 기능과 업데이트된 기능 
+		</p>
+ 
+		<div class="section" id="unique_2__section_70904123B3DA4AF9930159F55FB75230"><a name="unique_2__section_70904123B3DA4AF9930159F55FB75230"><!-- --></a><h2 class="sectiontitle">성능 향상</h2> 
+		   
+		  <div class="p"> 이 릴리스에서는 다음이 감소합니다. 
+		  <a name="unique_2__ul_33395AE00EFE45E798470B92C122586E"><!-- --></a><ul id="unique_2__ul_33395AE00EFE45E798470B92C122586E"> 
+			 <li id="unique_2__li_0CC0E0DB82D64868825B80B606A324D9"><a name="unique_2__li_0CC0E0DB82D64868825B80B606A324D9"><!-- --></a>온 액세스 검색 시간 
+			 </li>
+ 
+			 <li id="unique_2__li_6DE484C347614F558E86C80B6AD026FF"><a name="unique_2__li_6DE484C347614F558E86C80B6AD026FF"><!-- --></a>주문형 검색 시간 
+			 </li>
+ 
+			 <li id="unique_2__li_0DB8776903674E60993E165D67A075EC"><a name="unique_2__li_0DB8776903674E60993E165D67A075EC"><!-- --></a>시스템 시작 시간 
+			 </li>
+ 
+		  </ul>
+ 
+		  </div>
+ 
+		  <p> 중복 파일 검색을 줄이고 성능을 향상시키기 위해 이전에 검색된 파일을 공통 위치에 캐시합니다. 
+		  </p>
+ 
+		</div>
+ 
+		<div class="section" id="unique_2__section_20700E7137F64F168E3BDC43B8224B9B"><a name="unique_2__section_20700E7137F64F168E3BDC43B8224B9B"><!-- --></a><h2 class="sectiontitle">Windows Office 2010 지원</h2> 
+		   
+		  <p>이 릴리스에서는 특히 Microsoft Outlook 2010 전자 메일 및 첨부 파일의 온액세스 검색을 추가하여 모든 Windows Office 2010 응용프로그램을 지원합니다. 
+		  </p>
+ 
+		</div>
+ 
+		<div class="section"><h2 class="sectiontitle">ScriptScan 제외 지원</h2> 
+		   
+		  <p>알려진 안전한 웹 사이트에서 신뢰할 수 있는 스크립트의 URL인 ScriptScan 제외를 쉽게 추가하여 검색을 줄이고 성능을 향상시킬 수 있습니다. 이 기능은 <span id="unique_2__ph_060B71A603CD4E67B6B3B9CEC08A0162"><a name="unique_2__ph_060B71A603CD4E67B6B3B9CEC08A0162"><!-- --></a>ePolicy Orchestrator</span> 4.0 이상 및 <span id="unique_2__ph_B93C3EBD0D6343FA9BB629A80DD33512"><a name="unique_2__ph_B93C3EBD0D6343FA9BB629A80DD33512"><!-- --></a>VirusScan 콘솔</span>에서 사용할 수 있습니다. 이전에 이러한 제외된 URL에는 수동 레지스트리 편집이 필요했습니다. 
+		  </p>
+ 
+		</div>
+ 
+	 </div>
+ 
+  <div/>
+</div><div class="topiclevel1"><a name="unique_3"/> 
+	 <h2 class="topictitle2">알려진 문제</h2>
+ 
+	 <div> 
+		<p>이 소프트웨어 릴리스의 알려진 문제는 다음과 같습니다. 
+		</p>
+ 
+		<a name="unique_3__ul_4B7678ED69174FB4968A01596A4C29D9"><!-- --></a><ul id="unique_3__ul_4B7678ED69174FB4968A01596A4C29D9"> 
+		  <li id="unique_3__li_895C4CEA7FFA4E5AB31AC0A5D688B5B7"><a name="unique_3__li_895C4CEA7FFA4E5AB31AC0A5D688B5B7"><!-- --></a><a href="#unique_3__VSE_088M904005Z" title="">ePolicy Orchestrator에 정책 및 이벤트 마이그레이션</a>
+		  </li>
+ 
+		  <li id="unique_3__li_B945703B2BA84028AA476C8E46C34230"><a name="unique_3__li_B945703B2BA84028AA476C8E46C34230"><!-- --></a><a href="#unique_3__VSE_0847J0D0S5Z" title="">지원되는 플랫폼 및 제품</a>
+		  </li>
+ 
+		  <li id="unique_3__li_E40F617B313F41E3A87E08F307B97AD7"><a name="unique_3__li_E40F617B313F41E3A87E08F307B97AD7"><!-- --></a><a href="#unique_3__VSE_083VB90N0HS" title="">다른 제품과의 호환성</a>
+		  </li>
+ 
+		  <li id="unique_3__li_DA3687500BCD4797B06FDA1EB4B1519A"><a name="unique_3__li_DA3687500BCD4797B06FDA1EB4B1519A"><!-- --></a><a href="#unique_3__VSE_083VAJ0305Z" title="">업데이트</a>
+		  </li>
+ 
+		  <li id="unique_3__li_7C4D59C89819435E8EE3D0A7611B9151"><a name="unique_3__li_7C4D59C89819435E8EE3D0A7611B9151"><!-- --></a><a href="#unique_3__VSE_0866A05J0YK" title="">원격 콘솔</a>
+		  </li>
+ 
+		  <li id="unique_3__li_D954DF472B684DD1B965A612118E4917"><a name="unique_3__li_D954DF472B684DD1B965A612118E4917"><!-- --></a><a href="#unique_3__VSE_083VAK0L0Y4" title="">기타</a>
+		  </li>
+ 
+		  <li><a href="#unique_3__VSE_Documentation" title="">설명서</a>
+			 
+		  </li>
+ 
+		</ul>
+ 
+		<div class="section" id="unique_3__VSE_088M904005Z"><a name="unique_3__VSE_088M904005Z"><!-- --></a><h2 class="sectiontitle">ePolicy Orchestrator에 정책 및 이벤트 마이그레이션</h2> 
+		   
+		  <a name="unique_3__ul_49D3B25720BC402A87D34BA2282C77EC"><!-- --></a><ul id="unique_3__ul_49D3B25720BC402A87D34BA2282C77EC"> 
+			 <li> 
+				<strong>문제</strong> 
+				<p><span id="unique_3__ph_12179AA3F3C34B55A4CA157C69ED4AFB"><a name="unique_3__ph_12179AA3F3C34B55A4CA157C69ED4AFB"><!-- --></a>ePolicy Orchestrator</span> 마이그레이션 도구는 <span id="unique_3__ph_99066B1B9E894B70B623EAD00D37CD1A"><a name="unique_3__ph_99066B1B9E894B70B623EAD00D37CD1A"><!-- --></a>ePolicy Orchestrator</span> 액세스에 Windows NT 인증을 사용하는 <span id="unique_3__ph_B09F91E5F11B4858888D78279AE2DC44"><a name="unique_3__ph_B09F91E5F11B4858888D78279AE2DC44"><!-- --></a>ePolicy Orchestrator</span> 서버에서 기존 정책과 작업을 마이그레이션하지 못할 수 있습니다. 경우에 따라 <span id="unique_3__ph_E572C2B4B05947EEBFFF1D9457B810E7"><a name="unique_3__ph_E572C2B4B05947EEBFFF1D9457B810E7"><!-- --></a>ePolicy Orchestrator</span> 마이그레이션 도구는 SQL 관리자에게 <span id="unique_3__ph_85363D7938C7498D97ED4FD423DB44D5"><a name="unique_3__ph_85363D7938C7498D97ED4FD423DB44D5"><!-- --></a>ePolicy Orchestrator</span> 마이그레이션 도구의 매개 변수로 암호를 전달해야 합니다. 
+				</p>
+ 
+				<p><strong>해결 방법:</strong> 명령줄에서 <strong>ePOPolicyMigration.exe</strong> 명령을 실행하고 <strong>/PASSWORD</strong> 스위치와 SQL 관리자 암호를 추가합니다. 예를 들어, 다음과 같이 입력합니다. <strong>[<em>path</em>]\epopolicymigration.exe /password=<em>sql_admin_password</em></strong> 
+				</p>
+ 
+				<p>명령줄에서 <span id="unique_3__ph_1C5993CB575348E8A9F7E46680F0F6CC"><a name="unique_3__ph_1C5993CB575348E8A9F7E46680F0F6CC"><!-- --></a>ePolicy Orchestrator</span> <strong>/PASSWORD</strong> 스위치 사용에 대한 자세한 내용은 <em>McAfee VirusScan Enterprise 8.8.0 설치 안내서</em>를 참조하십시오. (611047) 
+				</p>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_0847J0D0S5Z"><a name="unique_3__VSE_0847J0D0S5Z"><!-- --></a><h2 class="sectiontitle">지원되는 플랫폼 및 제품</h2> 
+		   
+		  <a name="unique_3__ul_1C2BD2A0D3BD4D16A0DBB33761A81AD7"><!-- --></a><ul id="unique_3__ul_1C2BD2A0D3BD4D16A0DBB33761A81AD7"> 
+			 <li id="unique_3__li_FFBD1621C4C8449587B57229CE103063"><a name="unique_3__li_FFBD1621C4C8449587B57229CE103063"><!-- --></a> 이 <span id="unique_3__ph_BD9DB4D214D94AE3B1E8D80C218B6CCB"><a name="unique_3__ph_BD9DB4D214D94AE3B1E8D80C218B6CCB"><!-- --></a>VirusScan Enterprise</span> 버전에서는 Lotus Notes 버전 7.0.x 및 8.0.x – 8.5.1을 지원합니다. 지원되는 응용프로그램에 대한 자세한 내용은 <em><span id="unique_3__ph_2F2398048DD24C93ADCC228633631F03"><a name="unique_3__ph_2F2398048DD24C93ADCC228633631F03"><!-- --></a>VirusScan Enterprise 8.8</span> 설치 안내서</em>를 참조하십시오. 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_083VB90N0HS"><a name="unique_3__VSE_083VB90N0HS"><!-- --></a><h2 class="sectiontitle">다른 제품과의 호환성</h2> 
+		   
+		  <a name="unique_3__ul_DB6C16A6E85C4630A9FAE384606A0DF7"><!-- --></a><ul id="unique_3__ul_DB6C16A6E85C4630A9FAE384606A0DF7"> 
+			 <li><strong>문제</strong> 
+				<div class="p"><span id="unique_3__ph_5550EAAE4BAD4313AEA66D5049A05C08"><a name="unique_3__ph_5550EAAE4BAD4313AEA66D5049A05C08"><!-- --></a>ePolicy Orchestrator</span> 사용자 인터페이스의 <strong>처음 수행할 액션</strong> 목록에서 <strong>액션에 대한 프롬프트</strong> 작업 선택이 없습니다. 예를 들어 <span id="unique_3__ph_27A0C41CA2FF49B4A197D698C8183A43"><a name="unique_3__ph_27A0C41CA2FF49B4A197D698C8183A43"><!-- --></a>ePolicy Orchestrator</span> 사용자 인터페이스를 사용하여 주문형 검색 작업을 구성하려면 다음을 수행합니다. 
+				<ul> 
+				  <li><strong>시스템 트리 | 클라이언트 작업 | VSE 8.8.0에 대한 주문형 검색 작업</strong>을 클릭합니다. 
+				  </li>
+ 
+				  <li><strong>설정 편집</strong>, <strong>구성</strong> 및 <strong>액션</strong> 탭을 클릭합니다. 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+				<p>이 대화 상자의 <strong>처음 수행할 액션</strong> 목록에 <strong>액션에 대한 프롬프트</strong> 작업 선택이 <em>없습니다</em>. 
+				</p>
+ 
+				<div class="p"><span id="unique_3__ph_55234F3F7F3B47299198B6A3291ED36A"><a name="unique_3__ph_55234F3F7F3B47299198B6A3291ED36A"><!-- --></a>VirusScan 콘솔</span> 사용자 인터페이스에서 <strong>액션에 대한 프롬프트</strong> 작업 선택을 <em>사용할 수 있습니다</em>. 예를 들면 다음과 같습니다. 
+				<ul> 
+				  <li>주문형 검색 작업을 두 번 클릭하는 경우 주문형 검색 등록 정보 대화 상자에서 <strong>액션</strong> 탭을 클릭합니다. 
+				  </li>
+ 
+				  <li><strong>처음 수행할 액션</strong> 목록에서 <strong>액션에 대한 프롬프트</strong> 작업을 선택할 수 있습니다. 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+				<p><strong>해결 방법:</strong> 없음. <span id="unique_3__ph_C27F870B782943D28E47030D1B46930D"><a name="unique_3__ph_C27F870B782943D28E47030D1B46930D"><!-- --></a>ePolicy Orchestrator</span> 관리 검색 작업이므로 주문형 검색 작업이 실행되는 동안 사용자에게 표시되는 사용자 인터페이스가 없습니다. 따라서 사용자에게 액션을 요청하는 프롬프트를 표시하도록 구성할 수 없습니다. (590803) 
+				</p>
+ 
+			 </li>
+ 
+			 <li><strong>문제</strong> 
+				<p><span id="unique_3__ph_5073FD5387B74ED9BD60FA4A6E85DF1F"><a name="unique_3__ph_5073FD5387B74ED9BD60FA4A6E85DF1F"><!-- --></a>VirusScan Enterprise 8.7</span>에서 <span id="unique_3__ph_C2D94C9B84E64AB397DD17D4F114FB38"><a name="unique_3__ph_C2D94C9B84E64AB397DD17D4F114FB38"><!-- --></a>VirusScan Enterprise 8.8</span>로 업그레이드한 후 <span id="unique_3__ph_4E70920A825E45DEA5CC77E64B7A39F7"><a name="unique_3__ph_4E70920A825E45DEA5CC77E64B7A39F7"><!-- --></a>ePolicy Orchestrator</span> 4.5 시스템 세부 정보 대화 상자에서 <span id="unique_3__ph_935D4C0E82574BBD97D35D4F1D623A6A"><a name="unique_3__ph_935D4C0E82574BBD97D35D4F1D623A6A"><!-- --></a>VirusScan Enterprise 8.8</span>이
+				  
+				  <strong>설치된 제품</strong> 행에 표시되지 않습니다. (620509) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_C02ED602A8A649C1942D7A9797DA6780"><a name="unique_3__li_C02ED602A8A649C1942D7A9797DA6780"><!-- --></a> 
+				<strong>문제</strong> 
+				<div class="p"><span id="unique_3__ph_1FEB92212C7C4FE59FEA91743ECD4B55"><a name="unique_3__ph_1FEB92212C7C4FE59FEA91743ECD4B55"><!-- --></a>McAfee</span> 네트워크 접근 제어 3.0이 설치된 시스템에 <span id="unique_3__ph_714B4A6E28644349926BD4831934F877"><a name="unique_3__ph_714B4A6E28644349926BD4831934F877"><!-- --></a>VirusScan Enterprise 8.8</span>을 설치한 후
+				  
+				  <span id="unique_3__ph_EA92543F48704A5E9480101F06D79319"><a name="unique_3__ph_EA92543F48704A5E9480101F06D79319"><!-- --></a>McAfee</span> 서비스의 식별을 차단하는 실패가 발생할 수 있습니다. 이러한 증상을 볼 수 있습니다. 
+				<a name="unique_3__ul_DFF9978660B04FD0BAD9ED80EDFE8391"><!-- --></a><ul id="unique_3__ul_DFF9978660B04FD0BAD9ED80EDFE8391"> 
+				  <li id="unique_3__li_D74226A34F8E49C296E1290F940E36FC"><a name="unique_3__li_D74226A34F8E49C296E1290F940E36FC"><!-- --></a>다시 시작하기 전에 업데이트 작업을 수행하는 경우 <em>지정된 드라이버가 올바르지 않음</em> 메시지가 기록됩니다. 
+				  </li>
+ 
+				  <li id="unique_3__li_9AD5A32E0FBE43AB83374C8089C864F8"><a name="unique_3__li_9AD5A32E0FBE43AB83374C8089C864F8"><!-- --></a>하나 이상의 제품에 대해 <em>드라이버를 로드하지 못함</em> 메시지가 기록됩니다. 
+				  </li>
+ 
+				  <li id="unique_3__li_61033F2A534B4D8A851B254F970C5E1B"><a name="unique_3__li_61033F2A534B4D8A851B254F970C5E1B"><!-- --></a> 로컬 시스템 응용프로그램 이벤트 로그에 이벤트 ID 5004가 있습니다. 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+				<p><strong>해결 방법:</strong> 실패한 제품을 제거하고 시스템을 다시 시작한 다음 제품을 다시 설치합니다. 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_B96FBDE4187043FA9977F80EBF9D7214"><a name="unique_3__li_B96FBDE4187043FA9977F80EBF9D7214"><!-- --></a> 
+				<strong>문제</strong> 
+				<p>NVIDIA<span id="unique_3__ph_9205389A43A846B3818BD3C608B78484"><a name="unique_3__ph_9205389A43A846B3818BD3C608B78484"><!-- --></a><sup>®</sup></span> 드라이버가 성능 문제나 시스템 실패를 초래할 수 있습니다. <span id="unique_3__ph_13C646C054A84FE4B79D1183A727ED14"><a name="unique_3__ph_13C646C054A84FE4B79D1183A727ED14"><!-- --></a>VirusScan Enterprise 8.8</span>이 100% CPU 사용률로 실행되거나 시스템 실패를 초래할 수 있습니다. 이 문제에 대한 자세한 내용은 기술 자료 문서 KB614212 및 KB65066을 참조하십시오. (388060) 
+				</p>
+ 
+			 </li>
+ 
+			 <li><strong>문제</strong> 
+				<p><span id="unique_3__ph_748F104D2C11451A8A965E0AFAFBC4FB"><a name="unique_3__ph_748F104D2C11451A8A965E0AFAFBC4FB"><!-- --></a>VirusScan Enterprise 8.8</span> 설치 프로그램을 실행할 경우 모든 CA Anti-Virus 버전 7.0 및 7.1 프로그램 디렉터리 구조와 레지스트리 키 항목을 완전히 제거하지 못합니다. 
+				</p>
+ 
+				<p><strong>해결 방법:</strong> 없음. CA Anti-Virus 제거 프로그램의 문제입니다. (625703) 
+				</p>
+ 
+			 </li>
+ 
+			 <li><strong>문제</strong> 
+				<p>독립 실행형 클라이언트 시스템에서 <span id="unique_3__ph_6753BFC0E99C4CB3B0038BA896DD71A4"><a name="unique_3__ph_6753BFC0E99C4CB3B0038BA896DD71A4"><!-- --></a>VirusScan Enterprise 8.8</span>이 함께 설치된 Panda Anti-Virus 2008의 초기 제품 업데이트를 완료하지 못합니다. 
+				</p>
+ 
+				<p><kbd class="userinput">VSESetup.exe</kbd>를 실행할 때 Panda Anti-Virus 2008 소프트웨어를 제거하지 않도록 <strong>아니오</strong> 옵션을 선택한 경우 <span id="unique_3__ph_ABB59E5A933B446398AEC7B13728EF6B"><a name="unique_3__ph_ABB59E5A933B446398AEC7B13728EF6B"><!-- --></a>VirusScan Enterprise 8.8</span>이 제품 업데이트를 수행하는 최종 단계에서 업데이트 대화 상자가 20분 이상 정지할 수 있습니다. 
+				</p>
+ 
+				<p><strong>해결 방법:</strong> VSESetup.exe를 실행할 때 <strong>예</strong> 옵션을 선택하여 Panda Anti-Virus 2008 소프트웨어를 제거합니다. (626009)
+				  
+				</p>
+ 
+			 </li>
+ 
+			 <li><strong>문제</strong> 
+				<p><span id="unique_3__ph_41358ABFC5BF43DA88E226D24C8FE382"><a name="unique_3__ph_41358ABFC5BF43DA88E226D24C8FE382"><!-- --></a>ePolicy Orchestrator</span> 관리 클라이언트에서 <kbd class="userinput">VSESetup.exe</kbd>를 실행하고 탐지된 안티바이러스 소프트웨어를 제거하는 옵션을 선택하더라도 일부 Symantec 안티바이러스 파일, 디렉토리 및 레지스트리 키가 시스템에 남습니다. 
+				</p>
+ 
+				<p><strong>해결 방법:</strong> 없음. (629265) 
+				</p>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_083VAJ0305Z"><a name="unique_3__VSE_083VAJ0305Z"><!-- --></a><h2 class="sectiontitle">업데이트</h2> 
+		   
+		  <a name="unique_3__ul_A9C1AF6BD5444EB6B6359AAF8DC4D608"><!-- --></a><ul id="unique_3__ul_A9C1AF6BD5444EB6B6359AAF8DC4D608"> 
+			 <li> 
+				<strong>문제</strong> 
+				<div class="p">업데이트 로그에서 “업데이트 실패”를 보고하고 다른 오류를 표시하지 않을 수 있습니다. 패치, DAT 및 엔진의 업데이트 기능을 사용하려면 업그레이드 패키지를 확장할 충분한 사용 가능한 공간과 메모리가 있어야 합니다. 업데이트에 성공하려면 다음의 최소 공간 요구 사항이 있어야 합니다. 
+				<ul> 
+				  <li>125MB의 사용 가능한 하드 디스크 공간 
+				  </li>
+ 
+				  <li>250MB의 총 사용 가능한 하드 디스크 및 메모리 공간 
+					 <div class="note"><span class="notetitle">참고:</span> Windows 가상 메모리를 사용하여 추가 메모리 공간을 생성할 수도 있지만 이 합계는 250MB의 <em>사용 가능한</em> 공간과 같아야 합니다. 
+					 </div>
+ 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+				<p>이 하드 디스크 및 메모리 요구 사항은 특히 최소 시스템 요구 사항을 실행하는 포함된 시스템과 가상 시스템에 중요합니다. (625749) 
+				</p>
+ 
+			 </li>
+ 
+			 <li> 
+				<strong>문제</strong> 
+				<p>리포지토리 액세스 실패는 <span id="unique_3__ph_6DCBDEDE93B44F10A415F484547AC400"><a name="unique_3__ph_6DCBDEDE93B44F10A415F484547AC400"><!-- --></a>VirusScan Enterprise 8.8</span> 업데이트 로그에 기록되지 않지만 <span id="unique_3__ph_2EF5899FE0AC49DCBAF3879C1B93B706"><a name="unique_3__ph_2EF5899FE0AC49DCBAF3879C1B93B706"><!-- --></a>McAfee</span> 에이전트 로그에 기록됩니다. <span id="unique_3__ph_3446C450F6B647089EC8AD8E60CA7D3A"><a name="unique_3__ph_3446C450F6B647089EC8AD8E60CA7D3A"><!-- --></a>McAfee</span> 에이전트 로그의 기본 위치는 다음과 같습니다. <span class="filepath">&lt;drive&gt;:\Documents and Settings\All Users\Application Data\McAfee\Common Framework\mcscript.log</span> (384749) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_3ACC3BB5D66C445AB0E3344B91F99357"><a name="unique_3__li_3ACC3BB5D66C445AB0E3344B91F99357"><!-- --></a> 
+				<strong>문제</strong> 
+				<p>명령줄에서 수행되는 자동 업데이트 작업은 진행률 대화 상자를 표시합니다. 설치가 성공적으로 완료되었지만 명령줄에서 <kbd class="userinput">setup.exe /q RUNAUTOUPDATESILENTLY=TRUE</kbd>를 실행할 때 <strong>업데이트 진행 중</strong> 대화 상자가 나타납니다. (399265) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_917A620B31FB4558AE63F3E268FCC265"><a name="unique_3__li_917A620B31FB4558AE63F3E268FCC265"><!-- --></a> 
+				<strong>문제</strong> 
+				<p>명령줄에서 <kbd class="userinput">setup.exe CMASOURCEDIR="&lt;drive&gt;:\Documents and Settings\&lt;username&gt;\Desktop\"</kbd> 명령을 실행하여 제품을 설치하고 데스크톱에서 Sitelist.xml 파일을 가져올 때 설치는 성공적으로 완료되지만 Sitelist.xml 파일을 가져오지 못합니다.
+				  
+				</p>
+ 
+				<p><strong>해결 방법:</strong> <span id="unique_3__ph_369D14F0098B42C1A30AA0345EA51B41"><a name="unique_3__ph_369D14F0098B42C1A30AA0345EA51B41"><!-- --></a>ePolicy Orchestrator</span> 에이전트 4.0에서 생성된 Sitelist.xml 파일을 사용합니다. 만약
+				  
+				  <span id="unique_3__ph_FBC135FF185747A888140A7087847B8E"><a name="unique_3__ph_FBC135FF185747A888140A7087847B8E"><!-- --></a>McAfee</span> 에이전트 4.0 설치로 이전 <span id="unique_3__ph_888824D2FBCA403782C252C0C64146E0"><a name="unique_3__ph_888824D2FBCA403782C252C0C64146E0"><!-- --></a>ePolicy Orchestrator</span> 에이전트 <span id="unique_3__ph_F8A1028FF1B2415C81F71FA7BE13A6E6"><a name="unique_3__ph_F8A1028FF1B2415C81F71FA7BE13A6E6"><!-- --></a>3.6.1</span>의 설치가 <em>업그레이드</em>되었다면 가져올 수 있는 올바른 Sitelist.xml 파일이 생성됩니다. (419467) 
+				</p>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_0866A05J0YK"><a name="unique_3__VSE_0866A05J0YK"><!-- --></a><h2 class="sectiontitle">원격 콘솔</h2> 
+		   
+		  <a name="unique_3__ul_C581DE2D67CC47A8A7DD5D84BE06D474"><!-- --></a><ul id="unique_3__ul_C581DE2D67CC47A8A7DD5D84BE06D474"> 
+			 <li id="unique_3__li_8496A8801305460B98CC74FD7FFE365D"><a name="unique_3__li_8496A8801305460B98CC74FD7FFE365D"><!-- --></a><strong>문제</strong> 
+				<p>원격 콘솔 기능을 사용하여 Windows Vista 시스템 이상에 연결할 경우 원격 시스템에 대한 액세스 보호, 버퍼 오버플로 및 검역 관리자 대화 상자를 열 수 없고 오류가 나타나지 않습니다. 이는 Windows Vista 이상 시스템에서는 원격 콘솔 기능에 필요한 원격 레지스트리 서비스를 자동으로 시작하지 않기 때문입니다. 
+				</p>
+ 
+				<strong>해결 방법:</strong> 원격 콘솔 기능을 시작하기 전에 다음을 사용하여 원격 시스템에서 원격 레지스트리 서비스를 수동으로 시작합니다. 
+				<a name="unique_3__ul_AC9E6DA6F71E4994A59DA81BE37F3116"><!-- --></a><ul id="unique_3__ul_AC9E6DA6F71E4994A59DA81BE37F3116"> 
+				  <li id="unique_3__li_67D6B385F37F4C5FB42BD03C3F66812A"><a name="unique_3__li_67D6B385F37F4C5FB42BD03C3F66812A"><!-- --></a><strong>시작 | 실행</strong>을 클릭하고 <kbd class="userinput">services.msc</kbd>를 입력합니다. 서비스 대화 상자가 나타납니다. 
+				  </li>
+ 
+				  <li id="unique_3__li_C70EE8A1D1564CC3AEC1150E407F2982"><a name="unique_3__li_C70EE8A1D1564CC3AEC1150E407F2982"><!-- --></a><strong>서비스(로컬) | 이름</strong> 열에서 <strong>원격 레지스트리</strong>를 마우스 오른쪽 버튼으로 클릭하고 <strong>시작</strong>을 클릭합니다. 
+				  </li>
+ 
+				</ul>
+(581439) 
+			 </li>
+ 
+			 <li id="unique_3__li_6810F988930449E9864CA5AC10A09C96"><a name="unique_3__li_6810F988930449E9864CA5AC10A09C96"><!-- --></a> 
+				<strong>문제</strong> 
+				<p>Windows Server 2008이 설치된 시스템에서 원격 콘솔 기능을 사용하여 <strong>액세스 보호</strong> 속성을 열 경우 연결을 여는 데 몇 분이 걸릴 수 있습니다. (392825) 
+				</p>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_083VAK0L0Y4"><a name="unique_3__VSE_083VAK0L0Y4"><!-- --></a><h2 class="sectiontitle">기타</h2> 
+		   
+		  <a name="unique_3__ul_8C1A38A9D7074CAA83D1A325BBE9E070"><!-- --></a><ul id="unique_3__ul_8C1A38A9D7074CAA83D1A325BBE9E070"> 
+			 <li><strong>문제</strong> 
+				<p>CheckPoint pireg.exe 유틸리티를 실행할 때 다음과 같은 오류 메시지가 표시됩니다. 
+				</p>
+ 
+				<p><tt class="sysout">mcavscv.dll이 존재하지 않습니다.</tt> 
+				</p>
+ 
+				<p><strong>해결 방법:</strong> 이 오류가 표시되지 않게 하려면 Microsoft Visual C++ 2008 재배포 가능 패키지를 설치합니다. (629324) 
+				</p>
+ 
+			 </li>
+ 
+			 <li> 
+				<strong>문제</strong> 
+				<p> 사용자 계정 제어(UAC) 창 프롬프트에서 특정 설정을 변경하고 <strong>아니오</strong>를 클릭해도 변경 사항이 여전히 적용됩니다. 이 문제는 Microsoft Outlook 2010을 사용하는 다음과 같은 시스템에만 영향을 줍니다. 
+				</p>
+ 
+				<div class="p"> 
+				<ul> 
+				  <li>Microsoft Windows 7 또는 Microsoft Windows Server 2008(32비트 또는 64비트) 시스템 
+				  </li>
+ 
+				  <li>UAC를 활성화한 시스템 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+				<p>특히 이러한 환경에서는 다음과 같이 됩니다. 
+				</p>
+ 
+				<div class="p"> 
+				<ol> 
+				  <li>Microsoft Outlook 2010에서 <strong>주문형 전자 메일 검색 등록 정보</strong>를 여는 경우 <strong>보고서</strong> 탭 설정을 기본값에서 다른 설정(예: <strong>세션 설정</strong> 활성화)으로 변경하고 <strong>적용</strong> 또는 <strong>확인</strong>을 클릭합니다. 
+				  </li>
+ 
+				  <li>Windows UAC 창에서 <tt class="sysout">다음 프로그램이 이 컴퓨터를 변경할 수 있도록 허용하시겠습니까?</tt>라고 물을 때 <strong>아니오</strong>를 클릭하여 변경을 무시해도 변경이 수행됩니다. 
+				  </li>
+ 
+				</ol>
+ 
+				</div>
+ 
+				<p><strong>해결 방법:</strong> 없음. Windows UAC의 문제이며 해결 방법이 없습니다. (627058) 
+				</p>
+ 
+			 </li>
+ 
+			 <li> 
+				<strong>문제</strong> 
+				<p>온액세스 검색을 비활성화해도 ScriptScan이 비활성화되지 않습니다. <span id="unique_3__ph_8D1B4604E16542FE9CB539E3FF5E1D48"><a name="unique_3__ph_8D1B4604E16542FE9CB539E3FF5E1D48"><!-- --></a>VirusScan Enterprise 8.7</span> 이하에서는 온액세스 검색을 비활성화한 경우 ScriptScan 기능도 비활성화됩니다. <span id="unique_3__ph_DA9A5FE0DA8E47A79BB8604C5BC282F7"><a name="unique_3__ph_DA9A5FE0DA8E47A79BB8604C5BC282F7"><!-- --></a>VirusScan Enterprise 8.8</span>에서는 온액세스 검색을 비활성화한 경우 ScriptScan이 계속 실행됩니다. 
+				</p>
+ 
+				<div class="p"><strong>해결 방법:</strong> 이러한 사용자 인터페이스 중 하나를 사용하여 <span id="unique_3__ph_2083F6DF747542CD8E341459F33DE13F"><a name="unique_3__ph_2083F6DF747542CD8E341459F33DE13F"><!-- --></a>VirusScan Enterprise 8.8</span> ScriptScan 기능을 비활성화합니다. 
+				<ul> 
+				  <li><strong><span id="unique_3__ph_2585929D25C74695B148D082F2118C41"><a name="unique_3__ph_2585929D25C74695B148D082F2118C41"><!-- --></a>ePolicy Orchestrator 4.5 또는 4.6</span></strong>
+					 
+					 <div class="p"> 
+					 <ol> 
+						<li><strong>메뉴 | 정책 | 정책 카탈로그</strong>를 클릭한 다음 제품 목록에서 <strong>VirusScan Enterprise 8.8.0</strong>을 선택합니다. 범주 목록은 VirusScan Enterprise 8.8.0에 대한 정책 범주를 표시합니다. 
+						</li>
+ 
+						<li>범주 목록에서 <strong>온액세스 일반 정책</strong>을 선택하고 작업 열에서 <strong>설정 편집</strong>을 클릭하여 정책 구성 페이지를 엽니다. 
+						</li>
+ 
+						<li>설정 목록에서 <strong>워크스테이션</strong> 또는 <strong>서버</strong>를 선택합니다. 
+						</li>
+ 
+						<li>온액세스 일반 정책 페이지에서 <strong>ScriptScan</strong> 탭을 클릭합니다. 
+						</li>
+ 
+						<li><strong>스크립트 검색 활성화</strong> 확인란을 선택 취소합니다. 
+						</li>
+ 
+						<li><strong>저장</strong>을 클릭하여 구성 변경을 캡처합니다. 
+						</li>
+ 
+					 </ol>
+ 
+					 </div>
+ 
+				  </li>
+ 
+				  <li><strong><span id="unique_3__ph_CD54D5BEFC274D638794D0480F7EC75B"><a name="unique_3__ph_CD54D5BEFC274D638794D0480F7EC75B"><!-- --></a>ePolicy Orchestrator 				4.0</span></strong>
+					 
+					 <div class="p"> 
+					 <ol> 
+						<li><strong>시스템 | 정책 카탈로그</strong>를 클릭한 다음 제품 목록에서 <strong>VirusScan Enterprise 8.8.0</strong>을 선택합니다. 범주 목록은 VirusScan Enterprise 8.8.0에 대한 정책 범주를 표시합니다. 
+						</li>
+ 
+						<li>범주 목록에서 <strong>온액세스 일반 정책</strong>을 선택하고 작업 열에서 <strong>설정 편집</strong>을 클릭하여 정책 구성 페이지를 엽니다. 
+						</li>
+ 
+						<li>설정 목록에서 <strong>워크스테이션</strong> 또는 <strong>서버</strong>를 선택합니다. 
+						</li>
+ 
+						<li>온액세스 일반 정책 페이지에서 <strong>ScriptScan</strong> 탭을 클릭합니다. 
+						</li>
+ 
+						<li><strong>스크립트 검색 활성화</strong> 확인란을 선택 취소합니다. 
+						</li>
+ 
+						<li><strong>저장</strong>을 클릭하여 구성 변경을 캡처합니다. 
+						</li>
+ 
+					 </ol>
+ 
+					 </div>
+ 
+				  </li>
+ 
+				  <li><strong><span id="unique_3__ph_519794F235A04C3486046528CF9527BD"><a name="unique_3__ph_519794F235A04C3486046528CF9527BD"><!-- --></a>VirusScan 콘솔</span></strong>
+					 
+					 <div class="p"> 
+					 <ol> 
+						<li>작업 목록에서 <strong>온액세스 스캐너</strong>를 마우스 오른쪽 단추로 클릭한 다음 <strong>속성</strong>을 클릭하여 대화 상자를 엽니다. 
+						</li>
+ 
+						<li>온액세스 검색 속성 페이지의 왼쪽 창에서 <strong>일반 설정</strong>을 클릭하고 <strong>ScriptScan</strong> 탭을 클릭합니다. 
+						</li>
+ 
+						<li><strong>스크립트 검색 활성화</strong> 확인란을 선택 취소합니다. 
+						</li>
+ 
+						<li><strong>확인</strong>을 클릭하여 구성 변경을 캡처합니다. 
+						</li>
+ 
+					 </ol>
+ 
+					 </div>
+ 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+			 </li>
+ 
+			 <li> 
+				<strong>문제</strong> 
+				<p>Microsoft Outlook 2010을 사용하여 선택한 폴더에서 주문형 검색을 수행할 경우 폴더에 있는 하나의 항목만 검색됩니다. 
+				</p>
+ 
+				<div class="p"> 
+				  <div class="note"><span class="notetitle">참고:</span> 이 문제는 Microsoft Outlook 2007에서 발생하지 않습니다. 
+				  </div>
+ 
+				</div>
+ 
+				<p> 
+				  <strong>해결 방법:</strong> 전체 Microsoft Outlook 2010 폴더에 대한 주문형 검색을 수행하려면 다음을 수행합니다. 
+				</p>
+ 
+				<div class="p"> 
+				<ol> 
+				  <li>검색할 폴더 이름을 선택합니다. 
+				  </li>
+ 
+				  <li>폴더를 열고 항목에서 <strong>Ctrl+마우스 왼쪽 단추 클릭</strong>을 사용하여 강조 표시된 단일 항목을 선택 취소합니다. 
+				  </li>
+ 
+				  <li>주문형 검색을 실행하면 폴더의 모든 항목이 검색됩니다. 
+				  </li>
+ 
+				</ol>
+ 
+				</div>
+ 
+				<p>(624659) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_57FD9D50069E49DE9EF4B39588061785"><a name="unique_3__li_57FD9D50069E49DE9EF4B39588061785"><!-- --></a> 
+				<strong>문제</strong> 
+				<p>Microsoft Windows 2000 SP4의 경우 <span id="unique_3__ph_D6EBCECDFDE74554ACFBB4D2E483A3EE"><a name="unique_3__ph_D6EBCECDFDE74554ACFBB4D2E483A3EE"><!-- --></a>VirusScan 콘솔</span>에서 <strong>도구 | 자동 업데이트 리포지토리 목록 편집</strong> 명령을 사용하여 자동 업데이트 리포지토리 목록을 편집하려고 하면 다음 오류가 나타날 수 있습니다. 
+				</p>
+ 
+				<p><tt class="sysout">리포지토리 목록을 읽을 수 없습니다. 오류 = fffffffc</tt> 
+				</p>
+ 
+				<p> 오류가 나타나는 경우 원인은 <kbd class="userinput">SiteList.xml</kbd> 파일이 다음 경로에 없기 때문입니다. 
+				</p>
+ 
+				<p><kbd class="userinput">C:\Documents and Settings\All Users\Application Data\McAfee\Common Framework</kbd> 
+				</p>
+ 
+				<p><strong>해결 방법:</strong> <kbd class="userinput">SiteList.xml</kbd> 파일을 <span id="unique_3__ph_BEF909A9912F4381896AB1FF5ED31553"><a name="unique_3__ph_BEF909A9912F4381896AB1FF5ED31553"><!-- --></a>McAfee Agent</span> 4.0 설치 패키지 및 다른 위치에서 해당 경로로 복사합니다. (568699) 
+				</p>
+ 
+			 </li>
+ 
+			 <li><strong>문제</strong> 
+				<p>드라이브를 온액세스 검색에서 제외하도록 구성하려면 매핑된 네트워크 드라이브가 아니라 UNC 경로를 사용합니다. 예를 들어, 제외 설정 대화 상자에서 매핑된 네트워크 드라이브에 <kbd class="userinput">Z:</kbd>를 입력할 경우 매핑된 드라이브의 파일이 온액세스 검색에서 제외되지 않습니다. 
+				</p>
+ 
+				<p><strong>해결 방법:</strong> 네트워크 드라이브를 온액세스 검색에서 제외하려면 매핑된 네트워크 드라이브가 아니라 UNC 경로를 사용합니다. (546966) 
+				</p>
+ 
+			 </li>
+ 
+			 <li> 
+				<strong>문제</strong> 
+				<div class="p"><strong>배달 시 전자 메일 검색 등록 정보</strong> 또는 <strong>Outlook 주문형 검색</strong>을 구성할 때 <strong>기본 + 추가 파일 형식</strong>을 추가할 경우 확장 문자 세트가 예상대로 작동하지 않습니다. 예를 들어, <kbd class="userinput">ÃbÃ</kbd> 파일 유형을 검색할 사용자 지정 추가 파일 유형에 추가할 경우 "xxxxx.ÃbÃ" 파일 검색만 예상합니다. 그러나 다음 파일이 둘 다 검색됩니다. 
+				<ul> 
+				  <li>xxxxx.ÃbÃ 
+				  </li>
+ 
+				  <li>yyyyy.Ãbc 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+				<div class="p"> 이는 확장 문자 세트를 사용할 때 예상된 동작입니다. 
+				  <div class="note"><span class="notetitle">참고:</span> 이 문제는 Windows Outlook 2010 x64 Professional Edition을 사용하는 일부 Windows 64비트 시스템에서만 발생합니다. 
+				  </div>
+ 
+				</div>
+ 
+				<p> <kbd class="userinput">ÃbÃ</kbd> 파일 유형만 검색하려면 와일드카드 문자 <kbd class="userinput">?</kbd> 또는 <kbd class="userinput">*</kbd>를 사용하여 제외를 구성합니다. 예를 들어, <kbd class="userinput">Ãb?</kbd> 또는 <kbd class="userinput">Ã*</kbd>를 사용하여 제외를 구성합니다. 
+				</p>
+ 
+				<p>(586207) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_B9F93F8EAD6045CCB70D3437D8360453"><a name="unique_3__li_B9F93F8EAD6045CCB70D3437D8360453"><!-- --></a> 
+				<strong>문제</strong> 
+				<p>Lotus Notes에 대한 <span id="unique_3__ph_5E3F24989B0F49EFB1F1CC10051A9C77"><a name="unique_3__ph_5E3F24989B0F49EFB1F1CC10051A9C77"><!-- --></a>McAfee</span> 전자 메일 스캐너에서 탐지된 위협을 검역하는 데 <strong>검역 관리자</strong>를 사용하지 않습니다. 따라서 전자 메일 스캐너의 첫 번째 액션을 <strong>첨부 파일 치료</strong> 또는 <strong>첨부 파일 삭제</strong>로 구성하면 원래 버전의 탐지된 위협을 더 이상 복구하거나 복원할 수 없습니다. 탐지에 대한 액션이 수행된 후 원래 버전의 탐지된 위협을 사용할 수 있으려면 <span id="unique_3__ph_FD189D1D68FB4586AD450C1130AE9A3E"><a name="unique_3__ph_FD189D1D68FB4586AD450C1130AE9A3E"><!-- --></a>McAfee</span>에서는 첫 번째 액션을 <strong>첨부 파일을 폴더로 이동</strong>으로 설정하고 검역 폴더를 지정하도록 권장합니다. 이 이동 액션을 활성화하면 원래 탐지된 위협이 지정된 검역 폴더로 이동되고 탐지 항목에 .MCM 확장명이 추가됩니다. 
+				</p>
+ 
+				<p>클라이언트 시스템에서 <strong>첨부 파일을 폴더로 이동</strong> 옵션을 활성화할 경우 다른 사용자가 실수로 해당 파일에 액세스할 수 없도록 항상 온액세스 스캐너를 활성화해야 합니다. (430862) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_9E973F4288C848699353AD4EA88F8947"><a name="unique_3__li_9E973F4288C848699353AD4EA88F8947"><!-- --></a> 
+				<strong>문제</strong> 
+				<p>Microsoft Windows Server 2008이 설치된 시스템에서 <span id="unique_3__ph_847CE84076254122B1F97DBD5AAD90A7"><a name="unique_3__ph_847CE84076254122B1F97DBD5AAD90A7"><!-- --></a>VirusScan Enterprise 				8.7i</span>을 실행할 경우 온액세스 스캐너가 탐지된 파일을 네트워크 공유 폴더에서 삭제하지 못할 수 있습니다. 네트워크 파일 시스템에서는 온액세스 스캐너의 탐지된 파일 삭제 기능이 보장되지 않습니다. 이 경우에 탐지된 파일이 삭제되지 않는 경우 파일 내용이 제거되고 남은 파일 크기는 0입니다. (431158) 
+				</p>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_Documentation"><a name="unique_3__VSE_Documentation"><!-- --></a><h2 class="sectiontitle">설명서</h2> 
+		   
+		  <ul> 
+			 <li> 
+				<strong>문제</strong> 
+				<p><em><span id="unique_3__ph_3F9C77E7CF724D2190BFF9EBB85358EC"><a name="unique_3__ph_3F9C77E7CF724D2190BFF9EBB85358EC"><!-- --></a>McAfee</span>
+					 
+					 <span id="unique_3__ph_74DD01D588ED4B24838210FC0F99BBB8"><a name="unique_3__ph_74DD01D588ED4B24838210FC0F99BBB8"><!-- --></a>VirusScan Enterprise 8.8</span> 소프트웨어 제품 안내서</em>와 도움말의 릴리스 후에 <em>일반 설정 구성</em> 섹션의 정보가 변경되었습니다. 
+				</p>
+ 
+				<p>각 사용자 인터페이스 콘솔에서 다음 단계가 참고를 포함하도록 수정되었습니다. 
+				</p>
+ 
+				<div class="p"><strong>ScriptScan</strong> 탭에서 ScriptScan을 활성화하고 검색에서 제외할 프로세스 또는 URL을 구성합니다. 
+				  <div class="note"><span class="notetitle">참고:</span> 온액세스 검색을 비활성화해도 ScriptScan이 비활성화되지 않습니다. <span id="unique_3__ph_3A62E448989549B187AC3BE53F3BC1AD"><a name="unique_3__ph_3A62E448989549B187AC3BE53F3BC1AD"><!-- --></a>VirusScan Enterprise 8.7</span> 이하에서는 온액세스 검색을 비활성화하면 ScriptScan 기능이 비활성화되었습니다. <span id="unique_3__ph_43200325B0CD4A0A851466896544DBFD"><a name="unique_3__ph_43200325B0CD4A0A851466896544DBFD"><!-- --></a>VirusScan Enterprise 8.8</span>에서는 온액세스 검색을 비활성화해도 ScriptScan이 비활성화되지 않습니다. ScriptScan을 비활성화하려면 <strong>스크립트 검색 활성화</strong> 확인란을 선택 취소합니다. 
+				  </div>
+ 
+				</div>
+ 
+			 </li>
+ 
+			 <li> 
+				<strong>문제</strong> 
+				<p><em><span id="unique_3__ph_7C34B997A17B4911BD838B838DBD1783"><a name="unique_3__ph_7C34B997A17B4911BD838B838DBD1783"><!-- --></a>McAfee</span> <span id="unique_3__ph_A4C92C707D03484380406692DCBAC420"><a name="unique_3__ph_A4C92C707D03484380406692DCBAC420"><!-- --></a>VirusScan Enterprise 8.8</span> 소프트웨어 제품 안내서</em>와 도움말의 릴리스 후에 온액세스 검색 정책 도움말에서 일반 탭의 정보가 변경되었습니다. 
+				</p>
+ 
+				<p>검색 옵션에 다음 정보가 추가되었습니다. 
+				</p>
+ 
+				<div class="p"><strong>신뢰할 수 있는 설치 프로그램</strong> - msiexec.exe가 설치하여 McAfee 또는 Microsoft에서 서명한 MSI 파일 또는 Windows 신뢰할 수 있는 설치 프로그램 서비스 파일이 온액세스 검색되는지 여부를 지정합니다. 
+				<ul> 
+				  <li>선택되지 않음, MSI 또는 Windows Trusted Installer 서비스에서 설치한 파일을 <em>검색하지 않습니다</em>. <em>기본값 = 비활성화</em> 
+					 <div class="note"><span class="notetitle">참고:</span>  선택되지 않음을 선택하면 대형 Microsoft 응용프로그램 설치 프로그램의 성능이 향상됩니다. 
+					 </div>
+ 
+				  </li>
+ 
+				  <li>선택됨, MSI 또는 Windows Trusted Installer 서비스에서 설치한 파일을 <em>검색합니다</em>. 
+					 <div class="note"><span class="notetitle">참고:</span> 이렇게 해도 명령줄 설치 및 화이트리스트에 있는 병합 또는 템플릿 MSI 파일은 검색하지 않습니다. 
+					 </div>
+ 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+	 </div>
+ 
+  </div><div class="topiclevel1"><a name="unique_4"/>
+<h2 class="topictitle2"><span>McAfee</span> Enterprise 제품 정보 얻기</h2>
+
+<div><p><span>McAfee</span> 설명서에서는 새 제품의 평가에서 기존 제품의 유지 관리에 이르기까지, 제품 구현의 각 단계를 수행하는 데 필요한 정보를 얻을 수 있습니다. 제품에 따라 추가 설명서가 제공될 수 있습니다. 제품이 출시된 이후에는 <span>McAfee</span> ServicePortal에서 온라인으로 제공되는 기술 자료를 통해 제품 관련 추가 정보를 얻을 수 있습니다.</p>
+
+
+<table cellpadding="4" cellspacing="0" border="1" class="tableborder"><tr><td>
+<a name="unique_4__table_6EFA783CC51B469AAD06700A54EE3E8C"><!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="unique_4__table_6EFA783CC51B469AAD06700A54EE3E8C" border="0">
+
+
+
+<thead align="left">
+<tr>
+<th class="row-nocellborder" valign="top" width="NaN%" id="d0e1268"><p><strong>설치 단계</strong></p>
+</th>
+
+<th class="row-nocellborder" valign="top" width="NaN%" id="d0e1273"><p><strong>설정 단계</strong></p>
+</th>
+
+<th class="cellrowborder" valign="top" width="NaN%" id="d0e1278"><p><strong>유지 관리 단계</strong></p>
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td class="row-nocellborder" valign="top" width="NaN%" headers="d0e1268 "><p>설치 전, 설치 중 및 설치 후 작업 </p>
+<p><em>릴리스 노트</em></p>
+<a name="unique_4__ul_25451F8E1C6147C9BB589A3BF3B74EB6"><!-- --></a><ul id="unique_4__ul_25451F8E1C6147C9BB589A3BF3B74EB6">
+<li id="unique_4__li_80B0282706594EAAA565498383E94DE2"><a name="unique_4__li_80B0282706594EAAA565498383E94DE2"><!-- --></a>현재 릴리스의 알려진 문제</li>
+
+<li id="unique_4__li_09B2C0EAE2394CDEBF2DCE65E0196F93"><a name="unique_4__li_09B2C0EAE2394CDEBF2DCE65E0196F93"><!-- --></a>마지막 릴리스 후 해결된 문제</li>
+
+<li>제품이나 설명서의 최신 변경 내용</li>
+</ul>
+<p><em>설치 안내서</em></p>
+<a name="unique_4__ul_C03D50E1DEE14D40B8DABB1550E9CFE5"><!-- --></a><ul id="unique_4__ul_C03D50E1DEE14D40B8DABB1550E9CFE5">
+<li id="unique_4__li_6B92411C37D549B7AE2F2CE3F1FDC1D2"><a name="unique_4__li_6B92411C37D549B7AE2F2CE3F1FDC1D2"><!-- --></a>실제 환경에서 소프트웨어 준비, 설치 및 배포</li>
+</ul>
+</td>
+
+<td class="row-nocellborder" valign="top" width="NaN%" headers="d0e1273 "><p>제품 시작 및 실행</p>
+<p><em>제품 안내서</em> 및 <em>온라인 도움말</em></p>
+<a name="unique_4__ul_E5BD8374461A414FB9D3AF8BDF8CBBC6"><!-- --></a><ul id="unique_4__ul_E5BD8374461A414FB9D3AF8BDF8CBBC6"><li>사용자 환경에 맞게 소프트웨어 설정 및 사용자 지정</li>
+</ul>
+<p><em>온라인 도움말</em></p>
+<a name="unique_4__ul_DFB7A29FBDE248BE8DFB0570FC851AF9"><!-- --></a><ul id="unique_4__ul_DFB7A29FBDE248BE8DFB0570FC851AF9">
+<li id="unique_4__li_75153B8872054E9FB094F436FA244673"><a name="unique_4__li_75153B8872054E9FB094F436FA244673"><!-- --></a>ePolicy Orchestrator를 통해 제품 관리 및 배포</li>
+
+<li id="unique_4__li_CC50DFBE9A364159A4248BE8B8896A4D"><a name="unique_4__li_CC50DFBE9A364159A4248BE8B8896A4D"><!-- --></a>제품에 포함된 옵션 관련 세부 정보</li>
+</ul>
+</td>
+
+<td class="cellrowborder" valign="top" width="NaN%" headers="d0e1278 "><p>소프트웨어 유지 관리 </p>
+<p><em>온라인 도움말</em></p>
+<ul><li id="unique_4__li_FBD7F0E1DB5540FC83A1E23A14100B73"><a name="unique_4__li_FBD7F0E1DB5540FC83A1E23A14100B73"><!-- --></a>소프트웨어 유지 관리</li>
+
+<li id="unique_4__li_EFC63A1559434D32B6305A77249612C6"><a name="unique_4__li_EFC63A1559434D32B6305A77249612C6"><!-- --></a>참조 정보</li>
+
+<li id="unique_4__li_5866282FBAF44A659933CC2D682B666F"><a name="unique_4__li_5866282FBAF44A659933CC2D682B666F"><!-- --></a>제품 안내서에서 찾을 수 있는 모든 정보</li>
+</ul>
+<p><em>기술 자료</em>(<a href="https://knowledge.mcafee.com" target="_blank">knowledge.mcafee.com</a>)를 참조할 수 있습니다.</p>
+<a name="unique_4__ul_E4F4DE6CDD284EF0AFE92330434DD2BA"><!-- --></a><ul id="unique_4__ul_E4F4DE6CDD284EF0AFE92330434DD2BA">
+<li id="unique_4__li_1FDAEBD0861143B3A85DE33E0A7E7A02"><a name="unique_4__li_1FDAEBD0861143B3A85DE33E0A7E7A02"><!-- --></a>릴리스 정보 및 설명서</li>
+
+<li>추가 제품 정보</li>
+
+<li id="unique_4__li_0932E4B09B7A4CD1B7B8C7671071CAB1"><a name="unique_4__li_0932E4B09B7A4CD1B7B8C7671071CAB1"><!-- --></a><p>알려진 문제의 해결 방법</p>
+</li>
+</ul>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+</td></tr></table>
+</div>
+
+<div/>
+<div class="topiclevel1"><a name="unique_5"/>
+<h3 class="topictitle3"><span>McAfee</span> Enterprise 제품의 릴리스 정보 및 설명서 찾기</h3>
+
+<div><div class="section" id="unique_5__context_E6CB02CCD26B49F0906C0E46E0E08EA8"><a name="unique_5__context_E6CB02CCD26B49F0906C0E46E0E08EA8"><!-- --></a><p><span>McAfee</span> Enterprise 제품의 릴리스 정보와 기타 제품 설명서를 얻으려면 다음 단계를 따르십시오.</p>
+</div>
+
+<a name="unique_5__steps_EA35AEF189874421937F033655704EB9"><!-- --></a><ol id="unique_5__steps_EA35AEF189874421937F033655704EB9"><li><span><a href="https://knowledge.mcafee.com" target="_blank">knowledge.mcafee.com</a>으로 이동하여 <span class="uicontrol">유용한 링크</span> 아래의 <span class="uicontrol">제품 설명서</span>를 선택합니다.</span></li>
+
+<li id="unique_5__step_FED5CB126F814940A3B29F668E4D6862"><a name="unique_5__step_FED5CB126F814940A3B29F668E4D6862"><!-- --></a><span><span class="uicontrol">&lt;제품 이름&gt;</span> | <span class="uicontrol">&lt;제품 버전&gt;</span>을 선택한 후 문서 목록에서 필요한 설명서를 선택합니다.</span></li>
+</ol>
+</div>
+<div/>
+</div></div><div class="topiclevel1"><a name="unique_6"/>
+<h2 class="topictitle2">라이선스 인증</h2>
+</div><hr/><dita><topic xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="CMN_076IF0JN05Z" xml:lang="ko-kr">
+<title outputclass="t1">저작권</title>
+<body>
+<div class="copyright">
+<p><b outputclass="subheading">저작권</b></p>
+<p outputclass="p1">Copyright © 2010 McAfee, Inc. All Rights Reserved.</p>
+<p outputclass="p2">이 문서의 어떠한 부분도 McAfee, Inc. 또는 그 제공업체나 계열 회사의 명시적인 서명 승인 없이는 어떠한 형식이나 수단으로도 검색 시스템에 복제, 전송, 기록되거나 다른 언어로 번역될 수 없습니다.</p>
+<section>
+<title outputclass="t2">상표 인증</title>
+<p><b outputclass="subheading">상표 인증</b></p>
+<p outputclass="p3">AVERT, EPO, EPOLICY ORCHESTRATOR, FOUNDSTONE, GROUPSHIELD, INTRUSHIELD, LINUXSHIELD, 
+MAX (MCAFEE SECURITYALLIANCE EXCHANGE),
+MCAFEE, NETSHIELD, PORTALSHIELD, PREVENTSYS, SECURITYALLIANCE,
+SITEADVISOR, TOTAL PROTECTION, VIRUSSCAN, WEBSHIELD는 미국 및/또는 기타 국가에서 McAfee, Inc. 및/또는 자회사의 등록 상표 또는 상표입니다. McAfee 보안에 관련된 빨간색은 McAfee 브랜드 제품의 특징입니다. 여기에 있는 기타 모든 등록 및 미등록 상표는 각 소유주의 재산입니다.</p>
+</section>
+<section>
+<title outputclass="t3">사용권 정보</title>
+<p><b outputclass="subheading">사용권 정보</b></p>
+<p outputclass="t4"><b outputclass="subheading">사용권 계약서</b></p>
+<p outputclass="p4">모든 사용자에 대한 고지 사항: 사용자가 구입한 사용권에 대한 올바른 법적 계약서를 주의 깊게 읽으십시오. 정식 소프트웨어의 사용에 대한 일반 사항과 조건이 명시되어 있습니다. 구입한 사용권의 종류를 잘 모르겠으면, 영업부에 문의하시거나 기타 관련 사용권 허가서 또는 소프트웨어 포장에 포함되어 있는 구입 주문서 또는 구입의 일부로서 별도로 받은 사용권 허가서(책자, 제품 CD에 있는 파일, 소프트웨어 패키지를 다운로드한 웹 사이트에 있는 파일)를 참조하십시오. 여기서 설명하는 모든 조건에 동의하지 않으면 소프트웨어를 설치하지 마십시오. 이 경우, 이 제품을 MCAFEE 또는 구입처에 반환하면 전액 환불해 드립니다.</p>
+</section>
+</div>
+</body>
+</topic>
+</dita>
+</body>
+</html>

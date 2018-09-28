@@ -1,0 +1,7 @@
+os,server_ipaddress,ansible_ssh_user,ansible_ssh_pass,ansible_ssh_port,ansible_connection,host_key_checking,ansible_winrm_server_cert_validation,ansible_winrm_transport,disksize_required,
+windows,192.168.105.30,Administrator,Atos@010,5986,winrm,false,ignore,ssl,
+windows,192.168.105.32,Administrator,Atos@010,5986,winrm,false,ignore,ssl,
+linux,192.168.105.36,root,Atos@010,22,ssh,false,ignore,
+linux,12.12.12.11,a,a,a,a,a,a
+mac,12.12.12.14,a,a,a,a,a,a
+mac,12.12.12.16,a,a,a,a,a,a

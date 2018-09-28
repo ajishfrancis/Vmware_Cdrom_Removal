@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml-transitional.dtd">
+<html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href=""/>
+<title>VirusScan Enterprise 8.8.x Software</title></head><body>
+
+
+
+<style type="text/css">
+      
+        html, body, h5, h6, p, dl, dt, dd, div, blockquote, table, caption, pre.long, td, th , h2.sectiontitle, div.label {
+            font-size: 9pt;
+            line-height: 12pt;
+        }
+        
+        html, body, h5, h6, p, dl, dt, dd, div, blockquote, table, caption, pre.long, th, h2.sectiontitle, div.label {
+            vertical-align: bottom;
+        }
+        
+        td {
+            vertical-align: top;
+        }
+      
+          h2.topictitle2{
+            font-size: 18px;
+          }
+          
+          h3.topictitle3 {
+            margin-top: 20pt;
+            margin-bottom: 10pt;
+          }
+        
+      
+      
+      body {
+        font-family: verdana,arial,helvetica,sans-serif;
+      }    
+      
+      h1, h2, h3, h4, h5, h6, .label, #prodname {
+        color: #CC0033;
+        font-family: verdana,arial,helvetica,sans-serif;
+      }   
+      
+      h1.title {
+        line-height: 1.1em;
+        margin-top: 0pt;
+      }
+      
+      div.related div.label {
+        color: #000000;
+      }
+      
+       .label {
+           margin-top: 10pt;
+           font-weight: bold;
+       }
+       
+       dt.dlterm {
+          color: #CC0033;
+          font-weight: bold;
+       }
+       
+       ul, ol {
+           margin-bottom: 4pt!important;
+           margin-top: 4pt!important;
+       }
+       
+       .prereq .label {
+           /* We don't want the margin within the gray-shaded area; we want it outside */
+           margin-top: 0pt;
+       }
+       
+       .prereq {
+           padding: 5pt;
+           /* We don't want the margin within the gray-shaded area; we want it outside */
+           margin-top: 10pt;
+           margin-left: 15pt;
+           margin-right: 15pt;
+           border: 1pt solid #cc0033;
+       }
+       
+       
+       div.example {
+          padding: 0pt 5pt 0pt 5pt;
+          /* We don't want the margin within the gray-shaded area; we want it outside */
+          margin-top: 10pt;
+          margin-left: 15pt;
+          margin-right: 15pt;
+          border: 1pt solid black;
+       }
+       
+       .prereq p {
+          margin-top: 0pt;
+       }
+       
+       .prereq .last_p {
+          margin-bottom: 0pt; 
+       }
+       
+       td, th {
+          padding: 6pt;
+       }
+       
+       table.simpletablenoborder td, table.simpletablenoborder th {
+          padding: 6pt!important;
+       }
+       
+       th {
+          background: #e5e5e5;
+       }
+       
+       div.tablenoborder th {
+          background: #ffffff;
+       }
+       
+       table.note td, table.list table.note td, table.childlist table.note td {
+           padding: 5pt;
+       }
+       
+       table.note {
+          width: 75%;
+          margin-top: 6pt;
+          margin-bottom: 6pt;
+          padding-bottom: 2pt;
+       }
+       table table.note, table.list table table.note {
+          width: 100%;
+       }
+       table.list table.note {
+          width: 75%;
+       }
+       
+       .notelabel {
+          font-size: 9pt;
+          line-height: 12pt;
+          font-weight: bold;
+          color: #CC0033;
+          width: 20px;
+          text-align: left;
+       }
+       
+       .noteicon {
+           width: 20px;
+           text-align: center;
+       }
+       
+       .notetext {
+          padding-bottom: 8pt!important;
+       }
+       
+       .notetext, .notetext p {
+          background: #e5e5e5;
+          font-size: 8pt;
+          line-height: 10pt;
+          margin-top: 6pt;
+          margin-bottom: 0pt;
+          padding-bottom: 0pt;
+       }
+              
+       img {
+           vertical-align: text-bottom;
+       }
+       
+       
+       .copyright {
+           margin-top: 45pt;
+           font-size: 90%;
+       }
+       
+       .familylinks {
+           margin-top: 10pt;
+       }
+       
+       span.filepath, span.codeph {
+           font-family: monospace;
+       }
+       
+       
+       .endnotes {
+           margin-top: 10pt;
+           font-size: 90%;
+       }
+       
+       .table-footnotes {
+           font-size: 90%;
+           padding-right: 40pt;
+       }
+       
+       .footnote {
+           font-size: inherit;
+       }
+       
+       sup.footnote {
+           font-size: 90%;
+       }
+       
+       a.footnoteLink {
+          text-decoration: none;
+       }
+       
+       .how {
+           margin-top: 5pt;
+           margin-left: 15pt;
+           margin-right: 15pt;
+           text-decoration: none;
+           color: blue;
+       }
+       
+       div.figcap, div.tablecap {
+           margin-top: 5pt;
+           font-weight: bold;
+           color: #CC0033;
+       }
+           
+       h2 {
+          margin-bottom: 0.4em!important;
+       }
+       
+       h2.sectiontitle {
+          margin-bottom: -1em!important;
+       }
+       h2.sectiontitle + table, h2.sectiontitle + div.tableborder table, h2.sectiontitle + table.tableborder, h2.sectiontitle + a + table.tableborder {
+          margin-top: 1em;
+       }
+       
+       li table {
+           margin-top: 5pt;
+       }
+       
+       h1.topictitle1 {
+           margin-top: 5pt;
+       }
+       
+       table.list {
+          margin-top: 5px;
+          margin-bottom: 5px;
+       }
+       
+       table.list, table.note, table.list td, table.note td {
+          border: none!important;	
+       }
+       
+       table.top_align_list {
+          margin-top: -1.5pt!important;
+       }
+       table.top_align_list td.listlabel_first, table.top_align_list td.listcontent_first {
+          padding-top: 0pt!important;
+       }
+       
+       table.steps, table.childlist {
+          margin-top: 0px;
+       }
+       
+       .optiondef {
+          margin-top: 5px;
+          margin-bottom: 1px;
+       }
+       
+       table.list table.list {
+          margin-top: 8px;
+          margin-bottom: 0px;
+       }
+       
+       td.listlabel, td.listlabel_first, td.listlabel_subsequent, td.listcontent, td.listcontent_first, td.listcontent_subsequent {
+          padding-left: 0pt;
+          padding-right: 0pt;
+       }
+       
+       td.listlabel, td.listlabel_first, td.listlabel_subsequent {
+          font-weight: bold;
+          vertical-align: top;
+          width: .2in;
+          font-family: Arial Narrow;
+       }
+       
+       td.listlabel_subsequent, td.listcontent_subsequent {
+          padding-top: 0pt;
+       }
+       
+       /*tbody.listbullet td.listlabel_subsequent {
+         padding-top: 6pt;
+       }*/
+       
+       table.steps td.listlabel_first, table.steps td.listcontent_first {
+          padding-top: 0pt;
+       }
+       
+       td.listlabel, td.listcontent {
+          padding-top: 3pt;
+          padding-bottom: 0pt;
+       }
+       
+       .bullet {
+          font-size: 7pt;
+          line-height:10pt;
+          font-family: verdana,arial,helvetica,sans-serif;
+       }
+       
+       .disc {
+          font-size: 16pt;
+          line-height: 8pt;
+       }
+       
+       .copyright_t {
+          color: #CC0033;
+          font-weight: bold;
+          font-size: 8pt;
+          line-height: 9pt;
+       }
+       
+       .copyright_heading {
+          margin-top: 12pt;
+          margin-bottom: 0pt;
+       }
+       
+       .copyright_subheading {
+          margin-top: 6pt;
+          margin-bottom: 0pt;
+       }
+       
+       .copyright_p {
+          font-size: 7pt;
+          margin-top: 0pt;
+          line-height: 9pt;
+       }
+       
+       #prodname {
+          text-align: right;
+          margin-top: 5pt;
+          
+       }
+       
+       td p:first-child, td a:first-child + p {
+          margin-top: 0pt;
+       }
+       
+       tr.doubleListRow td.listcontent, tr.doubleListRow td.listcontent_first, tr.doubleListRow td.listcontent_subsequent  {
+          padding-right: 40pt;
+       }
+       
+       
+       table.footnoteTable {
+          margin-bottom: 2pt;
+       }
+       
+       table.footnoteTable td {
+          padding: 0pt;
+       }
+       
+       td.footnoteCallout {
+          width: 13pt;
+          vertical-align: top;
+          font-size: 8pt;
+       }
+       
+       td.footnoteText {
+          font-size: 7pt;
+          line-height: 8pt;
+       }
+       
+       div.p {
+          margin-top: 1em;
+          margin-bottom: 1em;
+       }
+       
+       div.draft-comment {
+          border: 1pt solid black;
+          color: #cc0033;
+          margin-top: 10pt;
+          margin-bottom: 10pt;
+       }
+       
+       pre.codeblock {
+          background: #e5e5e5;
+          margin-left: 4pt;
+          margin-right: 4pt;
+          padding: 5pt;
+          font-size: 8pt;
+          line-height: 9pt;
+       }
+       
+       
+       p + table.list, p + a + table.list, p + table.list td.listlabel_first, p + table.list td.listcontent_first, p + a + table.list td.listlabel_first, p + a + table.list td.listcontent_first {
+          margin-top: 0pt;
+          padding-top: 0pt;
+       }
+       
+       .stepresult {
+
+          margin-top: 1em;
+       }
+       
+       table.tableborder {
+          border: 1px solid black;
+       }   
+       
+       div.tableborder &gt; table, div.tableborder &gt; table &gt; tbody &gt; tr {
+          border: 1px solid black;
+       }     
+       
+       div.top-of-page {
+         margin-top: 2em;
+         margin-left: 20pt;
+       }
+       
+       div.cluster-links {
+         margin-top: 1em;
+         }
+         
+       .show_hide {
+         margin-left: 15px;
+         }
+         
+       .show_hide a{
+         text-decoration: none;
+         color: black;
+         font-weight: bold;
+         }
+         
+         .uicontrol { 
+            font-weight: bold; 
+            font-family: "Arial Narrow Bold", Arial, Helvetica, sans-serif; 
+            font-size: 10pt;
+         }
+         .wintitle, .uicontrol_apac {
+            font-weight: normal; 
+            font-family: verdana,arial, helvetica, sans-serif; 
+            font-size: 9pt;
+         }
+    </style>
+<h1>Release Notes </h1><h1 class="title">VirusScan Enterprise 8.8.x Software</h1><div class="maptoc"><table class="childlist"><tbody><tr><td class="listlabel"><span class="bullet">•</span></td><td class="listcontent"><a href="#unique_1">About this release</a></td></tr><tr><td class="listlabel"><span class="bullet">•</span></td><td class="listcontent"><a href="#unique_2">Find product documentation</a></td></tr></tbody></table></div><div class="topiclevel1"><a name="unique_1"><!----></a>
+  <h2 class="topictitle2">About this release</h2>
+ 
+   
+  <div class="body conbody"><p class="shortdesc"> 
+	 <span class="ph">This document contains important information about the current release. We strongly recommend that you read the entire document.</span> 
+  </p>
+
+	 <p class="p"> 
+		<b class="ph b">Build date</b> — February 22, 2016 
+	 </p>
+ 
+	 <p class="last_p"> For the latest information, including supported environments, release notes, and patch and hotfix releases, on 
+		<span class="ph"><span dir="ltr">McAfee<sup>®</sup></span> 
+		  <span dir="ltr">VirusScan<sup>®</sup></span> Enterprise</span>, see KnowledgeBase article 
+		<span class="ph"> 
+		  <a href="https://kc.mcafee.com/corporate/index?page=content&amp;id=KB51111" target="_blank">KB51111</a>. 
+		</span> 
+	 </p>
+ 
+	 </div>
+ 
+
+<div class="endnotes"/>
+</div><div class="topiclevel1"><a name="unique_2"><!----></a>
+  <h2 class="topictitle2">Find product documentation</h2>
+ 
+   
+   
+  <div class="body taskbody"><p class="shortdesc">On the 
+	 <span class="ph uicontrol uicontrol">ServicePortal</span>, you can find information about a released product, including product documentation, technical articles, and more. 
+  </p>
+ 
+	 <div class="label">Task</div><table class="list steps"><tbody class="ol steps" id="unique_2__GUID-9AA24C77-07E9-4D7B-9C58-EA87A4967F7D"> 
+		<tr><td class="listlabel_first">1</td><td class="listcontent_first"> 
+		  <span class="ph cmd">Go to the 
+			 <span class="ph uicontrol uicontrol">ServicePortal</span> at 
+			 <a href="https://support.mcafee.com" target="_blank">https://support.mcafee.com</a> and click the 
+			 <span class="ph uicontrol uicontrol">Knowledge Center</span> tab. 
+		  </span> 
+		</td></tr>
+ 
+		<tr><td class="listlabel_subsequent">2</td><td class="listcontent_subsequent"> 
+		  <span class="ph cmd">In the 
+			 <span class="ph uicontrol uicontrol">Knowledge Base</span> pane under 
+			 <span class="ph uicontrol uicontrol">Content Source</span>, click 
+			 <span class="ph uicontrol uicontrol">Product Documentation</span>. 
+		  </span> 
+		</td></tr>
+ 
+		<tr><td class="listlabel_subsequent">3</td><td class="listcontent_subsequent"> 
+		  <span class="ph cmd">Select a product and version, then click 
+			 <span class="ph uicontrol uicontrol">Search</span> to display a list of documents. 
+		  </span> 
+		</td></tr>
+ 
+	 </tbody></table>
+ 
+  </div>
+ 
+
+<div class="endnotes"/>
+</div><hr/><div><p class="copyright_p">Copyright © 2016 McAfee, Inc.
+<a href="http://www.intelsecurity.com" target="_blank">www.intelsecurity.com</a></p><p class="copyright_p">Intel and the Intel logo
+are trademarks/registered trademarks of Intel Corporation. McAfee and the
+McAfee logo are trademarks/registered trademarks of McAfee, Inc. Other names
+and brands may be claimed as the property of others.</p></div>
+</body>
+</html>

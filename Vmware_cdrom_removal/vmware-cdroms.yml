@@ -1,0 +1,7 @@
+---
+- name: Execution starts
+  hosts: localhost
+  connection: local
+  sudo: yes
+  roles:
+    - vmware_cdroms

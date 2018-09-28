@@ -1,0 +1,13 @@
+---
+
+#    - name: Find the number of drives present in Windows
+    - win_shell: gwmi Win32_DiskDrive | measure | Select Count | ft -AutoSize -HideTableHeaders
+      delegate_to: "{{ item }}"
+      with_items: '{{groups["windows"]}}'
+      register: windows_vm_disk_facts
+      when: ansible_os_family == "Windows"
+
+    - name: Compare the vmdks and drives present in VCenter and OS respectively
+      debug: msg="The result of comparison for {{ hostvars[inventory_hostname]['inventory_hostname'] }} is TRUE with drives and vmdks as {{windows_vm_disk_facts.stdout}} and {{vcenter_disk_facts.guest_disk_facts["No_of_Disk_present"]}} respectively"
+
+      when: ansible_os_family == "Windows" and vcenter_disk_facts.guest_disk_facts["No_of_Disk_present"] == windows_vm_disk_facts.stdout|int

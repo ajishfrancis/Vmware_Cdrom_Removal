@@ -1,0 +1,9 @@
+---
+cert_validation: ignore
+connection: ssh
+host_ip: 10.202.192.66
+hostname: linux
+password: Atos@010
+port: '22'
+timezone: 'null'
+username: root

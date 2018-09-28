@@ -1,0 +1,16 @@
+		: (mcavscv
+			:type (plugin)
+			:parameters (
+				:product (VSE)
+				:minimum_product (8.8)
+				:minimum_engine (5400)
+				:minimum_dat (1111)
+				:dat_age_max_days (30)
+				:begin_admin (admin)
+				:send_log (alert)
+				:mismatchmessage ("McAfee VirusScan Enterprise protection is not running or is out of date, please run AutoUpdate or enable the on-access scanner.")
+				:end (admin)
+			)
+		)
+
+

@@ -1,0 +1,10 @@
+---
+ - hosts: localhost
+   become: true
+   gather_facts: false
+   tasks:
+ - name: Include the Linux slave playbook
+   import_playbook: Linux_submaster_playbook.yml
+
+ - name: Include the Mail playbook
+   import_playbook: Mail.yml

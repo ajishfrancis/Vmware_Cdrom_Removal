@@ -1,0 +1,12 @@
+---
+
+#Setting pagefile size for C Drive
+
+init_size: 4096
+max_size: 4096
+
+#Setting pagefile size for Other  Drive
+
+other_size: 0
+other_size: 0
+

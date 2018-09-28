@@ -1,0 +1,30 @@
+---
+
+- block:
+    - name: Ensure user Administrator is present in Windows
+      win_user:
+          name: Administrator
+          state: query
+          groups:
+             - Users
+      register: userinfo
+    - debug: msg="{{userinfo}}"
+
+    - name: Setting facts
+      set_fact:
+           Userstate: "{{userinfo.state}}"
+        
+
+    - name: If User Administror does not exist Create it
+      win_user:
+         name: "{{name}}"
+         password: "{{password}}"
+         state: present
+         groups:
+            - Users
+ #     when: Userstate == "absent"
+           
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
+

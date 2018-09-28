@@ -1,0 +1,12 @@
+[server]
+
+10.202.192.65
+
+[server:vars]
+
+ansible_ssh_user=root
+ansible_ssh_pass=Atos@010
+ansible_ssh_port=5986
+ansible_connection=winrm
+host_key_checking=false
+#ansible_winrm_server_cert_validation: ignore

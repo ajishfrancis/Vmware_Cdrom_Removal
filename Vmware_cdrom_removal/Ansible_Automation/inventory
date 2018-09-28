@@ -1,0 +1,40 @@
+[linux]
+#I2C-DC-01	ansible_host=192.168.105.10
+I2C-Ansible-01	ansible_host=192.168.105.20
+I2C-Ansible-02	ansible_host=192.168.105.21
+#I2C-Ansible-03	ansible_host=192.168.105.22
+I2C-RHEL7-01	ansible_host=192.168.105.36
+I2C-RHEL6X64-01	ansible_host=192.168.105.37
+#I2C-RHEL5X64-01	ansible_host=192.168.105.38
+I2C-SLES11-01	ansible_host=192.168.105.39
+[linux:vars]
+ansible_ssh_user=root
+ansible_ssh_pass=Atos@010
+ansible_ssh_port=22
+ansible_connection=ssh
+host_key_checking=false
+
+[main]
+I2C-Ansible-01	ansible_host=192.168.105.20 
+[main:vars]
+ansible_ssh_user=root
+ansible_ssh_pass=Atos@010
+ansible_ssh_port=22
+ansible_connection=ssh
+host_key_checking=false
+
+
+[windows]
+I2C-W2K16-01	ansible_host=192.168.105.30
+#I2C-W2K12R2-01	ansible_host=192.168.105.31
+I2C-W2K12-01	ansible_host=192.168.105.32
+#I2C-W2K8R2-01	ansible_host=192.168.105.33
+#I2C-W2K8X64-01	ansible_host=192.168.105.34
+#I2C-W2K8X32-01	ansible_host=192.168.105.35
+[windows:vars]
+ansible_ssh_user=Administrator
+ansible_ssh_pass=Atos@010
+ansible_ssh_port=5986
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+ansible_winrm_transport=ssl

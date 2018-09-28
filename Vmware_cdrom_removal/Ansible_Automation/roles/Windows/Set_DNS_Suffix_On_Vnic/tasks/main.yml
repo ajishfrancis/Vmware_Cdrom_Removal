@@ -1,0 +1,17 @@
+---
+
+- block:
+
+  - name: Collect the facts of the windows systems
+    setup:
+    register: winfacts
+
+  - name: Configure domain name for the network in Windows
+    win_shell: Get-NetAdapter -Name "{{adapter_name}}" | Set-DnsClient -ConnectionSpecificSuffix "{{dns_suffix_name}}"
+    
+    when:  winfacts.ansible_facts.ansible_interfaces[item|int].connection_name is defined and  adapter_name ==  winfacts.ansible_facts.ansible_interfaces[item|int].connection_name
+    with_sequence: start=0 end="{{ winfacts.ansible_facts.ansible_interfaces | length |int -1}}" stride=1
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"

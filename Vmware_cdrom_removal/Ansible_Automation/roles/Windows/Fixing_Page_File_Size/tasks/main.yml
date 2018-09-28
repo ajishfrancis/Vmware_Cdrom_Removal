@@ -1,0 +1,22 @@
+---
+
+- block:
+   
+    - name: Fetching pagefile size Information
+      win_pagefile:
+          state: query
+      register: result
+    - debug: msg="{{result}}"
+
+   
+    - name: Fix PageFile Size For  C Drive
+      win_pagefile:
+          drive: C
+          initial_size: "{{init_size}}"
+          maximum_size: "{{max_size}}"
+          state: present
+ 
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"

@@ -1,0 +1,27 @@
+---
+- name: Sending an e-mail using Canopy Atos mail server
+  mail:
+    host: 10.72.169.25
+    port: 25
+    from: noreply@canopy-cloud.com
+   # username: sonalrnikam224@gmail.com
+   # password: gceksnowijuoxeok
+    to: 
+    - Amika <amika.rai@atos.net>
+    - Marc <marc.merkestein@atos.net>
+    - Thijs <thijs.vandongen@atos.net>
+    cc:
+    - Ajish Chovallur <ajish.chovallur@atos.net>
+    - Sonal Nikam <sonal.nikam@atos.net>
+    - Ishan <ishan.aggarwal@atos.net>
+    - Sonam <sonam.verma@atos.net>
+   
+
+    attach:
+    - /home/Ajish/mailreport.txt
+    subject: Ansible-report
+    body: Hi Marc/Amika,
+          This is the mail sent using canopy smtp from Anisble playbook.
+          System {{ ansible_hostname }} has been successfully provisioned.This mail is sent to check the smtp capability of ansible and to check wether it is configured properly with atos smtp server, cheers if you get the mail and the attachment
+  delegate_to: localhost
+

@@ -1,0 +1,9 @@
+---
+ - hosts: all
+   gather_facts: true
+   #strategy: free
+   roles:
+   - VMware/VCenter_Disk_Facts
+   - VMware/Linux_VM_Disk_Facts
+   - VMware/Windows_VM_Disk_Facts
+   - VMware/CPU_Hot_Add

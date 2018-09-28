@@ -1,0 +1,16 @@
+---
+# vars file for McAfeeUninstall
+#PRODUCT ID FOR McAfee VIRUSSCAN ENTERPRISE 8.8
+prod_id: '{CE15D1B6-19B6-4D4D-8F43-CF5D2C3356FF}'
+
+#INSTALLATION DIRECTORY PATH OF McAfee AGENT
+installation_directory: 'C:\Program Files (x86)\McAfee\Common Framework\'
+
+#DIRECTORY PATH
+directory_path: 'C:\Program Files (x86)\'
+
+#REGISTRY PATH
+registry_path: HKLM:\SOFTWARE\Wow6432Node\McAfee
+
+#DIRECTORY REMOVE PATH
+directory_remove_path: 'C:\Program Files (x86)\McAfee\'

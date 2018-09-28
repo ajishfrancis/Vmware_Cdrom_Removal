@@ -1,0 +1,6 @@
+hostname,host_ip,username,password,connection,port,cert_validation,timezone
+windows,10.202.192.65,root,Atos@010,winrm,5986,ignore,null
+windows,10.202.192.64,root,Atos@010,winrm,5986,ignore,null
+windows,10.202.192.63,root,Atos@010,winrm,5986,ignore,null
+linux,10.202.192.66,root,Atos@010,ssh,22,ignore,null
+demo_test,10.202.192.61,root,Atos@010,ssh,22,ignore,Asia/Tokyo

@@ -1,0 +1,18 @@
+---
+
+- block:
+    - name: Assign the timezone to local system
+      copy:
+        src:  /usr/share/zoneinfo/{{timezone_required}}
+        dest: /etc/localtime
+
+    - name: Create a  symbolic link for the new timezone
+      file:
+        src:  /usr/share/zoneinfo/{{timezone_required}} 
+        dest: /etc/localtime
+        state: link
+        force: yes
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
+   

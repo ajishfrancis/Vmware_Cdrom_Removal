@@ -1,0 +1,37 @@
+---
+- name: VSPHERE_GUEST | connect vNICs to correct network
+  connection: local
+  vmware_guest:
+
+    hostname: "{{ hostname }}"
+    username:  "{{ username }}"
+    password: "{{ password }}"
+    name: "{{ name }}"
+    #folder: "{{ vm_folder }}"
+    datacenter: Arlington
+    #cluster: "{{ vcenter_cluster }}"
+    validate_certs: false
+    #state: poweredon 
+    #switch_name: DVswitch01-A
+    
+    
+  register: vm_net_reconfigured
+- name: vsphere  
+  vsphere_guest:
+    vcenter_hostname: "{{hostname}}"
+    username:  "{{username}}"
+    password: "{{password}}"
+    validate_certs: False
+    guest: I2C-RHEL6X64-01 
+    state: reconfigured
+    esxi:
+        datacenter: Arlington
+    vm_nic:  
+      nic3:
+        type: vmxnet3
+        network: 014_bur
+        network_type: dvs
+        state: connected
+
+  register: vm_net_reconfigured  
+

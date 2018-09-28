@@ -1,0 +1,19 @@
+---
+
+- block:
+    - name: Check the Software Installation in Windows
+      win_shell: |
+          $software = "VMware Tools";
+          $installed = Get-WmiObject -Class Win32_Product | sort-object Name | select Name | where {$_.Name -match $software}
+          If(-Not $installed) 
+          {
+            Write-Host "'$software' is not installed.";
+          } 
+          else 
+          {
+            Write-Host "'$software' is installed."
+          }
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
+

@@ -1,0 +1,6 @@
+---
+# vars file for LinuxPartition
+total_volume_size: 40GB
+criteria_match: criteriasuccess
+criteria_not_match: criterianotsuccess
+

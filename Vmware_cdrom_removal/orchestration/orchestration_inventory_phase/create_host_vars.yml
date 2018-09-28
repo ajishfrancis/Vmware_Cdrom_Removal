@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: creating host_vars
+      shell: python convert_csv.py
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: building config
+      shell: ansible-playbook -i hosts create_host.yml
+

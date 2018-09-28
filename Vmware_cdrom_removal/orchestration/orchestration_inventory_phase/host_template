@@ -1,0 +1,12 @@
+[server]
+
+{{ host_ip }}
+
+[server:vars]
+
+ansible_ssh_user={{ username }}
+ansible_ssh_pass={{ password }}
+ansible_ssh_port={{ port }}
+ansible_connection={{ connection }}
+host_key_checking=false
+#ansible_winrm_server_cert_validation: {{ cert_validation }}

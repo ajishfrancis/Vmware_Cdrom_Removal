@@ -1,0 +1,13 @@
+---
+- name: configure the NIC's
+  nic_updated:
+      hostname: "{{fabearlhst0004.atosfabricit.local}}"
+      username: "{{Administrator}}"
+      validate_certs: false
+      password: "{{Atos@010}}"
+      port: "{{216}}"
+      name: "{{FED}}"
+      uuid: "{{4203ecbb-8a7b-e348-08ef-71f2284d9b26}}"
+      nic_state: "{{Enabled}}"
+      nic_number: "{{1}}"
+  register:  updated

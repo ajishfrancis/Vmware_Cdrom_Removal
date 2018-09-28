@@ -1,0 +1,21 @@
+---
+- name: find the cdrom connected
+  vsphere_guest:
+    validate_certs: False
+    vcenter_hostname: "{{hostname }}"
+    username:  "{{username }}"
+    password: "{{password }}"
+    validate_certs: False
+    guest: "{{name }}"
+    #uuid: "{{uuid}}"
+    state: reconfigured 
+    esxi:
+      datacenter: Arlington
+   # state: present
+    vm_hardware:
+       vm_cdrom:
+         type: none
+      
+
+  register: vm_cdroms_check
+

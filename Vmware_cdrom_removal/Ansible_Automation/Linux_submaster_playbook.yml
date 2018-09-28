@@ -1,0 +1,18 @@
+---
+ - hosts: all
+   become: true
+   gather_facts: false
+   strategy: free
+#   serial: 1
+   roles:
+   - Linux/Account_Validation
+#   - Linux/SSH_TO_LINUX
+#   - Linux/Volume_Partition_Info
+#   - Linux/Setting_Timezone
+#   - Linux/Platespin_removal
+#   - Linux/Host_File_Correction 
+#   - VMware/VCenter_Disk_Facts
+#   - VMware/Linux_VM_Disk_Facts 
+#   - VMware/CPU_Hot_Add
+ #- include: /home/Ansible_Automation/success_mail.yml
+     

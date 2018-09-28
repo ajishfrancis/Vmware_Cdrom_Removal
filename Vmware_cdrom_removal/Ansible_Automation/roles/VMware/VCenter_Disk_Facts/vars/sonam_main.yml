@@ -1,0 +1,6 @@
+---
+# Variable file for VCenter
+
+vcenter_hostname: 192.168.202.20
+vcenter_username: A637980@devdpc.local
+vcenter_password: P@ssw0rd01ATOS123!

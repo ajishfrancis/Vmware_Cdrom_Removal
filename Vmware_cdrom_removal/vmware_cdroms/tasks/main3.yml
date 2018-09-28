@@ -1,0 +1,29 @@
+---
+- name: Adding  NIC's to VM
+  vmware_guest:
+      hostname: "{{hostname}}"
+      username: "{{username}}"
+      validate_certs: false
+      password: "{{password}}"
+      port: "{{port}}"
+ #     name: I2C-W2K16-01
+      uuid: "{{uuid}}"
+      datacenter: ha-datacenter
+      name: "{{name}}"
+      folder: /Arlington/vm/Ansible/VMs/Windows
+    #    template: mytemplate
+      state: poweredon
+      networks:
+      - name: 1201_hosted2_build1 
+        ip: 10.10.10.10
+        netmask: 255.255.255.0
+        gateway: 10.10.10.1
+        device_type: e1000e
+        label: network5
+        dns_servers:
+        - 10.10.10.1
+        - 10.10.10.2
+        type: static
+        start_connected: True
+      wait_for_ip_address: False
+  delegate_to: localhost

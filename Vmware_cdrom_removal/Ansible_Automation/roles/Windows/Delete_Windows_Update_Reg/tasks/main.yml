@@ -1,0 +1,14 @@
+---
+
+- block:
+
+    - name: Delete a windows Update registry key from regedit
+      win_regedit:
+          path: "{{path}}"
+          state: absent
+      register: current_result
+    - debug: msg="{{current_result}}"
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"

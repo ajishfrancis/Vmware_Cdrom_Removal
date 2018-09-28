@@ -1,0 +1,52 @@
+---
+
+- block:
+    - name: Check the FQDN present
+      command: hostname -f 
+      register: try
+    - debug: msg="{{try.stdout}}"
+    - debug: var=ansible_default_ipv4.address
+ 
+    - name: Setting the facts 
+      set_fact:
+          try1: "{{try.stdout}}" 
+          fqdnname: "{{fqdnname}}"
+          ipaddress: "{{ipaddress}}"
+    - debug: msg="{{try1}}" 
+
+    - name: Check and correct IP and FQDN
+      replace:
+           path: /etc/hosts
+           regexp: "{{expression}}"
+           replace: "{{linetoadd}}"
+      when:  try1 != fqdnname or ansible_default_ipv4.address != ipaddress           
+
+    - name: Rename the hostname in the /etc/hostname file
+      replace:
+          path: /etc/hostname
+          regexp: "{{try1}}"
+          replace: "{{newhostname}}"
+      when:  try1 != fqdnname or ansible_default_ipv4.address != ipaddress           
+
+    - name: Restart the server
+      shell: sleep 3 && shutdown -r now
+      async: 1
+      poll: 0
+      become: yes
+      become_method: sudo
+    
+    - name: Waiting for sever to reboot
+      local_action: wait_for host="{{ inventory_hostname }}" delay=30 state=started port=22 connect_timeout=30 timeout=300
+
+    - name: Check the FQDN again
+      command: hostname -f 
+      register: newname
+    - debug: msg="{{newname.stdout}}"
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
+   
+
+
+ 

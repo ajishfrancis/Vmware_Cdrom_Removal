@@ -1,0 +1,23 @@
+---
+- name: find the cdrom connected
+  vmware_guest:
+    validate_certs: False
+    hostname: "{{hostname }}"
+    username:  "{{username }}"
+    password: "{{password }}"
+    validate_certs: False
+    name: "{{name }}"
+    uuid: "{{uuid}}"
+   # state: poweredon 
+    datacenter: Arlington
+    state: present
+    cdrom:
+     type: none
+    # name: mydvdrom
+    # state: present
+    customization:
+      autologon: yes
+    
+
+  register: vm_cdroms_check
+

@@ -1,0 +1,23 @@
+---
+- hosts: main
+  become: true
+  tasks:
+    - name: Check whether the vm is on or not. If the vm is off, make it on first.
+      vmware_guest:
+       hostname: 192.168.202.20
+       username: A637980@devdpc.local
+       password: P@ssw0rd01ATOS123!
+       name: I2C-OLD-01
+       validate_certs: no
+       state: poweredoff
+
+    - name: Change the version
+      sonam_version:
+       hostname: 192.168.202.20
+       username: A637980@devdpc.local
+       password: P@ssw0rd01ATOS123!
+       name: I2C-OLD-01
+       validate_certs: no
+       hardware:
+         version: 9      
+       

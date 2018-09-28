@@ -1,0 +1,22 @@
+---
+    - name: Start of Execution
+      mail:
+        host: 10.72.169.25
+        port: 25
+        from: noreply@canopy-cloud.com
+        to:
+        - Ajish Chovallur <ajish.chovallur@atos.net>
+#        cc:
+#        - Ajish Chovallur <ajish.chovallur@atos.net>
+        subject: Execution {{ role_name }} task for {{ hostvars[inventory_hostname]['inventory_hostname'] }} Started
+        body: |
+          Hi All,
+
+          The execution for {{ role_name }} of the server {{ hostvars[inventory_hostname]['inventory_hostname'] }} is in progress.
+
+
+          Thanks & Regards,
+          Ansible Automation Engineers.
+
+
+

@@ -1,0 +1,13 @@
+#!/bin/sh
+export IFS=","
+
+cat > test(/home/Ajish/orchestration/orchestration_inventory_phase/arlington.csv)
+cat test | while read ($1);
+done
+w=windows
+b=windows
+if [ $b == $1 ]
+then
+  echo "$2" > /home/a.txt
+
+fi

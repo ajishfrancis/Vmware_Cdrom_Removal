@@ -1,0 +1,2008 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml2-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href=""/>
+<title>Release Notes for McAfee® VirusScan® Enterprise 8.8</title>
+<style>
+<!-- Body Paragraphs-->
+body{
+    font-family: Verdana;
+    }
+p {
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 12pt;
+    margin-left: 1in;
+    margin-bottom: 8pt;
+    margin-top: 0pt;
+    }
+.p{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 12pt;
+    margin-left: 1in;
+    margin-bottom: 8pt;
+    margin-top: 0pt;
+    }
+div.section{
+        font-family: Verdana;
+        margin-left: 1in;
+        margin-bottom: 8pt;
+        }        
+.section p{
+        font-family: Verdana;
+        font-size: 9pt;
+        margin-left: 0in;
+        margin-bottom: 8pt;
+        margin-top: 0pt;
+        }
+.section div.p{
+    margin-left: 0in;
+    }
+ol li .p{
+    margin-top: 8pt;
+    }
+.p ol li p{
+    margin-top: 8pt;
+    }
+ul li .p{
+    margin-top: 8pt;
+    margin-left:  0in;
+    }
+.p ul li p{
+    margin-left: 0in;
+    }
+<!-- Unordered Lists -->
+ul{
+    list-style-type: disc;
+    }
+ul li{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 12pt;
+    margin-bottom: 8pt;
+    }
+ul li ul li{
+    margin-top: 8pt;
+    }
+div.maptoc{
+    margin-bottom: 8pt;
+    margin-left: .75in;
+    margin-top: 8pt;
+    }
+div.topiclevel1 li{
+    margin-left: .75in;
+    margin-bottom: 8pt;
+    }
+div.section ul li{
+    margin-bottom: 8pt;
+    margin-left: -.25in;
+    }
+div.p ul li{
+    margin-left: -.25in;
+    margin-bottom: 8pt;
+    }
+.section ul{
+    margin-top: 3pt;
+    }
+<!-- Ordered Lists -->
+ol{
+    list-style-type: decimal;
+    }
+ol li{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 12pt;
+    margin-bottom: 8pt;
+    }
+.p ol li{
+    margin-left: -.25in;
+    }
+.section ol li{
+    margin-bottom: 8pt;
+    margin-left: -8pt;
+    }
+li ol li{
+    margin-left: -.75pt;
+    margin-top: 8pt;
+    }
+div.p ol li{
+    margin-left: 0in;
+    margin-bottom: 11pt;
+    margin-top: -5pt;
+    }
+<!-- Chap/App Title -->
+h1{
+    font-family: Verdana;
+	font-size: 20pt;
+    font-weight: bold;
+    line-height: 22pt;
+    }
+h1{
+    font-family: Verdana;
+	color: #c41e3a; 
+    }
+<!-- Heading 1 -->
+.topictitle2{
+    font-size: 15pt;
+    font-weight: bold;
+    line-height: 16pt;
+    }
+div.topiclevel1 h2{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-weight: bold;
+    margin-bottom: 5pt;
+    }
+.topictitle2{
+    border-top: 1pt solid #c41e3a;
+    margin-top: 40pt;
+    }
+ <!-- Heading 2 -->
+.topictitle3{
+    font-size: 13pt;
+    font-weight: bold;
+    line-height: 14pt;
+    margin-top: 16pt;
+    }
+h3{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-weight: bold;
+    margin-left: 1in;
+    margin-bottom: 3pt;
+    margin-top: 16pt;
+    }
+    <!-- Heading 3 -->
+.topictitle4{
+    font-size: 11pt;
+    font-weight: bold;
+    line-height: 12pt;
+    margin-top: 14pt;
+    }
+h4{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-weight: bold;
+    margin-bottom: 3pt;
+    margin-left: 1in;
+    }
+<!-- Heading 4 -->
+.topictitle5{
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-top: 12pt;
+    }
+h5{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-weight: bold;
+    margin-left: 1in;
+    }
+    <!-- Heading 5 -->
+.topictitle6{
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 12pt;
+    margin-bottom: 3pt;
+    margin-top: 12pt;
+    }
+h6{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-weight: bold;
+    margin-left: 1in;
+    }
+    <!-- Subheading -->
+    .sectiontitle{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-top: 12pt;
+    }    
+    div.section h2{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-top: 12pt;
+    }
+    div.section h3{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-left: 0in;
+    margin-top: 12pt;
+    }
+    h2.sectiontitle{
+    font-family: Verdana;
+    }
+    .subheading{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    }
+    .p .subheading{
+    color: #c41e3a;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-left: 0in;
+    margin-top: 12pt;
+    }
+    p .subheading{
+    color: purple;
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10pt;
+    margin-bottom: 3pt;
+    margin-left: 0in;
+    margin-top: 12pt;
+    }
+<!-- Font Styles -->
+strong, b{
+    font-weight:bold;
+    }
+span.uicontrol {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 8pt;
+    }
+p sup{
+    font-size: 6pt;
+    line-height:12pt;
+    }
+.copyright b{
+    color: #c41e3a;
+    font-weight: bold;
+    }
+<!-- Tables -->
+table.tableborder th p{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 10pt
+    margin-bottom: 0pt;
+    margin-left: 0in;
+    }
+table.tableborder td p{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;    
+    margin-left: 0in;
+    }
+table.tableborder ul li{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 10pt;
+    margin-left: -.25in;
+    margin-bottom: 6pt;
+    }
+table.tableborder ol li{
+    font-family: Verdana;
+    font-size: 9pt;
+    line-height: 10pt;
+    margin-left: -.25in;
+    margin-bottom: 6pt;
+    }
+table.tableborder tbody{
+    margin-bottom: 8pt;
+    }
+table.tableborder td, table.tableborder th{
+    padding: 2pt;
+    border: 1pt solid black;
+    }
+table.tableborder th{
+    padding:2pt;
+    background-color:#f3f3f3;
+    }
+<!-- Simple Table -->
+table.simpletablenoborder{
+    margin-left: -2pt;
+    padding: 0pt;
+    }
+
+    
+div.tablenoborder{
+	margin: 8px 0px 0px 0px;
+	width: 100%;	
+    }
+div.tablenoborder table{
+	width: 100%;
+	font-size:9pt;
+	line-height: 10pt;
+	border: 1px solid #e0e0e0;	
+	border-right: 1px solid #e0e0e0;
+}
+div.tablenoborder caption{
+	font-size: 10px;
+	color: #333;
+	padding-bottom:3px;
+}
+div.tablenoborder thead{
+	background-color: #ededed;
+	border: 0px;
+}
+div.tablenoborder th{
+	border: 0px;
+	border-left: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	color:#4B4B4B;
+	font-weight: bold;
+	height:24px;
+	white-space:nowrap;
+	vertical-align:middle;
+	padding: 0px 15px 0px 8px;	
+}
+div.tablenoborder tr, div.tablenoborder tbody{
+	border:0px;
+}
+div.tablenoborder tr{
+	border-right:1px solid #e0e0e0;
+}
+div.tablenoborder td{
+	border:0px;
+	border-left: 1px solid #e0e0e0;
+	color:#4B4B4B;
+	height:8pt;
+	vertical-align:top;
+	padding: 10px;	
+}
+
+<!-- Note Label -->
+.note{
+    background-color:#f3f3f3;
+    }
+div.note{
+    background-color:#f3f3f3;
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 1in;
+    }
+div.note p{
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-left: 0in;
+    }
+ .section .note{
+    margin-bottom: 6pt;
+    margin-left: 0in;
+     margin-top: 8pt;
+     }
+span.notetitle{
+    font-weight:bold;
+    }
+<!-- Caution  Label -->
+.caution{
+    background-color:#f3f3f3;
+    }
+div.caution{
+    background-color:#f3f3f3;
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 1in;
+    }
+div.caution p {
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    margin-top: 4pt;
+    }
+.section .caution{
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    margin-top: 8pt;
+    }
+span.cautiontitle{
+    font-weight:bold;
+    }
+<!-- Tip Label  -->
+.tip{
+    background-color:#f3f3f3;
+    }
+div.tip{
+    background-color:#f3f3f3;
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 1in;
+    }
+div.tip p {
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    }
+.section .tip{
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    margin-top: 8pt;
+    }
+span.tiptitle{
+    font-weight:bold;
+    }
+    <!-- Warning Table -->
+.danger{
+    background-color:#f3f3f3;
+    }
+div.danger{
+    background-color:#f3f3f3;
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 1in;
+    }
+div.danger p {
+    font-family: Verdana;
+    font-size: 8pt;
+    line-height: 10pt;
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    }
+.section .danger{
+    margin-bottom: 6pt;
+    margin-left: 0in;
+    margin-top: 8pt;
+    }
+span.dangertitle{
+    font-weight:bold;
+    }
+</style>
+</head><body>
+<h1>Release Notes for McAfee® VirusScan® Enterprise 8.8</h1><div class="maptoc"><ul><li><a href="#unique_1">About this document</a></li><li><a href="#unique_2">New features</a></li><li><a href="#unique_3">Known issues</a></li><li><a href="#unique_4">Where to find <span>McAfee</span> enterprise product information</a></li><li><a href="#unique_6">License attributions</a></li></ul></div><div class="topiclevel1"><a name="unique_1"/> 
+	 <h2 class="topictitle2">About this document</h2>
+ 
+	 <div> 
+		<p>Thank you for using 
+		  <span>VirusScan Enterprise</span> software. This document contains important information
+		  about this release. We strongly recommend that you read the entire document. 
+		</p>
+ 
+		<div class="caution"><span class="cautiontitle">CAUTION:</span> We do not support automatic upgrading of a
+		  pre-release version of the software. To upgrade to a production release of the
+		  software, you must first uninstall the existing version of the software. 
+		</div>
+ 
+		<p>The 
+		  <span>VirusScan Enterprise 8.8</span>
+		  release uses the following:
+		</p>
+
+		<a name="unique_1__ul_FDAF8933190E422B8048EEC510258B2D"><!-- --></a><ul id="unique_1__ul_FDAF8933190E422B8048EEC510258B2D"> 
+		  <li id="unique_1__li_A5C08D6B1E79450A9DFAE6650C6340CE"><a name="unique_1__li_A5C08D6B1E79450A9DFAE6650C6340CE"><!-- --></a>Engine version: 5400.1158 
+		  </li>
+
+		  <li id="unique_1__li_6D53699C546B45559A2B197F9D94DF1F"><a name="unique_1__li_6D53699C546B45559A2B197F9D94DF1F"><!-- --></a>Detection definition
+			 (DAT): This version of 
+			 <span>VirusScan Enterprise</span> software automatically downloads the latest version of the
+			 DAT files when the software is installed. Previously the DAT files were
+			 included in the installation executable.
+		  </li>
+ 
+		</ul>
+
+		<div class="section" id="unique_1__section_2BFE6DCA6C144F73B8684D160BEC0FBE"><a name="unique_1__section_2BFE6DCA6C144F73B8684D160BEC0FBE"><!-- --></a> 
+		</div>
+ 
+	 </div>
+ 
+  </div><div class="topiclevel1"><a name="unique_2"/> 
+	 <h2 class="topictitle2">New features</h2>
+ 
+	 <div> 
+		<p>New and updated features in the 
+		  <span>VirusScan Enterprise 8.8</span>
+		  software release. 
+		</p>
+ 
+		<div class="section" id="unique_2__section_70904123B3DA4AF9930159F55FB75230"><a name="unique_2__section_70904123B3DA4AF9930159F55FB75230"><!-- --></a><h2 class="sectiontitle">Performance improvements</h2> 
+		   
+		  <div class="p"> This release reduces: 
+		  <a name="unique_2__ul_33395AE00EFE45E798470B92C122586E"><!-- --></a><ul id="unique_2__ul_33395AE00EFE45E798470B92C122586E"> 
+			 <li id="unique_2__li_0CC0E0DB82D64868825B80B606A324D9"><a name="unique_2__li_0CC0E0DB82D64868825B80B606A324D9"><!-- --></a>On-access scan time 
+			 </li>
+ 
+			 <li id="unique_2__li_6DE484C347614F558E86C80B6AD026FF"><a name="unique_2__li_6DE484C347614F558E86C80B6AD026FF"><!-- --></a>On-demand scan time 
+			 </li>
+ 
+			 <li id="unique_2__li_0DB8776903674E60993E165D67A075EC"><a name="unique_2__li_0DB8776903674E60993E165D67A075EC"><!-- --></a>System startup time 
+			 </li>
+ 
+		  </ul>
+ 
+		  </div>
+ 
+		  <p> Caches previously scanned files in a common location to reduce
+			 duplicate file scanning and improve performance. 
+		  </p>
+ 
+		</div>
+ 
+		<div class="section" id="unique_2__section_20700E7137F64F168E3BDC43B8224B9B"><a name="unique_2__section_20700E7137F64F168E3BDC43B8224B9B"><!-- --></a><h2 class="sectiontitle">Windows Office 2010 support</h2> 
+		   
+		  <p>This release supports all Windows Office 2010 applications,
+			 specifically adding on-access scanning of Microsoft Outlook 2010 email and
+			 attachment files. 
+		  </p>
+ 
+		</div>
+ 
+		<div class="section"><h2 class="sectiontitle">ScriptScan exclusion support</h2> 
+		   
+		  <p>ScriptScan exclusions, URLs of trusted scripts from known safe
+			 websites, can be easily added to reduce scanning and improve performance. This
+			 feature is available in 
+			 <span id="unique_2__ph_060B71A603CD4E67B6B3B9CEC08A0162"><a name="unique_2__ph_060B71A603CD4E67B6B3B9CEC08A0162"><!-- --></a>ePolicy Orchestrator</span> 4.0 or
+			 later, and in the 
+			 <span id="unique_2__ph_B93C3EBD0D6343FA9BB629A80DD33512"><a name="unique_2__ph_B93C3EBD0D6343FA9BB629A80DD33512"><!-- --></a>VirusScan Console</span>.
+			 Previously these excluded URLs required manual registry editing. 
+		  </p>
+ 
+		</div>
+ 
+	 </div>
+ 
+  <div/>
+</div><div class="topiclevel1"><a name="unique_3"/> 
+	 <h2 class="topictitle2">Known issues</h2>
+ 
+	 <div> 
+		<p>Known issues in this release of the software are described below. 
+		</p>
+ 
+		<a name="unique_3__ul_4B7678ED69174FB4968A01596A4C29D9"><!-- --></a><ul id="unique_3__ul_4B7678ED69174FB4968A01596A4C29D9"> 
+		  <li id="unique_3__li_895C4CEA7FFA4E5AB31AC0A5D688B5B7"><a name="unique_3__li_895C4CEA7FFA4E5AB31AC0A5D688B5B7"><!-- --></a><a href="#unique_3__VSE_088M904005Z" title="">Migrating policies and events in ePolicy Orchestrator</a>
+		  </li>
+ 
+		  <li id="unique_3__li_B945703B2BA84028AA476C8E46C34230"><a name="unique_3__li_B945703B2BA84028AA476C8E46C34230"><!-- --></a><a href="#unique_3__VSE_0847J0D0S5Z" title="">Supported platforms and products</a>
+		  </li>
+ 
+		  <li id="unique_3__li_E40F617B313F41E3A87E08F307B97AD7"><a name="unique_3__li_E40F617B313F41E3A87E08F307B97AD7"><!-- --></a><a href="#unique_3__VSE_083VB90N0HS" title="">Compatibility with other products</a>
+		  </li>
+ 
+		  <li id="unique_3__li_DA3687500BCD4797B06FDA1EB4B1519A"><a name="unique_3__li_DA3687500BCD4797B06FDA1EB4B1519A"><!-- --></a><a href="#unique_3__VSE_083VAJ0305Z" title="">Updating</a>
+		  </li>
+ 
+		  <li id="unique_3__li_7C4D59C89819435E8EE3D0A7611B9151"><a name="unique_3__li_7C4D59C89819435E8EE3D0A7611B9151"><!-- --></a><a href="#unique_3__VSE_0866A05J0YK" title="">Remote console</a>
+		  </li>
+ 
+		  <li id="unique_3__li_D954DF472B684DD1B965A612118E4917"><a name="unique_3__li_D954DF472B684DD1B965A612118E4917"><!-- --></a><a href="#unique_3__VSE_083VAK0L0Y4" title="">Miscellaneous</a>
+		  </li>
+ 
+		  <li id="unique_3__li_C98CFF0F40774A3A914B7887A2C09826"><a name="unique_3__li_C98CFF0F40774A3A914B7887A2C09826"><!-- --></a><a href="#unique_3__VSE_Documentation" title="">Documentation</a>
+			 
+		  </li>
+ 
+		</ul>
+ 
+		<div class="section" id="unique_3__VSE_088M904005Z"><a name="unique_3__VSE_088M904005Z"><!-- --></a><h2 class="sectiontitle">Migrating policies and events in ePolicy Orchestrator</h2> 
+		   
+		  <a name="unique_3__ul_49D3B25720BC402A87D34BA2282C77EC"><!-- --></a><ul id="unique_3__ul_49D3B25720BC402A87D34BA2282C77EC"> 
+			 <li id="unique_3__li_514FE37032FB457BA18E070AAE0C7674"><a name="unique_3__li_514FE37032FB457BA18E070AAE0C7674"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>The 
+				  <span id="unique_3__ph_12179AA3F3C34B55A4CA157C69ED4AFB"><a name="unique_3__ph_12179AA3F3C34B55A4CA157C69ED4AFB"><!-- --></a>ePolicy Orchestrator</span>
+				  Migration tool might fail to migrate the existing policies and tasks from an 
+				  <span id="unique_3__ph_B09F91E5F11B4858888D78279AE2DC44"><a name="unique_3__ph_B09F91E5F11B4858888D78279AE2DC44"><!-- --></a>ePolicy Orchestrator</span> Server
+				  that uses Windows NT authentication for 
+				  <span id="unique_3__ph_99066B1B9E894B70B623EAD00D37CD1A"><a name="unique_3__ph_99066B1B9E894B70B623EAD00D37CD1A"><!-- --></a>ePolicy Orchestrator</span>
+				  access. In some cases the 
+				  <span id="unique_3__ph_E572C2B4B05947EEBFFF1D9457B810E7"><a name="unique_3__ph_E572C2B4B05947EEBFFF1D9457B810E7"><!-- --></a>ePolicy Orchestrator</span>
+				  Migration tool needs to pass the SQL administrator password as a parameter for
+				  the 
+				  <span id="unique_3__ph_85363D7938C7498D97ED4FD423DB44D5"><a name="unique_3__ph_85363D7938C7498D97ED4FD423DB44D5"><!-- --></a>ePolicy Orchestrator</span>
+				  Migration tool. 
+				</p>
+ 
+				<p><strong>Workaround:</strong> Run the 
+				  <strong>ePOPolicyMigration.exe</strong> command from the command line, and
+				  add the 
+				  <strong>/PASSWORD</strong> switch and the SQL administrator password. For
+				  example, type: 
+				  <strong>[<em>path</em>]\epopolicymigration.exe
+					 /password=<em>sql_admin_password</em></strong> 
+				</p>
+ 
+				<p>For information about using the 
+				  <span id="unique_3__ph_1C5993CB575348E8A9F7E46680F0F6CC"><a name="unique_3__ph_1C5993CB575348E8A9F7E46680F0F6CC"><!-- --></a>ePolicy Orchestrator</span> 
+				  <strong>/PASSWORD</strong> switch at the command line see the 
+				  <em>McAfee VirusScan Enterprise 8.8.0 Installation Guide</em>.
+				  (611047) 
+				</p>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_0847J0D0S5Z"><a name="unique_3__VSE_0847J0D0S5Z"><!-- --></a><h2 class="sectiontitle">Supported platforms and products</h2> 
+		   
+		  <a name="unique_3__ul_1C2BD2A0D3BD4D16A0DBB33761A81AD7"><!-- --></a><ul id="unique_3__ul_1C2BD2A0D3BD4D16A0DBB33761A81AD7"> 
+			 <li id="unique_3__li_FFBD1621C4C8449587B57229CE103063"><a name="unique_3__li_FFBD1621C4C8449587B57229CE103063"><!-- --></a> This version of 
+				<span id="unique_3__ph_BD9DB4D214D94AE3B1E8D80C218B6CCB"><a name="unique_3__ph_BD9DB4D214D94AE3B1E8D80C218B6CCB"><!-- --></a>VirusScan Enterprise</span> supports Lotus
+				Notes version 7.0.x and 8.0.x – 8.5.1. See the<em> 
+				  <span id="unique_3__ph_2F2398048DD24C93ADCC228633631F03"><a name="unique_3__ph_2F2398048DD24C93ADCC228633631F03"><!-- --></a>VirusScan Enterprise 8.8</span>
+				  Installation Guide</em> for information about supported applications. 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_083VB90N0HS"><a name="unique_3__VSE_083VB90N0HS"><!-- --></a><h2 class="sectiontitle">Compatibility with other products</h2> 
+		   
+		  <a name="unique_3__ul_DB6C16A6E85C4630A9FAE384606A0DF7"><!-- --></a><ul id="unique_3__ul_DB6C16A6E85C4630A9FAE384606A0DF7"> 
+			 <li id="unique_3__li_566EF9EC28DC4BE4934839AAB837A2E7"><a name="unique_3__li_566EF9EC28DC4BE4934839AAB837A2E7"><!-- --></a><strong>Issue</strong> 
+				<p>After successfully upgrading from 
+				  <span id="unique_3__ph_5073FD5387B74ED9BD60FA4A6E85DF1F"><a name="unique_3__ph_5073FD5387B74ED9BD60FA4A6E85DF1F"><!-- --></a>VirusScan Enterprise 8.7</span>
+				  to 
+				  <span id="unique_3__ph_C2D94C9B84E64AB397DD17D4F114FB38"><a name="unique_3__ph_C2D94C9B84E64AB397DD17D4F114FB38"><!-- --></a>VirusScan Enterprise 8.8</span>
+				  the 
+				  <span id="unique_3__ph_4E70920A825E45DEA5CC77E64B7A39F7"><a name="unique_3__ph_4E70920A825E45DEA5CC77E64B7A39F7"><!-- --></a>ePolicy Orchestrator</span> 4.5
+				  System Details dialog box does not list 
+				  <span id="unique_3__ph_935D4C0E82574BBD97D35D4F1D623A6A"><a name="unique_3__ph_935D4C0E82574BBD97D35D4F1D623A6A"><!-- --></a>VirusScan Enterprise 8.8</span> in the
+				  
+				  <strong>Installed Products</strong> row. (620509) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_C02ED602A8A649C1942D7A9797DA6780"><a name="unique_3__li_C02ED602A8A649C1942D7A9797DA6780"><!-- --></a> 
+				<strong>Issue</strong> 
+				<div class="p">After installing 
+				  <span id="unique_3__ph_714B4A6E28644349926BD4831934F877"><a name="unique_3__ph_714B4A6E28644349926BD4831934F877"><!-- --></a>VirusScan Enterprise 8.8</span> on a
+				  system where 
+				  <span id="unique_3__ph_1FEB92212C7C4FE59FEA91743ECD4B55"><a name="unique_3__ph_1FEB92212C7C4FE59FEA91743ECD4B55"><!-- --></a>McAfee</span> Network Access
+				  Control 3.0 is installed, a failure might occur that prevents identification of
+				  
+				  <span id="unique_3__ph_EA92543F48704A5E9480101F06D79319"><a name="unique_3__ph_EA92543F48704A5E9480101F06D79319"><!-- --></a>McAfee</span> services. You
+				  might see these symptoms: 
+				<a name="unique_3__ul_DFF9978660B04FD0BAD9ED80EDFE8391"><!-- --></a><ul id="unique_3__ul_DFF9978660B04FD0BAD9ED80EDFE8391"> 
+				  <li id="unique_3__li_D74226A34F8E49C296E1290F940E36FC"><a name="unique_3__li_D74226A34F8E49C296E1290F940E36FC"><!-- --></a>A 
+					 <em>specified driver is invalid</em> message is logged if you
+					 perform an update task before restarting. 
+				  </li>
+ 
+				  <li id="unique_3__li_9AD5A32E0FBE43AB83374C8089C864F8"><a name="unique_3__li_9AD5A32E0FBE43AB83374C8089C864F8"><!-- --></a>A 
+					 <em>driver failed to load</em> message is logged for one or both
+					 products. 
+				  </li>
+ 
+				  <li id="unique_3__li_61033F2A534B4D8A851B254F970C5E1B"><a name="unique_3__li_61033F2A534B4D8A851B254F970C5E1B"><!-- --></a> The local system
+					 application event log contains event ID 5004. 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+				<p><strong>Workaround:</strong> Uninstall the failed product, restart the
+				  system, then reinstall the product. 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_B96FBDE4187043FA9977F80EBF9D7214"><a name="unique_3__li_B96FBDE4187043FA9977F80EBF9D7214"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>NVIDIA<span id="unique_3__ph_9205389A43A846B3818BD3C608B78484"><a name="unique_3__ph_9205389A43A846B3818BD3C608B78484"><!-- --></a><sup>®</sup></span> drivers might cause performance
+				  issues or system failure. 
+				  <span id="unique_3__ph_13C646C054A84FE4B79D1183A727ED14"><a name="unique_3__ph_13C646C054A84FE4B79D1183A727ED14"><!-- --></a>VirusScan Enterprise 8.8</span> might
+				  run at 100% CPU utilization or cause the system to fail. See KnowledgeBase
+				  articles KB51688 and KB52367 for more information about this issue. (388060) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_71B335A5AF5C43D89C179E750F56D534"><a name="unique_3__li_71B335A5AF5C43D89C179E750F56D534"><!-- --></a><strong>Issue</strong> 
+				<p>Running the 
+				  <span id="unique_3__ph_748F104D2C11451A8A965E0AFAFBC4FB"><a name="unique_3__ph_748F104D2C11451A8A965E0AFAFBC4FB"><!-- --></a>VirusScan Enterprise 8.8</span>
+				  installer fails to completely remove all the CA Anti-Virus version 7.0 and 7.1
+				  program directory structure and registry key entries. 
+				</p>
+ 
+				<p><strong>Workaround:</strong> None. This is an issue with the CA Anti-Virus
+				  uninstall program. (625703) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_6D2A646FF8464C5390DCCED2FD476F50"><a name="unique_3__li_6D2A646FF8464C5390DCCED2FD476F50"><!-- --></a><strong>Issue</strong> 
+				<p>On standalone client systems, 
+				  <span id="unique_3__ph_6753BFC0E99C4CB3B0038BA896DD71A4"><a name="unique_3__ph_6753BFC0E99C4CB3B0038BA896DD71A4"><!-- --></a>VirusScan Enterprise 8.8</span> fails
+				  to complete the initial product update with Panda Anti-Virus 2008 also
+				  installed. 
+				</p>
+ 
+				<p>When you run 
+				  <kbd class="userinput">VSESetup.exe</kbd> and selected the option 
+				  <strong>No</strong>, to not remove the Panda Anti-Virus 2008 software, at
+				  the last stage where 
+				  <span id="unique_3__ph_ABB59E5A933B446398AEC7B13728EF6B"><a name="unique_3__ph_ABB59E5A933B446398AEC7B13728EF6B"><!-- --></a>VirusScan Enterprise 8.8</span> would
+				  perform the product update, the update dialog box might hang for 20 minutes or
+				  more. 
+				</p>
+ 
+				<p><strong>Workaround:</strong> When you run VSESetup.exe, selected the
+				  option 
+				  <strong>Yes</strong> to remove the Panda Anti-Virus 2008 software. (626009)
+				  
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_6972F49B4EBA4425A44DC64362244E43"><a name="unique_3__li_6972F49B4EBA4425A44DC64362244E43"><!-- --></a><strong>Issue</strong> 
+				<p>On an 
+				  <span id="unique_3__ph_41358ABFC5BF43DA88E226D24C8FE382"><a name="unique_3__ph_41358ABFC5BF43DA88E226D24C8FE382"><!-- --></a>ePolicy Orchestrator</span>
+				  managed client, if you run 
+				  <kbd class="userinput">VSESetup.exe</kbd> and select the option to
+				  remove detected anti-virus software, some Symantec anti-virus files,
+				  directories, and registry keys are left on the system. 
+				</p>
+ 
+				<p><strong>Workaround:</strong> None. (629265) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_CEA3377405E2483F9A71027E697058F1"><a name="unique_3__li_CEA3377405E2483F9A71027E697058F1"><!-- --></a><strong>Issue</strong> 
+				<p>Upgrading from VirusScan Enterprise 8.7i to 
+				  <span>VirusScan Enterprise 8.8</span>
+				  via 
+				  <span>ePolicy Orchestrator</span>
+				  might cause the MSI installer (<kbd class="userinput">msiexec.exe</kbd>) to trigger
+				  the Access Protection rule 
+				  <em>Common Standard Protection: Prevent termination of McAfee
+					 processes</em>. 
+				</p>
+ 
+				<p><strong>Workaround:</strong> None. This does not affect the installation
+				  and can be ignored. (635226) 
+				</p>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_083VAJ0305Z"><a name="unique_3__VSE_083VAJ0305Z"><!-- --></a><h2 class="sectiontitle">Updating</h2> 
+		   
+		  <a name="unique_3__ul_A9C1AF6BD5444EB6B6359AAF8DC4D608"><!-- --></a><ul id="unique_3__ul_A9C1AF6BD5444EB6B6359AAF8DC4D608"> 
+			 <li id="unique_3__li_BEFB1A34D5D84CBA83319E6E4AB80842"><a name="unique_3__li_BEFB1A34D5D84CBA83319E6E4AB80842"><!-- --></a> 
+				<strong>Issue</strong> 
+				<div class="p">The update log might report an “Update failed” and not indicate
+				  any other error. The update function for patches, DATs, and engines requires
+				  enough free space and memory to expand the upgrade packages. You must have the
+				  following minimum space requirements for a successful update: 
+				<a name="unique_3__ul_FD314580D23D4F44B59902963716FA5E"><!-- --></a><ul id="unique_3__ul_FD314580D23D4F44B59902963716FA5E"> 
+				  <li id="unique_3__li_410066D5A475498BA8051F9E6BF8D3A3"><a name="unique_3__li_410066D5A475498BA8051F9E6BF8D3A3"><!-- --></a>125MB of free hard
+					 disk space 
+				  </li>
+ 
+				  <li id="unique_3__li_CBD7E582045448429D69C08DB132FAF2"><a name="unique_3__li_CBD7E582045448429D69C08DB132FAF2"><!-- --></a>250MB of total free
+					 hard disk and memory space 
+					 <div class="note"><span class="notetitle">NOTE:</span> Windows virtual memory can also be used to create
+						additional memory space, but that total must equal 250MB of 
+						<em>free</em> space. 
+					 </div>
+ 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+				<p>This hard disk and memory requirement is particularly important
+				  for embedded and virtual systems where running the minimum system requirements
+				  is often the case. (625749) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_66B0D882C17846B492B9B62A83D077CF"><a name="unique_3__li_66B0D882C17846B492B9B62A83D077CF"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>Failure to access the repository is not logged in the 
+				  <span id="unique_3__ph_6DCBDEDE93B44F10A415F484547AC400"><a name="unique_3__ph_6DCBDEDE93B44F10A415F484547AC400"><!-- --></a>VirusScan Enterprise 8.8</span>
+				  update log, but is logged in the 
+				  <span id="unique_3__ph_2EF5899FE0AC49DCBAF3879C1B93B706"><a name="unique_3__ph_2EF5899FE0AC49DCBAF3879C1B93B706"><!-- --></a>McAfee</span> Agent log. The
+				  default location of the 
+				  <span id="unique_3__ph_3446C450F6B647089EC8AD8E60CA7D3A"><a name="unique_3__ph_3446C450F6B647089EC8AD8E60CA7D3A"><!-- --></a>McAfee</span> Agent log is: 
+				  <span class="filepath">&lt;drive&gt;:\Documents and Settings\All
+					 Users\Application Data\McAfee\Common Framework\mcscript.log</span>.
+				  (384749) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_3ACC3BB5D66C445AB0E3344B91F99357"><a name="unique_3__li_3ACC3BB5D66C445AB0E3344B91F99357"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>Silent update tasks performed from the command line still
+				  display the progress dialog box. The installation completes successfully, but
+				  the 
+				  <strong>Update in progress</strong> dialog box appears when you run 
+				  <kbd class="userinput">setup.exe /q RUNAUTOUPDATESILENTLY=TRUE</kbd>
+				  from the command line. (399265) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_917A620B31FB4558AE63F3E268FCC265"><a name="unique_3__li_917A620B31FB4558AE63F3E268FCC265"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>When you run the command 
+				  <kbd class="userinput">setup.exe CMASOURCEDIR="&lt;drive&gt;:\Documents and
+					 Settings\&lt;username&gt;\Desktop\"</kbd> from the command line to
+				  install the product and import the Sitelist.xml file from the Desktop, the
+				  installation successfully completes, but fails to import the Sitelist.xml file.
+				  
+				</p>
+ 
+				<p><strong>Workaround:</strong> Use a Sitelist.xml file that was created by 
+				  <span id="unique_3__ph_369D14F0098B42C1A30AA0345EA51B41"><a name="unique_3__ph_369D14F0098B42C1A30AA0345EA51B41"><!-- --></a>ePolicy Orchestrator</span> agent 4.0. If the
+				  
+				  <span id="unique_3__ph_FBC135FF185747A888140A7087847B8E"><a name="unique_3__ph_FBC135FF185747A888140A7087847B8E"><!-- --></a>McAfee</span> Agent 4.0
+				  installation 
+				  <em>upgraded</em> a previous installation of 
+				  <span id="unique_3__ph_888824D2FBCA403782C252C0C64146E0"><a name="unique_3__ph_888824D2FBCA403782C252C0C64146E0"><!-- --></a>ePolicy Orchestrator</span> agent 
+				  <span id="unique_3__ph_F8A1028FF1B2415C81F71FA7BE13A6E6"><a name="unique_3__ph_F8A1028FF1B2415C81F71FA7BE13A6E6"><!-- --></a>3.6.1</span>, it produces a
+				  correct Sitelist.xml file that can be imported. (419467) 
+				</p>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_0866A05J0YK"><a name="unique_3__VSE_0866A05J0YK"><!-- --></a><h2 class="sectiontitle">Remote console</h2> 
+		   
+		  <a name="unique_3__ul_C581DE2D67CC47A8A7DD5D84BE06D474"><!-- --></a><ul id="unique_3__ul_C581DE2D67CC47A8A7DD5D84BE06D474"> 
+			 <li id="unique_3__li_8496A8801305460B98CC74FD7FFE365D"><a name="unique_3__li_8496A8801305460B98CC74FD7FFE365D"><!-- --></a><strong>Issue</strong> 
+				<p>When using the Remote Console feature to connect to Windows
+				  Vista systems or later, you are unable to open Access Protection, Buffer
+				  Overflow, and Quarantine Manager dialog boxes for the remote systems and no
+				  error appears. This is because the Windows Vista and later systems do not
+				  automatically start the Remote Registry service required by the Remote Console
+				  feature. 
+				</p>
+ 
+				<strong>Workaround:</strong> Before starting the Remote Console feature,
+				manually start the Remote Registry service on the remote system using the
+				following: 
+				<a name="unique_3__ul_AC9E6DA6F71E4994A59DA81BE37F3116"><!-- --></a><ul id="unique_3__ul_AC9E6DA6F71E4994A59DA81BE37F3116"> 
+				  <li id="unique_3__li_67D6B385F37F4C5FB42BD03C3F66812A"><a name="unique_3__li_67D6B385F37F4C5FB42BD03C3F66812A"><!-- --></a>Click 
+					 <strong>Start | Run</strong> and type 
+					 <kbd class="userinput">services.msc</kbd>. The Services dialog box
+					 appears. 
+				  </li>
+ 
+				  <li id="unique_3__li_C70EE8A1D1564CC3AEC1150E407F2982"><a name="unique_3__li_C70EE8A1D1564CC3AEC1150E407F2982"><!-- --></a>Right-click 
+					 <strong>Remote Registry</strong>, in the 
+					 <strong>Services (Local) | Name</strong> column, and click 
+					 <strong>Start</strong>. 
+				  </li>
+ 
+				</ul>
+(581439) 
+			 </li>
+ 
+			 <li id="unique_3__li_6810F988930449E9864CA5AC10A09C96"><a name="unique_3__li_6810F988930449E9864CA5AC10A09C96"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>When using the Remote Console feature to open 
+				  <strong>Access Protection</strong> properties on a system with Windows
+				  Server 2008, it might take several minute to open the connection. (392825) 
+				</p>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_083VAK0L0Y4"><a name="unique_3__VSE_083VAK0L0Y4"><!-- --></a><h2 class="sectiontitle">Miscellaneous</h2> 
+		   
+		  <a name="unique_3__ul_8C1A38A9D7074CAA83D1A325BBE9E070"><!-- --></a><ul id="unique_3__ul_8C1A38A9D7074CAA83D1A325BBE9E070"> 
+			 <li id="unique_3__li_80A659E8F0064928B167F65B74403058"><a name="unique_3__li_80A659E8F0064928B167F65B74403058"><!-- --></a><strong>Issue</strong> 
+				<div class="p">Buffer overflow protection appears disabled in the console when
+				  you restart the mcshield.exe service from the command line. For example, if you
+				  disable access protection and on-access scanning then, from the command line,
+				  stop and restart the mcshield service the Buffer Overflow Protection task
+				  appears disabled in the console. 
+				  <div class="note"><span class="notetitle">NOTE:</span> Buffer overflow protection is actually enabled and
+					 functioning correctly. 
+				  </div>
+ 
+				</div>
+ 
+				<p><strong>Workaround:</strong> Use these steps to restart the McAfee Task
+				  Manager service and reset the appearance of the Buffer Overflow Protection task
+				  status: 
+				</p>
+ 
+				<ol> 
+				  <li>Close the 
+					 <span id="unique_3__ph_036F469754E44E829CAAA5CC7ED925BB"><a name="unique_3__ph_036F469754E44E829CAAA5CC7ED925BB"><!-- --></a>VirusScan Enterprise 8.8</span>
+					 console. 
+				  </li>
+ 
+				  <li>Click 
+					 <span class="uicontrol">Programs | Administrative tools | Component
+						Services</span> to open the Component Service dialog box. 
+				  </li>
+ 
+				  <li>In the Services list, select the McAfee Task Manager and
+					 click 
+					 <span class="uicontrol">Restart</span>. 
+				  </li>
+ 
+				</ol>
+ 
+				<p>When you reopen the 
+				  <span id="unique_3__ph_E0FAD2BD118E425382F02D8B42D4027A"><a name="unique_3__ph_E0FAD2BD118E425382F02D8B42D4027A"><!-- --></a>VirusScan Enterprise 8.8</span>
+				  console, the Buffer Overflow Protection status appears enabled. (638390) 
+				</p>
+ 
+			 </li>
+ 
+			 <li><strong>Issue</strong> 
+				<p>When you try to move an infected file from one folder to
+				  another, within the same volume, the configured actions for "When a threat is
+				  found" are not performed on the source file, but the move is prevented. This is
+				  expected behavior for 
+				  <span id="unique_3__ph_31B3F2115D1E47FA9226FB5A1DF5DA5D"><a name="unique_3__ph_31B3F2115D1E47FA9226FB5A1DF5DA5D"><!-- --></a>VirusScan Enterprise 8.8</span>. For
+				  detailed information, see KnowledgeBase article KB70468. (633871) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_F20158D17D2147F497DB5D3E72DFF34C"><a name="unique_3__li_F20158D17D2147F497DB5D3E72DFF34C"><!-- --></a><strong>Issue</strong> 
+				<p>If you run an on-demand scan from Microsoft Outlook 2010 and an
+				  email with malware is detected in the body of a message, the Junk E-mail Filter
+				  moves the message to the Junk E-mail folder. This is not expected behavior. The
+				  infected message should have been moved to the Quarantine folder. 
+				</p>
+ 
+				<p><strong>Workaround:</strong> None. This is caused by the Junk E-mail
+				  Filter in Microsoft Outlook 2010. (631700) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_08F03CFA3F724956B53D0657D2A36F98"><a name="unique_3__li_08F03CFA3F724956B53D0657D2A36F98"><!-- --></a><strong>Issue</strong> 
+				<p>When you run the CheckPoint pireg.exe utility the following
+				  error message appears: 
+				</p>
+ 
+				<p><tt class="sysout">mcavscv.dll does not exist</tt> 
+				</p>
+ 
+				<p><strong>Workaround:</strong> To stop this error from appearing, install
+				  the Microsoft Visual C++ 2008 Redistributable Package. (629324) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_034B06125BA141599E35DF29B95218CC"><a name="unique_3__li_034B06125BA141599E35DF29B95218CC"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p> In the User Account Control (UAC) window prompt if you make
+				  certain setting changes and click 
+				  <strong>No</strong> the changes are still made. This issue only affects the
+				  following systems using Microsoft Outlook 2010: 
+				</p>
+ 
+				<div class="p"> 
+				<a name="unique_3__ul_5875024D10A848DF93DAAE362FBC683B"><!-- --></a><ul id="unique_3__ul_5875024D10A848DF93DAAE362FBC683B"> 
+				  <li id="unique_3__li_E1FFC98E45D94A50B5DBF21A8CD11C4D"><a name="unique_3__li_E1FFC98E45D94A50B5DBF21A8CD11C4D"><!-- --></a>Microsoft Windows 7
+					 or Microsoft Windows Server 2008 (32-bit or 64-bit) systems 
+				  </li>
+ 
+				  <li id="unique_3__li_19065F3159804501BE64ABF913006D1A"><a name="unique_3__li_19065F3159804501BE64ABF913006D1A"><!-- --></a>Systems with UAC
+					 enabled 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+				<p>Specifically, in these environments: 
+				</p>
+ 
+				<div class="p"> 
+				<a name="unique_3__ol_BD47DC3628C24F30B88E145E670DC97C"><!-- --></a><ol id="unique_3__ol_BD47DC3628C24F30B88E145E670DC97C"> 
+				  <li id="unique_3__li_413F91509A2C4B89944DC0D5309434E8"><a name="unique_3__li_413F91509A2C4B89944DC0D5309434E8"><!-- --></a>If you open the 
+					 <strong>On-Demand Email Scan properties</strong> from Microsoft Outlook
+					 2010, change the 
+					 <strong>Reports</strong> tab settings from the default to any other
+					 setting, for example enable 
+					 <strong>Session settings</strong>, and click 
+					 <strong>Apply</strong> or 
+					 <strong>OK</strong>. 
+				  </li>
+ 
+				  <li id="unique_3__li_294884F7F81B41DEB3265B00334C014A"><a name="unique_3__li_294884F7F81B41DEB3265B00334C014A"><!-- --></a>When the Windows UAC
+					 window prompts you, 
+					 <tt class="sysout">Do you want to allow the following program to
+						make changes to this computer?</tt>, even if you click 
+					 <strong>No</strong>, to disregard the change, the change is made. 
+				  </li>
+ 
+				</ol>
+ 
+				</div>
+ 
+				<p><strong>Workaround:</strong> None. This is a problem with the Windows UAC
+				  and there is no workaround. (627058) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_0543113198784A6CA0147709008A254D"><a name="unique_3__li_0543113198784A6CA0147709008A254D"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>Disabling on-access scanning does not disable ScriptScan. With 
+				  <span id="unique_3__ph_8D1B4604E16542FE9CB539E3FF5E1D48"><a name="unique_3__ph_8D1B4604E16542FE9CB539E3FF5E1D48"><!-- --></a>VirusScan Enterprise 8.7</span>
+				  and earlier, if you disabled on-access scanning it would also disable the
+				  ScriptScan feature. With 
+				  <span id="unique_3__ph_DA9A5FE0DA8E47A79BB8604C5BC282F7"><a name="unique_3__ph_DA9A5FE0DA8E47A79BB8604C5BC282F7"><!-- --></a>VirusScan Enterprise 8.8</span>
+				  if you disable on-access scanning ScriptScan continues to run. 
+				</p>
+ 
+				<div class="p"><strong>Workaround:</strong> Use one of these user interfaces to disable
+				  the 
+				  <span id="unique_3__ph_2083F6DF747542CD8E341459F33DE13F"><a name="unique_3__ph_2083F6DF747542CD8E341459F33DE13F"><!-- --></a>VirusScan Enterprise 8.8</span>
+				  ScriptScan feature: 
+				<a name="unique_3__ul_BB01B50D8D8E4B0D92FFFC439F8D3401"><!-- --></a><ul id="unique_3__ul_BB01B50D8D8E4B0D92FFFC439F8D3401"> 
+				  <li id="unique_3__li_DD02B8A8B3194FEB8A62F212999DAC63"><a name="unique_3__li_DD02B8A8B3194FEB8A62F212999DAC63"><!-- --></a><strong><span id="unique_3__ph_2585929D25C74695B148D082F2118C41"><a name="unique_3__ph_2585929D25C74695B148D082F2118C41"><!-- --></a>ePolicy Orchestrator 4.5 or
+				4.6</span></strong>
+					 
+					 <div class="p"> 
+					 <a name="unique_3__ol_A6C97FA0C91840F3A73934F930A5F8AA"><!-- --></a><ol id="unique_3__ol_A6C97FA0C91840F3A73934F930A5F8AA"> 
+						<li id="unique_3__li_E24A02521DDD45038B4D2BAC134559B5"><a name="unique_3__li_E24A02521DDD45038B4D2BAC134559B5"><!-- --></a>Click 
+						  <strong>Menu | Policy | Policy Catalog</strong>, then from the
+						  Product list select 
+						  <strong>VirusScan Enterprise 8.8.0</strong>. The Category list
+						  displays the policy categories for VirusScan Enterprise 8.8.0. 
+						</li>
+ 
+						<li id="unique_3__li_AEC6C2AA945B4F69A7244B0755EDDD1B"><a name="unique_3__li_AEC6C2AA945B4F69A7244B0755EDDD1B"><!-- --></a>From the
+						  Category list, select the 
+						  <strong>On-Access General Policies</strong> and from the Actions
+						  column, click 
+						  <strong>Edit Setting</strong> to open the policy configuration page. 
+						</li>
+ 
+						<li id="unique_3__li_743EF1FBF6C84BEA8C875D26D1E87EA0"><a name="unique_3__li_743EF1FBF6C84BEA8C875D26D1E87EA0"><!-- --></a>From the
+						  Settings for list, select 
+						  <strong>Workstation</strong> or 
+						  <strong>Server</strong>. 
+						</li>
+ 
+						<li id="unique_3__li_F2EF48FEF8F9425A9245377F8B12BB4B"><a name="unique_3__li_F2EF48FEF8F9425A9245377F8B12BB4B"><!-- --></a>From the
+						  On-Access General Policies page, click the 
+						  <strong>ScriptScan</strong> tab. 
+						</li>
+ 
+						<li id="unique_3__li_064F8123BD5C4E4BA54C81DFC4FB5864"><a name="unique_3__li_064F8123BD5C4E4BA54C81DFC4FB5864"><!-- --></a>Deselect the 
+						  <strong>Enable scanning of scripts</strong> checkbox. 
+						</li>
+ 
+						<li id="unique_3__li_E3BC0791D46E42DBB68B99A4A47477AC"><a name="unique_3__li_E3BC0791D46E42DBB68B99A4A47477AC"><!-- --></a>Click 
+						  <strong>Save</strong> to capture the configuration change. 
+						</li>
+ 
+					 </ol>
+ 
+					 </div>
+ 
+				  </li>
+ 
+				  <li id="unique_3__li_2E5D5462B1C94F41A555EC3E0DF54CBE"><a name="unique_3__li_2E5D5462B1C94F41A555EC3E0DF54CBE"><!-- --></a><strong><span id="unique_3__ph_CD54D5BEFC274D638794D0480F7EC75B"><a name="unique_3__ph_CD54D5BEFC274D638794D0480F7EC75B"><!-- --></a>ePolicy Orchestrator
+				4.0</span></strong>
+					 
+					 <div class="p"> 
+					 <a name="unique_3__ol_942E871F4F6B4542858CF3AAEFF0E0E6"><!-- --></a><ol id="unique_3__ol_942E871F4F6B4542858CF3AAEFF0E0E6"> 
+						<li id="unique_3__li_ED298B733C834BB1BD265A812626293B"><a name="unique_3__li_ED298B733C834BB1BD265A812626293B"><!-- --></a>Click 
+						  <strong>Systems | Policy Catalog</strong>, then from the Product list
+						  select 
+						  <strong>VirusScan Enterprise 8.8.0</strong>. The Category list
+						  displays the policy categories for VirusScan Enterprise 8.8.0. 
+						</li>
+ 
+						<li id="unique_3__li_9149B6C735B748BF9FF5F0D3A1B9AD69"><a name="unique_3__li_9149B6C735B748BF9FF5F0D3A1B9AD69"><!-- --></a>From the
+						  Category list, select the 
+						  <strong>On-Access General Policies</strong> and from the Actions
+						  column, click 
+						  <strong>Edit Setting</strong> to open the policy configuration page. 
+						</li>
+ 
+						<li id="unique_3__li_2C934B8943604598865D52D1EA335C38"><a name="unique_3__li_2C934B8943604598865D52D1EA335C38"><!-- --></a>From the
+						  Settings for list, select 
+						  <strong>Workstation</strong> or 
+						  <strong>Server</strong>. 
+						</li>
+ 
+						<li id="unique_3__li_8BB40E83FF724988B47680A47963753B"><a name="unique_3__li_8BB40E83FF724988B47680A47963753B"><!-- --></a>From the
+						  On-Access General Policies page, click the 
+						  <strong>ScriptScan</strong> tab. 
+						</li>
+ 
+						<li id="unique_3__li_CA5B4B4076BF4F31B4957831107ACA60"><a name="unique_3__li_CA5B4B4076BF4F31B4957831107ACA60"><!-- --></a>Deselect the 
+						  <strong>Enable scanning of scripts</strong> checkbox. 
+						</li>
+ 
+						<li id="unique_3__li_261299E84C3A4781B39E00E0E249320C"><a name="unique_3__li_261299E84C3A4781B39E00E0E249320C"><!-- --></a>Click 
+						  <strong>Save</strong> to capture the configuration change. 
+						</li>
+ 
+					 </ol>
+ 
+					 </div>
+ 
+				  </li>
+ 
+				  <li id="unique_3__li_B6802017800745D8A2CE8D8AB8AF5408"><a name="unique_3__li_B6802017800745D8A2CE8D8AB8AF5408"><!-- --></a><strong><span id="unique_3__ph_519794F235A04C3486046528CF9527BD"><a name="unique_3__ph_519794F235A04C3486046528CF9527BD"><!-- --></a>VirusScan Console</span></strong>
+					 
+					 <div class="p"> 
+					 <a name="unique_3__ol_0AA93307A6E44E86A4C68DA94A36D054"><!-- --></a><ol id="unique_3__ol_0AA93307A6E44E86A4C68DA94A36D054"> 
+						<li id="unique_3__li_B11C3C97365C45889F07A979C2F0CD8F"><a name="unique_3__li_B11C3C97365C45889F07A979C2F0CD8F"><!-- --></a>From the Task
+						  list, right-click 
+						  <strong>On-Access Scanner</strong>, then click 
+						  <strong>Properties</strong> to open the dialog box. 
+						</li>
+ 
+						<li id="unique_3__li_FC7114E8C5D84B15B9F1F35C6E080DDB"><a name="unique_3__li_FC7114E8C5D84B15B9F1F35C6E080DDB"><!-- --></a>From the
+						  On-Access Scan Properties page, click 
+						  <strong>General Settings</strong>, in the left-hand pane, and click
+						  the 
+						  <strong>ScriptScan</strong> tab. 
+						</li>
+ 
+						<li id="unique_3__li_8679AAC115C54459BAB0A197527BF16A"><a name="unique_3__li_8679AAC115C54459BAB0A197527BF16A"><!-- --></a>Deselect the 
+						  <strong>Enable scanning of scripts</strong> checkbox. 
+						</li>
+ 
+						<li id="unique_3__li_A14F28F10B5843F48231C62D676F5F7F"><a name="unique_3__li_A14F28F10B5843F48231C62D676F5F7F"><!-- --></a>Click 
+						  <strong>OK</strong> to capture the configuration change. 
+						</li>
+ 
+					 </ol>
+ 
+					 </div>
+ 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_ABCB81EB47BC48138F07963895C117E2"><a name="unique_3__li_ABCB81EB47BC48138F07963895C117E2"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>Using Microsoft Outlook 2010, if you want to perform an
+				  on-demand scan on a selected folder only one item in the folder is scanned. 
+				</p>
+ 
+				<div class="p"> 
+				  <div class="note"><span class="notetitle">NOTE:</span> This issue does not occur with Microsoft Outlook 2007. 
+				  </div>
+ 
+				</div>
+ 
+				<p> 
+				  <strong>Workaround:</strong> To perform an on-demand scan on an entire
+				  Microsoft Outlook 2010 folder: 
+				</p>
+ 
+				<div class="p"> 
+				<a name="unique_3__ol_F432758231F04EFFBC568AC6E282CCFF"><!-- --></a><ol id="unique_3__ol_F432758231F04EFFBC568AC6E282CCFF"> 
+				  <li id="unique_3__li_78863ED5E0E24F47BB174C0C910560D0"><a name="unique_3__li_78863ED5E0E24F47BB174C0C910560D0"><!-- --></a>Select the name of
+					 the folder you want to scan. 
+				  </li>
+ 
+				  <li id="unique_3__li_BFF9510BDFB545F4B010841DA516D0F7"><a name="unique_3__li_BFF9510BDFB545F4B010841DA516D0F7"><!-- --></a>Open the folder and
+					 unselect the single item highlighted using 
+					 <strong>Ctrl left-click</strong> on the item. 
+				  </li>
+ 
+				  <li id="unique_3__li_680B6731E28F4EEA8437B5218B589481"><a name="unique_3__li_680B6731E28F4EEA8437B5218B589481"><!-- --></a>Run the on-demand
+					 scan and all the items in the folder should be scanned. 
+				  </li>
+ 
+				</ol>
+ 
+				</div>
+ 
+				<p>(624659) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_57FD9D50069E49DE9EF4B39588061785"><a name="unique_3__li_57FD9D50069E49DE9EF4B39588061785"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>With Microsoft Windows 2000 SP4, if you try to edit the
+				  AutoUpdate Repository list using the 
+				  <strong>Tools | Edit AutoUpdate Repository List</strong> command in the 
+				  <span id="unique_3__ph_D6EBCECDFDE74554ACFBB4D2E483A3EE"><a name="unique_3__ph_D6EBCECDFDE74554ACFBB4D2E483A3EE"><!-- --></a>VirusScan Console</span>,
+				  the following error might appear: 
+				</p>
+ 
+				<p><tt class="sysout">Failed to read the repository list, Error =
+					 fffffffc</tt> 
+				</p>
+ 
+				<p> If the error appears it is because the 
+				  <kbd class="userinput">SiteList.xml</kbd> file is missing from the
+				  following path: 
+				</p>
+ 
+				<p><kbd class="userinput">C:\Documents and Settings\All Users\Application
+					 Data\McAfee\Common Framework</kbd> 
+				</p>
+ 
+				<p><strong>Workaround:</strong> Copy a 
+				  <kbd class="userinput">SiteList.xml</kbd> file from the 
+				  <span id="unique_3__ph_BEF909A9912F4381896AB1FF5ED31553"><a name="unique_3__ph_BEF909A9912F4381896AB1FF5ED31553"><!-- --></a>McAfee Agent</span>
+				  4.0 installation package, or another location, to the path. (568699) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_5D14D93BF3024C0C9923EDC6594974A8"><a name="unique_3__li_5D14D93BF3024C0C9923EDC6594974A8"><!-- --></a><strong>Issue</strong> 
+				<p>When you configure a drive to exclude from on-access scanning,
+				  use a UNC path, not a mapped network drive. For example, if you type 
+				  <kbd class="userinput">Z:</kbd>, for the mapped network drive in the
+				  Set Exclusions dialog box, the files in the mapped drive are not excluded from
+				  on-access scanning. 
+				</p>
+ 
+				<p><strong>Workaround:</strong> To exclude a network drive from on-access
+				  scanning use a UNC path, not a mapped network drive. (546966) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_4A8E6B623A4541E680DD284B741CC918"><a name="unique_3__li_4A8E6B623A4541E680DD284B741CC918"><!-- --></a> 
+				<strong>Issue</strong> 
+				<div class="p">Using the extended character set when adding 
+				  <strong>Default + additional file types</strong> does not work as you
+				  expect when configuring either 
+				  <strong>On-Delivery Email Scan Properties</strong> or 
+				  <strong>Outlook On-Demand Scan</strong>. For example, if you add the file
+				  type 
+				  <kbd class="userinput">ÃbÃ</kbd> to the User-specified additional file
+				  types to scan, you only expect scanning of the "xxxxx.ÃbÃ" file. But, both of
+				  the following files are scanned: 
+				<a name="unique_3__ul_E186E76849CC4C1AAF7E4C53766D0701"><!-- --></a><ul id="unique_3__ul_E186E76849CC4C1AAF7E4C53766D0701"> 
+				  <li id="unique_3__li_6E17725254A84E2FB77220725425D8E8"><a name="unique_3__li_6E17725254A84E2FB77220725425D8E8"><!-- --></a>xxxxx.ÃbÃ 
+				  </li>
+ 
+				  <li id="unique_3__li_7DBF4EE27459496FA833F92AE77F2AF6"><a name="unique_3__li_7DBF4EE27459496FA833F92AE77F2AF6"><!-- --></a>yyyyy.Ãbc 
+				  </li>
+ 
+				</ul>
+ 
+				</div>
+ 
+				<div class="p"> This is expected behavior when using the extended character
+				  set. 
+				  <div class="note"><span class="notetitle">NOTE:</span> This only occurs on some Windows 64-bit systems using
+					 Windows Outlook 2010 x64 Professional Edition. 
+				  </div>
+ 
+				</div>
+ 
+				<p> To scan only the file type 
+				  <kbd class="userinput">ÃbÃ</kbd>, configure an exclusion using the
+				  wildcard characters 
+				  <kbd class="userinput">?</kbd> or 
+				  <kbd class="userinput">*</kbd>. For example, configure an exclusion
+				  using 
+				  <kbd class="userinput">Ãb?</kbd> or 
+				  <kbd class="userinput">Ã*</kbd>. 
+				</p>
+ 
+				<p>(586207) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_B9F93F8EAD6045CCB70D3437D8360453"><a name="unique_3__li_B9F93F8EAD6045CCB70D3437D8360453"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>The 
+				  <span id="unique_3__ph_5E3F24989B0F49EFB1F1CC10051A9C77"><a name="unique_3__ph_5E3F24989B0F49EFB1F1CC10051A9C77"><!-- --></a>McAfee</span> email scanner for
+				  Lotus Notes does not use the 
+				  <strong>Quarantine Manager</strong> to quarantine detected threats.
+				  Consequently, if you configure the email scanner's first action as 
+				  <strong>Clean attachments</strong> or 
+				  <strong>Delete attachments</strong>, the original version of the detected
+				  threat is no longer available for recovery or restoration. If you want the
+				  original version of the detected threat to be available after the action is
+				  taken on the detection, 
+				  <span id="unique_3__ph_FD189D1D68FB4586AD450C1130AE9A3E"><a name="unique_3__ph_FD189D1D68FB4586AD450C1130AE9A3E"><!-- --></a>McAfee</span> recommends
+				  setting the first action as 
+				  <strong>Move attachments to a folder</strong> and to specify a quarantine
+				  folder. When this move action is enabled, the original detected threat is moved
+				  to the specified quarantine folder with the .MCM extension appended to the
+				  detection. 
+				</p>
+ 
+				<p>If you enable the 
+				  <strong>Move attachments to a folder</strong> option on client systems you
+				  should always have the on-access scanner enabled so those files can not
+				  inadvertently be accessed by a user. (430862) 
+				</p>
+ 
+			 </li>
+ 
+			 <li id="unique_3__li_9E973F4288C848699353AD4EA88F8947"><a name="unique_3__li_9E973F4288C848699353AD4EA88F8947"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p>When running 
+				  <span id="unique_3__ph_E7080D6A0B5646A089602A53242BE10E"><a name="unique_3__ph_E7080D6A0B5646A089602A53242BE10E"><!-- --></a>VirusScan Enterprise 8.8</span> on a
+				  system with Microsoft Windows Server 2008, the on-access scanner might fail to
+				  delete a detected file from a network shared folder. The on-access scanner’s
+				  ability to delete a detected file is not guaranteed on network file systems. In
+				  this case, if the detected file is not deleted, the file content is removed and
+				  the remaining file size is zero. (431158) 
+				</p>
+ 
+			 </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+		<div class="section" id="unique_3__VSE_Documentation"><a name="unique_3__VSE_Documentation"><!-- --></a><h2 class="sectiontitle">Documentation</h2> 
+		   
+		  <a name="unique_3__ul_F62E52AB22FB4B1785715D7C106B9E4C"><!-- --></a><ul id="unique_3__ul_F62E52AB22FB4B1785715D7C106B9E4C"> 
+			 <li id="unique_3__li_E3CF7181761040AA906E53B8FD306818"><a name="unique_3__li_E3CF7181761040AA906E53B8FD306818"><!-- --></a> 
+				<strong>Issue</strong> 
+				<p> 
+				</p>
+ 
+				<p>After localization of the 
+				  <em><span id="unique_3__ph_1656E4A922A74AE69FEC6CE431580B46"><a name="unique_3__ph_1656E4A922A74AE69FEC6CE431580B46"><!-- --></a>McAfee</span> 
+					 <span id="unique_3__ph_B70A4E2219C74E469DFB9D181BE9CFB8"><a name="unique_3__ph_B70A4E2219C74E469DFB9D181BE9CFB8"><!-- --></a>VirusScan Enterprise 8.8</span>
+					 software Installation Guide</em>, the information in the 
+				  <em>System requirements</em> section was changed. The English
+				  language files include this change. 
+				</p>
+ 
+				<p>In 
+				  <em>Table 1: Minimum workstation requirements</em>, the minimum RAM
+				  and processor requirements were changed in the following rows (changes shown as
+				  
+				  <strong>Bold</strong> text): 
+				</p>
+ 
+				<div class="p"> 
+				
+<table cellpadding="4" cellspacing="0" border="1" class="tableborder"><tr><td>
+<a name="unique_3__table_DD510B00E4C04A00A17C02AE816F8BE6"><!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="unique_3__table_DD510B00E4C04A00A17C02AE816F8BE6" border="0"><caption>Table 1. Minimum workstation requirements</caption> 
+			  
+			  
+			 <thead align="left"> 
+				<tr valign="top"> 
+				  <th class="row-nocellborder" align="left" valign="top" width="NaN%" id="d0e1225">Operating system 
+				  </th>
+ 
+				  <th class="cellrowborder" valign="top" width="NaN%" id="d0e1228">SP 
+				  </th>
+ 
+				  <th class="cellrowborder" valign="top" width="NaN%" id="d0e1231">32-bit 
+				  </th>
+ 
+				  <th class="row-nocellborder" align="left" valign="top" width="NaN%" id="d0e1234">64-bit 
+				  </th>
+ 
+				  <th class="cellrowborder" valign="top" width="NaN%" id="d0e1237">Processor 
+				  </th>
+ 
+				  <th class="cellrowborder" valign="top" width="NaN%" id="d0e1240">RAM 
+				  </th>
+ 
+				  <th class="cellrowborder" valign="top" width="NaN%" id="d0e1243">Minimum hard disk space 
+				  </th>
+ 
+				</tr>
+ 
+			 </thead>
+ 
+			 <tbody> 
+				<tr valign="top"> 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1225 ">Microsoft Windows 2000 Professional, with
+					 Update Rollup 1* 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1228 ">SP4 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1231 ">X 
+				  </td>
+ 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1234 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1237 ">133 MHz or greater Pentium. Up to two
+					 processors on a single computer 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1240 "><strong>64</strong> MB minimum and 4 GB maximum 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1243 ">450 MB 
+				  </td>
+ 
+				</tr>
+ 
+				<tr valign="top"> 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1225 ">Microsoft Windows XP Home and Professional
+					 Editions 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1228 "> SP2 or SP3 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1231 ">X 
+				  </td>
+ 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1234 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1237 ">233 MHz or greater (single or dual
+					 processor system), Intel Pentium/Celeron family, or AMD K6/Athlon/Duron family,
+					 or compatible 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1240 "><strong>256</strong> MB 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1243 ">450 MB 
+				  </td>
+ 
+				</tr>
+ 
+				<tr valign="top"> 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1225 ">Microsoft Windows XP Tablet PC Edition 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1228 ">SP3 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1231 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1234 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1237 "><strong>233 MHz or greater 
+					 </strong> 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1240 "><strong>256 MB** 
+					 </strong> 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1243 ">450 MB 
+				  </td>
+ 
+				</tr>
+ 
+				<tr valign="top"> 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1225 ">Microsoft Windows XP Embedded (2003) 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1228 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1231 ">X 
+				  </td>
+ 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1234 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1237 "><strong>233 MHz or greater 
+					 </strong> 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1240 "><strong>256 MB** 
+					 </strong> 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1243 ">450 MB 
+				  </td>
+ 
+				</tr>
+ 
+				<tr valign="top"> 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1225 ">Microsoft Windows Embedded Standard 2009 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1228 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1231 ">X 
+				  </td>
+ 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1234 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1237 "><strong>233 MHz or greater 
+					 </strong> 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1240 "><strong>256 MB** 
+					 </strong> 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1243 ">450 MB 
+				  </td>
+ 
+				</tr>
+ 
+				<tr valign="top"> 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1225 ">Microsoft Windows POS 1.1 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1228 ">SP3 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1231 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1234 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1237 "><strong>233 MHz or greater 
+					 </strong> 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1240 "><strong>256 MB** 
+					 </strong> 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1243 ">450 MB 
+				  </td>
+ 
+				</tr>
+ 
+				<tr valign="top"> 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1225 ">Microsoft Windows Point of Service (POS) Ready
+					 2009 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1228 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1231 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1234 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1237 "><strong>233 MHz or greater 
+					 </strong> 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1240 "><strong>256 MB** 
+					 </strong> 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1243 ">450 MB 
+				  </td>
+ 
+				</tr>
+ 
+				<tr valign="top"> 
+				  <td class="cellrowborder" colspan="7" align="left" valign="top" headers="d0e1225 d0e1228 d0e1231 d0e1234 d0e1237 d0e1240 d0e1243 ">* You must install McAfee Agent
+					 version 4.0 before installing this version of 
+					 <span id="unique_3__ph_D6957DF6D3BA4B7A96973DAF7F28716D"><a name="unique_3__ph_D6957DF6D3BA4B7A96973DAF7F28716D"><!-- --></a>VirusScan Enterprise</span>
+					 on Microsoft Windows 2000 Professional SP4 systems. 
+					 <p>** At least 250 MB of free memory space must be available to
+						update DAT and engine files. Windows virtual memory can also be used to create
+						additional memory space. 
+					 </p>
+ 
+				  </td>
+ 
+				</tr>
+ 
+			 </tbody>
+ 
+		  </table>
+</td></tr></table>
+ 
+		  </div>
+In 
+		  <em>Table 2: Minimum server requirements</em>, the minimum RAM
+		  requirements were changed in the following row (change shown as 
+		  <strong>Bold</strong> text): 
+		  <div class="p"> 
+		  
+<table cellpadding="4" cellspacing="0" border="1" class="tableborder"><tr><td>
+<a name="unique_3__table_9E4490D5230D4A25B656E8F4FB1E462B"><!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="unique_3__table_9E4490D5230D4A25B656E8F4FB1E462B" border="0"><caption>Table 2. Minimum server requirements</caption> 
+			  
+			  
+			 <thead align="left"> 
+				<tr valign="top"> 
+				  <th class="row-nocellborder" align="left" valign="top" width="NaN%" id="d0e1525">Operating system 
+				  </th>
+ 
+				  <th class="cellrowborder" valign="top" width="NaN%" id="d0e1528">SP 
+				  </th>
+ 
+				  <th class="cellrowborder" valign="top" width="NaN%" id="d0e1531">32-bit 
+				  </th>
+ 
+				  <th class="row-nocellborder" align="left" valign="top" width="NaN%" id="d0e1534">64-bit 
+				  </th>
+ 
+				  <th class="cellrowborder" valign="top" width="NaN%" id="d0e1537">Processor 
+				  </th>
+ 
+				  <th class="cellrowborder" valign="top" width="NaN%" id="d0e1540">RAM 
+				  </th>
+ 
+				  <th class="cellrowborder" valign="top" width="NaN%" id="d0e1543">Hard disk space 
+				  </th>
+ 
+				</tr>
+ 
+			 </thead>
+ 
+			 <tbody> 
+				<tr valign="top"> 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1525 ">Microsoft Windows 2000 Server, Advanced
+					 Server, and DataCenter Server editions, with Update Rollup 1* 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1528 ">SP4 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1531 ">X 
+				  </td>
+ 
+				  <td class="row-nocellborder" align="left" valign="top" width="NaN%" headers="d0e1534 "> 
+					 <p>
+					 </p>
+ 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1537 ">133 MHz or higher Pentium. Maximum four
+					 processors on a single computer. 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1540 "><strong>256</strong> MB minimum and 4 GB maximum 
+				  </td>
+ 
+				  <td class="cellrowborder" valign="top" width="NaN%" headers="d0e1543 ">450 MB 
+				  </td>
+ 
+				</tr>
+ 
+				<tr valign="top"> 
+				  <td class="cellrowborder" colspan="7" align="left" valign="top" headers="d0e1525 d0e1528 d0e1531 d0e1534 d0e1537 d0e1540 d0e1543 ">* You must install McAfee Agent
+					 version 4.0 before installing this version of 
+					 <span id="unique_3__ph_D913B2569A844D398A0DB8F17396CAB6"><a name="unique_3__ph_D913B2569A844D398A0DB8F17396CAB6"><!-- --></a>VirusScan Enterprise</span> on
+					 Microsoft Windows 2000 Professional SP4 systems. 
+				  </td>
+ 
+				</tr>
+ 
+			 </tbody>
+ 
+		  </table>
+</td></tr></table>
+ 
+		  </div>
+ 
+		  </li>
+ 
+		  <li id="unique_3__li_99D735A3D4B246BDAA261328F6364E5F"><a name="unique_3__li_99D735A3D4B246BDAA261328F6364E5F"><!-- --></a> 
+			 <strong>Issue</strong> 
+			 <p>After localization of the 
+				<em><span id="unique_3__ph_3F9C77E7CF724D2190BFF9EBB85358EC"><a name="unique_3__ph_3F9C77E7CF724D2190BFF9EBB85358EC"><!-- --></a>McAfee</span>
+				  
+				  <span id="unique_3__ph_74DD01D588ED4B24838210FC0F99BBB8"><a name="unique_3__ph_74DD01D588ED4B24838210FC0F99BBB8"><!-- --></a>VirusScan Enterprise 8.8</span>
+				  software Product Guide</em> and Help, the information in the 
+				<em>Configuring general settings</em> section was changed. The
+				English language files include this change. 
+			 </p>
+ 
+			 <p>In each of the user interface consoles the following step has been
+				modified to include a Note: 
+			 </p>
+ 
+			 <div class="p">On the 
+				<strong>ScriptScan</strong> tab, enable ScriptScan and specify any processes
+				or URLs you want to exclude from scanning. 
+				<div class="note"><span class="notetitle">NOTE:</span> With previous versions of 
+				  <span id="unique_3__ph_2313ECBBEFD047D3A2E40000B84213A1"><a name="unique_3__ph_2313ECBBEFD047D3A2E40000B84213A1"><!-- --></a>VirusScan Enterprise</span>
+				  disabling on-access scanning disabled ScriptScan. With 
+				  <span id="unique_3__ph_CF5A587574A44F20AB8300ACCF15613A"><a name="unique_3__ph_CF5A587574A44F20AB8300ACCF15613A"><!-- --></a>VirusScan Enterprise 8.8</span>
+				  disabling on-access scanning does not disable ScriptScan. To disable ScriptScan
+				  deselect the 
+				  <strong>Enable scanning of scripts</strong> checkbox. 
+				</div>
+ 
+			 </div>
+ 
+		  </li>
+ 
+		  <li id="unique_3__li_1DF6CAADCBED48A3A9758EB5F3DA99BF"><a name="unique_3__li_1DF6CAADCBED48A3A9758EB5F3DA99BF"><!-- --></a> 
+			 <strong>Issue</strong> 
+			 <p>After localization of the 
+				<em><span id="unique_3__ph_7C34B997A17B4911BD838B838DBD1783"><a name="unique_3__ph_7C34B997A17B4911BD838B838DBD1783"><!-- --></a>McAfee</span> 
+				  <span id="unique_3__ph_A4C92C707D03484380406692DCBAC420"><a name="unique_3__ph_A4C92C707D03484380406692DCBAC420"><!-- --></a>VirusScan Enterprise 8.8</span>
+				  software Product Guide</em> and Help, the information in the On-Access Scan
+				Policies Help for the General tab was changed. The English language files
+				include this change. 
+			 </p>
+ 
+			 <p>The following information was added to the Scan option: 
+			 </p>
+ 
+			 <div class="p"><strong>Trusted installers</strong> —Specify if MSI files, installed by
+				msiexec.exe and signed by McAfee or Microsoft, or if Windows Trusted Installer
+				service files, are scanned on-access: 
+			 <a name="unique_3__ul_9AEA5C72C6F846D48AE235BAADFB00DD"><!-- --></a><ul id="unique_3__ul_9AEA5C72C6F846D48AE235BAADFB00DD"> 
+				<li id="unique_3__li_AF60CE1488AE43CDA646EB1E9A14041B"><a name="unique_3__li_AF60CE1488AE43CDA646EB1E9A14041B"><!-- --></a>Disabled (default), do
+				  not scan files installed by MSI or Windows Trusted Installer service. 
+				  <div class="note"><span class="notetitle">NOTE:</span> Disabled improves the performance of large Microsoft
+					 application installers. 
+				  </div>
+ 
+				</li>
+ 
+				<li id="unique_3__li_2A70E3FE02A748779F15D743D56E4EA2"><a name="unique_3__li_2A70E3FE02A748779F15D743D56E4EA2"><!-- --></a>Enabled, scan files
+				  installed by MSI or Windows Trusted Installer service. 
+				</li>
+ 
+			 </ul>
+ 
+			 </div>
+ 
+		  </li>
+ 
+		  </ul>
+ 
+		</div>
+ 
+	 </div>
+ 
+  </div><div class="topiclevel1"><a name="unique_4"/>
+<h2 class="topictitle2">Where to find <span>McAfee</span> enterprise product information</h2>
+
+<div><p>The <span>McAfee</span> documentation is designed to provide you
+with the information you need during each phase of product implementation,
+from evaluating a new product to maintaining existing ones. Depending
+on the product, additional documents might be available. After a
+product is released additional information regarding the product
+is entered into the online Knowledgebase available on <span>McAfee</span> ServicePortal.</p>
+
+
+<table cellpadding="4" cellspacing="0" border="1" class="tableborder"><tr><td>
+<a name="unique_4__table_6EFA783CC51B469AAD06700A54EE3E8C"><!-- --></a><table cellpadding="4" cellspacing="0" summary="" id="unique_4__table_6EFA783CC51B469AAD06700A54EE3E8C" border="0">
+
+
+
+<thead align="left">
+<tr>
+<th class="row-nocellborder" valign="top" width="NaN%" id="d0e1709"><p><strong>Installation Phase</strong></p>
+</th>
+
+<th class="row-nocellborder" valign="top" width="NaN%" id="d0e1714"><p><strong>Setup Phase</strong></p>
+</th>
+
+<th class="cellrowborder" valign="top" width="NaN%" id="d0e1719"><p><strong>Maintenance Phase</strong></p>
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td class="row-nocellborder" valign="top" width="NaN%" headers="d0e1709 "><p>Before, during, and after installation. </p>
+<p><em>Release
+Notes</em></p>
+<a name="unique_4__ul_25451F8E1C6147C9BB589A3BF3B74EB6"><!-- --></a><ul id="unique_4__ul_25451F8E1C6147C9BB589A3BF3B74EB6">
+<li id="unique_4__li_80B0282706594EAAA565498383E94DE2"><a name="unique_4__li_80B0282706594EAAA565498383E94DE2"><!-- --></a>Known issues in the current
+release.</li>
+
+<li id="unique_4__li_09B2C0EAE2394CDEBF2DCE65E0196F93"><a name="unique_4__li_09B2C0EAE2394CDEBF2DCE65E0196F93"><!-- --></a>Issues resolved since the
+last release.</li>
+
+<li>Last-minute changes to the product or its documentation.</li>
+</ul>
+<p><em>Installation
+Guide</em></p>
+<a name="unique_4__ul_C03D50E1DEE14D40B8DABB1550E9CFE5"><!-- --></a><ul id="unique_4__ul_C03D50E1DEE14D40B8DABB1550E9CFE5">
+<li id="unique_4__li_6B92411C37D549B7AE2F2CE3F1FDC1D2"><a name="unique_4__li_6B92411C37D549B7AE2F2CE3F1FDC1D2"><!-- --></a>Preparing for, installing and
+deploying software in a production environment.</li>
+</ul>
+</td>
+
+<td class="row-nocellborder" valign="top" width="NaN%" headers="d0e1714 "><p>Getting up-and-running with the product.</p>
+<p><em>Product
+Guide</em> and <em>Online Help</em></p>
+<a name="unique_4__ul_E5BD8374461A414FB9D3AF8BDF8CBBC6"><!-- --></a><ul id="unique_4__ul_E5BD8374461A414FB9D3AF8BDF8CBBC6"><li>Setting up and customizing
+the software for your environment.</li>
+</ul>
+<p><em>Online Help</em></p>
+<a name="unique_4__ul_DFB7A29FBDE248BE8DFB0570FC851AF9"><!-- --></a><ul id="unique_4__ul_DFB7A29FBDE248BE8DFB0570FC851AF9">
+<li id="unique_4__li_75153B8872054E9FB094F436FA244673"><a name="unique_4__li_75153B8872054E9FB094F436FA244673"><!-- --></a>Managing and deploying
+products through ePolicy Orchestrator.</li>
+
+<li id="unique_4__li_CC50DFBE9A364159A4248BE8B8896A4D"><a name="unique_4__li_CC50DFBE9A364159A4248BE8B8896A4D"><!-- --></a>Detailed information about
+options in the product.</li>
+</ul>
+</td>
+
+<td class="cellrowborder" valign="top" width="NaN%" headers="d0e1719 "><p>Maintaining the software. </p>
+<p><em>Online
+Help</em></p>
+<ul><li id="unique_4__li_FBD7F0E1DB5540FC83A1E23A14100B73"><a name="unique_4__li_FBD7F0E1DB5540FC83A1E23A14100B73"><!-- --></a>Maintaining
+the software.</li>
+
+<li id="unique_4__li_EFC63A1559434D32B6305A77249612C6"><a name="unique_4__li_EFC63A1559434D32B6305A77249612C6"><!-- --></a>Reference information.</li>
+
+<li id="unique_4__li_5866282FBAF44A659933CC2D682B666F"><a name="unique_4__li_5866282FBAF44A659933CC2D682B666F"><!-- --></a>All information found
+in the product guide.</li>
+</ul>
+<p><em>Knowledgebase</em> (<a href="https://knowledge.mcafee.com" target="_blank">knowledge.mcafee.com</a>)</p>
+<a name="unique_4__ul_E4F4DE6CDD284EF0AFE92330434DD2BA"><!-- --></a><ul id="unique_4__ul_E4F4DE6CDD284EF0AFE92330434DD2BA">
+<li id="unique_4__li_1FDAEBD0861143B3A85DE33E0A7E7A02"><a name="unique_4__li_1FDAEBD0861143B3A85DE33E0A7E7A02"><!-- --></a>Release notes and documentation.</li>
+
+<li>Supplemental product information.</li>
+
+<li id="unique_4__li_0932E4B09B7A4CD1B7B8C7671071CAB1"><a name="unique_4__li_0932E4B09B7A4CD1B7B8C7671071CAB1"><!-- --></a><p>Workarounds to
+known issues.</p>
+</li>
+</ul>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+</td></tr></table>
+</div>
+
+<div/>
+<div class="topiclevel1"><a name="unique_5"/>
+<h3 class="topictitle3">Finding release notes and documentation for <span>McAfee</span> enterprise products</h3>
+
+<div><div class="section" id="unique_5__context_E6CB02CCD26B49F0906C0E46E0E08EA8"><a name="unique_5__context_E6CB02CCD26B49F0906C0E46E0E08EA8"><!-- --></a><p>Use
+this task to go to the release notes and other product documentation
+for <span>McAfee</span> enterprise products.</p>
+</div>
+
+<a name="unique_5__steps_EA35AEF189874421937F033655704EB9"><!-- --></a><ol id="unique_5__steps_EA35AEF189874421937F033655704EB9"><li><span>Go
+to <a href="https://knowledge.mcafee.com" target="_blank">knowledge.mcafee.com</a> and select <span class="uicontrol">Product
+Documentation</span> under <span class="uicontrol">Useful links</span>.</span></li>
+
+<li id="unique_5__step_FED5CB126F814940A3B29F668E4D6862"><a name="unique_5__step_FED5CB126F814940A3B29F668E4D6862"><!-- --></a><span>Select <span class="uicontrol">&lt;Product
+Name&gt;</span> | <span class="uicontrol">&lt;Product Version&gt;</span> and
+select the required document from the list of documents.</span></li>
+</ol>
+</div>
+<div/>
+</div></div><div class="topiclevel1"><a name="unique_6"/>
+<h2 class="topictitle2">License attributions</h2>
+</div><hr/><dita>
+ <topic xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="CMN_076IF0JN05Z" xml:lang="en-us">
+  <title outputclass="t1">COPYRIGHT</title>
+  <body>
+   <div class="copyright">
+    <p>
+     <b outputclass="subheading">COPYRIGHT</b>
+    </p>
+    <p outputclass="p1">Copyright © 2010 McAfee, Inc. All Rights Reserved.</p>
+    <p outputclass="p2">No part of this publication may be reproduced, transmitted, transcribed,
+     stored in a retrieval system, or translated into any language in any form or by any means
+     without the written permission of McAfee, Inc., or its suppliers or affiliate companies.</p>
+    <section>
+     <title outputclass="t2">TRADEMARK ATTRIBUTIONS</title>
+     <p>
+      <b outputclass="subheading">TRADEMARK ATTRIBUTIONS</b>
+     </p>
+     <p outputclass="p3">AVERT, EPO, EPOLICY ORCHESTRATOR, FOUNDSTONE, GROUPSHIELD, INTRUSHIELD,
+      LINUXSHIELD, MAX (MCAFEE SECURITYALLIANCE EXCHANGE), MCAFEE, NETSHIELD, PORTALSHIELD,
+      PREVENTSYS, SECURITYALLIANCE, SITEADVISOR, TOTAL PROTECTION, VIRUSSCAN, WEBSHIELD are
+      registered trademarks or trademarks of McAfee, Inc. and/or its affiliates in the US and/or
+      other countries. McAfee Red in connection with security is distinctive of McAfee brand
+      products. All other registered and unregistered trademarks herein are the sole property of
+      their respective owners.</p>
+    </section>
+    <section>
+     <title outputclass="t3">LICENSE INFORMATION</title>
+     <p>
+      <b outputclass="subheading">LICENSE INFORMATION</b>
+     </p>
+     <p outputclass="t4">
+      <b outputclass="subheading">License Agreement</b>
+     </p>
+     <p outputclass="p4">NOTICE TO ALL USERS: CAREFULLY READ THE APPROPRIATE LEGAL AGREEMENT
+      CORRESPONDING TO THE LICENSE YOU PURCHASED, WHICH SETS FORTH THE GENERAL TERMS AND CONDITIONS
+      FOR THE USE OF THE LICENSED SOFTWARE. IF YOU DO NOT KNOW WHICH TYPE OF LICENSE YOU HAVE
+      ACQUIRED, PLEASE CONSULT THE SALES AND OTHER RELATED LICENSE GRANT OR PURCHASE ORDER DOCUMENTS
+      THAT ACCOMPANY YOUR SOFTWARE PACKAGING OR THAT YOU HAVE RECEIVED SEPARATELY AS PART OF THE
+      PURCHASE (AS A BOOKLET, A FILE ON THE PRODUCT CD, OR A FILE AVAILABLE ON THE WEBSITE FROM
+      WHICH YOU DOWNLOADED THE SOFTWARE PACKAGE). IF YOU DO NOT AGREE TO ALL OF THE TERMS SET FORTH
+      IN THE AGREEMENT, DO NOT INSTALL THE SOFTWARE. IF APPLICABLE, YOU MAY RETURN THE PRODUCT TO
+      MCAFEE OR THE PLACE OF PURCHASE FOR A FULL REFUND.</p>
+
+    </section>
+   </div>
+  </body>
+ </topic>
+</dita>
+</body>
+</html>

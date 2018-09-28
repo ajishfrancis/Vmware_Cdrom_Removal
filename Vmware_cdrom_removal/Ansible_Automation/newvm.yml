@@ -1,0 +1,38 @@
+---
+- hosts: main
+  become: true
+  tasks:
+  - name: Create a virtual machine on given ESXi hostname
+    vmware_guest:
+     hostname: 192.168.202.20
+     datacenter: DEVMEC3001
+     username: A637980@devdpc.local
+     password: P@ssw0rd01ATOS123!
+     name: I2C-W2K12R2-01
+     validate_certs: False
+     folder: /I2C/
+     name: test_vm_0001
+     state: poweredon
+     guest_id: sles11_64Guest
+    # This is hostname of particular ESXi server on which user wants VM to be deployed
+     cluster: DEVCMEC3CMP001
+     disk:
+     - size_gb: 10
+       type: thin
+       datastore: ISCSIDatastore001CMP001
+     hardware:
+       memory_mb: 512
+       num_cpus: 4
+       scsi: paravirtual
+       version: 10
+     cdrom:
+      type: iso
+      iso_path: "[ISCSIDatastore001CMP001]ISO SLES-11-SP3-DVD-x86_64-GM-DVD1.iso"
+     networks:
+     - name: DEVNMEC3PGCMPMGT0105
+       mac: aa:bb:dd:aa:00:14
+       ip: 10.10.10.100
+       netmask: 255.255.255.0
+       device_type: vmxnet3
+     wait_for_ip_address: yes
+    register: deploy_vm       

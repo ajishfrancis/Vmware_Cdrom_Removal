@@ -1,0 +1,43 @@
+---
+  - name: Powering off If VM is Running
+    vmware_guest:
+      hostname: "{{vcenter_hostname}}"
+      username: "{{vcenter_username}}"
+      validate_certs: false
+      password: "{{vcenter_password}}"
+      state: "{{vmstate_off}}"
+      datacenter: "{{datacenter}}"
+      name: "{{vmname}}"
+    delegate_to: I2C-Ansible-01
+    when: hostvars[inventory_hostname]['inventory_hostname'] ==  vmname and hotcpu_required == 'yes'
+      
+  - name: configuring Hardware memory and cpu
+    vmware_guest:
+      hostname: "{{vcenter_hostname}}"
+      username: "{{vcenter_username}}"
+      validate_certs: false
+      password: "{{vcenter_password}}"
+      state: "{{vmstate}}"
+      datacenter: "{{datacenter}}"
+      name: "{{vmname}}"
+      hardware:
+       memory_mb: "{{memory_mb}}"
+       num_cpus: "{{num_cpus}}"
+       hotadd_cpu: "{{hotadd_cpu}}"
+       hotadd_memory: "{{hotadd_memory}}"
+    delegate_to: I2C-Ansible-01
+    when: hostvars[inventory_hostname]['inventory_hostname'] ==  vmname and hotcpu_required == 'yes'
+
+
+  - name: Powering on If VM is Running
+    vmware_guest:
+      hostname: "{{vcenter_hostname}}"
+      username: "{{vcenter_username}}"
+      validate_certs: false
+      password: "{{vcenter_password}}"
+      state: "{{vmstate_on}}"
+      datacenter: "{{datacenter}}"
+      name: "{{vmname}}" 
+    delegate_to: I2C-Ansible-01
+    when: hostvars[inventory_hostname]['inventory_hostname'] ==  vmname and hotcpu_required == 'yes'
+

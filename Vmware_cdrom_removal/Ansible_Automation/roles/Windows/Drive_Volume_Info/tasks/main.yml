@@ -1,0 +1,29 @@
+---
+# tasks file for WindowsPartition
+
+- block:
+ 
+    - name: Get the volume size of the drives
+      win_shell: |
+         $disk = Get-WmiObject Win32_LogicalDisk -Filter "DeviceID='C:'" | Select-Object Size, FreeSpace
+         Write-Host ("{0}GB" -f [math]::truncate($disk.Size / 1GB))
+      register: volume_size
+
+    - name: Setting facts
+      set_fact:
+        servervolume: "{{volume_size.stdout|trim}}"
+        requiredvolume: "{{total_volume_size}}"
+
+    - name: Results of comparison in Windows
+      debug: 
+         msg: "criteria matched"
+      when: servervolume >= requiredvolume
+
+    - name: Results of comparison in Windows
+      debug: 
+         msg: "criteria not matched"
+      when: servervolume < requiredvolume
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"

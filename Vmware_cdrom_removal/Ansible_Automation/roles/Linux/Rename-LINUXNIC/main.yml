@@ -1,0 +1,103 @@
+---
+    - name: install nmcli
+      yum:
+       name: NetworkManager
+       state: present
+
+    - name: start service
+      service: 
+        name: NetworkManager
+        enabled: yes
+        state: started
+
+    - name: make directory if not exist
+      file: path=/home/IDM-ADD-Change state=directory
+
+    - name: get local directory
+      local_action: shell pwd
+      register: current_directory 
+           
+    - name: View the interfaces
+      command: nmcli dev status
+      register: interfaces
+   # - local_action: copy content={{ interfaces.stdout }} dest=/home/IDM-ADD-Change/interfaces
+    - name: copy the interfaces content
+      copy:
+        content: "{{ interfaces.stdout }}"
+        dest: /home/IDM-ADD-Change/interfaces
+
+    - name: Fetch the device name
+      shell: awk '{ print $1 }' /home/IDM-ADD-Change/interfaces 
+      register: devname
+   # - local_action: copy content={{ devname.stdout }} dest=/home/IDM-ADD-Change/devices
+      
+    - name: copying the device name 
+      copy:
+        content: "{{ devname.stdout }}"
+        dest: /home/IDM-ADD-Change/devices
+
+    - name: Getting from 2nd row onwards
+      shell: tail -n +2 /home/IDM-ADD-Change/devices
+      register: finalop
+    - local_action: copy content={{ finalop.stdout }} dest=./final 
+    
+    - name: copying the 2nd row
+      copy:
+        content: "{{ finalop.stdout }}"
+        dest: /home/IDM-ADD-Change/final
+
+#    - name: Including the variable file
+#      include_vars:
+#        file: /home/ajish/IDM-ADD-Change/NIC.yml
+ 
+    - name: for Centos 7.3 and above the following file should be changed
+      replace: 
+        path: /etc/udev/rules.d/90-eno-fix.rules
+        regexp: "{{ item }}"
+        replace: "{{ new_name }}"
+      when:  hostvars[inventory_hostname]['ansible_'~item].macaddress is defined and hostvars[inventory_hostname]['ansible_'~item].macaddress == "{{ MAC }}" 
+      with_lines: cat ./final
+
+
+    - name: Iterating over the network and changing the name of the interfaces that match the MAC
+      shell: mv /etc/sysconfig/network-scripts/ifcfg-"{{ item }}" /etc/sysconfig/network-scripts/ifcfg-"{{ new_name }}"
+      when:  hostvars[inventory_hostname]['ansible_'~item].macaddress is defined and hostvars[inventory_hostname]['ansible_'~item].macaddress == "{{ MAC }}"
+      with_lines: cat ./final
+
+   
+ 
+    - name: Change the line
+      lineinfile:
+         path: /etc/sysconfig/network-scripts/ifcfg-{{ new_name }}
+         regexp: '^NAME='
+         line: 'NAME={{ new_name }}'
+      when:  hostvars[inventory_hostname]['ansible_'~item].macaddress is defined and hostvars[inventory_hostname]['ansible_'~item].macaddress == "{{ MAC }}" 
+      with_lines: cat ./final
+
+    - name: Rename Device
+      lineinfile:
+         path: /etc/sysconfig/network-scripts/ifcfg-{{ new_name }}
+         regexp: '^DEVICE='
+         line: 'DEVICE={{ new_name }}'
+      when:  hostvars[inventory_hostname]['ansible_'~item].macaddress is defined and hostvars[inventory_hostname]['ansible_'~item].macaddress == "{{ MAC }}" 
+      with_lines: cat ./final
+    - name: Delete all the unused files
+      file: 
+        path: "{{ item }}"
+        state: absent
+      with_items:
+        - /home/IDM-ADD-Change/interfaces
+        - /home/IDM-ADD-Change/devices
+        - /home/IDM-ADD-Change/final
+        - /home/IDM-ADD-Change
+    
+    - local_action: file path=./final state=absent
+    - name: Restart the service
+      shell: /sbin/reboot
+
+#    - name: waiting for server to reboot
+#      sudo: yes
+#      local_action: wait_for host="{{ inventory_hostname }}" search_regex=OpenSSH port=22 timeout=3000
+
+#    - name: fetching the new network name
+#      shell: ifconfig -a 

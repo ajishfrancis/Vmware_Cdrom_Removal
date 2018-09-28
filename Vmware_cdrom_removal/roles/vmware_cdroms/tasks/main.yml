@@ -1,0 +1,10 @@
+---
+- cdromab1:
+    name: I2C-W2K12R2-01
+    uuid: "{{uuid}}"
+    hostname: "{{hostname}}"
+    username: "{{username}}"
+    password: "{{password}}"
+    port: 443
+   # state: poweredoff
+    datacenter: DEVMEC3001

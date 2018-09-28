@@ -1,0 +1,11 @@
+---
+
+- block:
+    - name: Ping all Windows Hosts
+      win_ping:
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
+   
+      

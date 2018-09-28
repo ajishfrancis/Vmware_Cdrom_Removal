@@ -1,0 +1,6 @@
+---
+# vars file for Host_File_Correction
+
+Host_file_path: /etc/hosts
+Old_IP_FQDN: 192.202.68.73
+New_IP_FQDN: 192.202.68.75

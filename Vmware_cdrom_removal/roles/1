@@ -1,0 +1,4 @@
+---
+
+ - cdromab:
+    name: "{{name}}"

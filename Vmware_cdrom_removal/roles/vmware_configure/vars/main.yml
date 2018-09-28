@@ -1,0 +1,17 @@
+---
+# vars file for vmware_vnic
+
+hostname: 10.202.191.25
+username: a146619@atosfabricit.local
+password: 20Dollar$
+port: 443
+
+#VMNAME
+name: I2C-W2K16-01
+
+uuid: 42031902-7856-6a8d-f9ff-19c9327b06b6
+
+
+#Port Group Name
+#port_group: '011_Infr_mgmt'
+

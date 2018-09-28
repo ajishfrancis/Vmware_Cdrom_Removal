@@ -1,0 +1,9 @@
+---
+cert_validation: ignore
+connection: winrm
+host_ip: 10.202.192.65
+hostname: windows
+password: Atos@010
+port: '5986'
+timezone: 'null'
+username: root

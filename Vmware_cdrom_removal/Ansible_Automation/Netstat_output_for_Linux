@@ -1,0 +1,25 @@
+I2C-Ansible-02 Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       User       Inode      PID/Program name    
+tcp        0      0 192.168.105.21:22       192.168.105.20:44368    ESTABLISHED 0          20747      2624/sshd: root@pts 
+I2C-SLES11-01 Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       User       Inode      PID/Program name   
+tcp        0      0 192.168.105.39:22       192.168.105.20:59622    ESTABLISHED 0          14233      4056/0              
+I2C-RHEL6X64-01 Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address               Foreign Address             State       User       Inode      PID/Program name   
+tcp        0      0 192.168.105.37:22           192.168.105.20:58360        ESTABLISHED 0          5491007    18920/sshd          
+I2C-RHEL7-01 Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       User       Inode      PID/Program name    
+tcp        0      0 192.168.105.36:22       192.168.105.20:39969    ESTABLISHED 0          26212      3156/sshd: root@pts 
+I2C-Ansible-01 Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       User       Inode      PID/Program name    
+tcp        0      0 192.168.105.20:22       192.168.202.22:52685    ESTABLISHED 0          18713      2380/sshd: root@pts 
+tcp        0      0 192.168.105.20:59622    192.168.105.39:22       ESTABLISHED 0          639582     20316/ssh: /root/.a 
+tcp        0      0 192.168.105.20:22       192.168.202.22:52686    ESTABLISHED 0          18070      2404/sshd: root@pts 
+tcp        0      0 192.168.105.20:22       192.168.202.22:52731    ESTABLISHED 0          59920      5681/sshd: root@not 
+tcp        0      0 192.168.105.20:22       192.168.202.22:53283    ESTABLISHED 0          541076     12046/sshd: root@no 
+tcp        0      0 192.168.105.20:58360    192.168.105.37:22       ESTABLISHED 0          640122     20313/ssh: /root/.a 
+tcp        0      0 192.168.105.20:22       192.168.202.22:52681    ESTABLISHED 0          18558      2351/sshd: root@pts 
+tcp        0      0 192.168.105.20:22       192.168.105.20:58935    ESTABLISHED 0          639515     20298/sshd: root@pt 
+tcp        0     36 192.168.105.20:58935    192.168.105.20:22       ESTABLISHED 0          639514     20310/ssh: /root/.a 
+tcp        0      0 192.168.105.20:44368    192.168.105.21:22       ESTABLISHED 0          639549     20306/ssh: /root/.a 
+tcp        0      0 192.168.105.20:39969    192.168.105.36:22       ESTABLISHED 0          640151     20308/ssh: /root/.a 

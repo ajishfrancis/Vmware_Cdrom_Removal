@@ -1,0 +1,32 @@
+---
+ - hosts: localhost
+   become: true
+   gather_facts: false
+   tasks: 
+    - name: Sending mail to the user
+      mail:
+        host: 10.72.169.25
+        port: 25
+        from: noreply@canopy-cloud.com
+        to:
+        - Rai Amika <amika.rai@atos.net>
+        - Merkestein  Marc <marc.merkestein@atos.net>
+ #       - Meyer AJ <albert-john.meyer@atos.net>
+        cc:
+        - Ajish Chovallur <ajish.chovallur@atos.net>
+        - Sonam Verma <sonam.verma@atos.net>
+        - Aggarwal Ishan <ishan.aggarwal@atos.net>
+        - Nikam Sonal <sonal.nikam@atos.net>
+   
+        attach:
+        - /home/Ansible_Automation/Playbook_Logs
+        subject: Ansible-report of Linux Playbook
+        body: |
+          Hi All,
+
+          The execution of Linux Playbook is completed. Please find the attached logs and verify the same.
+
+
+          Thanks & Regards,
+          Ansible Automation Engineers.
+

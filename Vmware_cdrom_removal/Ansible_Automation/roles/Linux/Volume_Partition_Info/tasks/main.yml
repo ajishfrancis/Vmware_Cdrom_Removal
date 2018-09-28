@@ -1,0 +1,41 @@
+---
+# tasks file for LinuxPartition
+
+- block:
+
+    - name: Show all Partitions
+      shell: parted -l
+      register: all_partition
+    - debug: msg="{{all_partition}}"
+
+    - name: Getting total volume size of server
+      shell: parted -l | head -2 |sed '1d' | cut -d ":" -f2
+      register: volume_size
+    - debug: msg="{{volume_size.stdout}}"
+   
+    - name: Setting facts
+      set_fact:
+        servervolume: "{{volume_size.stdout}}"
+        requiredvolume: "{{disksize_required}}"
+       #critera_matched: "{{criteria_match}}"
+       #criteria_not_matched: "{{criteria_not_match}}"
+
+    - name: Results
+      #shell: echo "Available space Fullfiling Criteria"
+      #when: servervolume >= requiredvolume
+      debug: 
+         msg: "criteria matched"
+      when: servervolume >= requiredvolume
+
+    - name: Results
+      #shell: echo  "Available space not Fullfiling Criteria"
+      #when: servervolume < requiredvolume
+      debug: 
+         msg: "criteria not matched"
+      when: servervolume < requiredvolume
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
+   
+

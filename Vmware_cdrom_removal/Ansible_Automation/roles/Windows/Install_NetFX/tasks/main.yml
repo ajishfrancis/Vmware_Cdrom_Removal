@@ -1,0 +1,15 @@
+---
+
+- block:
+
+    - name: Install NetFX in Windows
+      win_shell: |
+        if ((Get-WindowsFeature NET-Framework-Features).Installed -eq 0)
+            {Install-WindowsFeature -Name NET-Framework-Features -IncludeAllSubFeature}
+
+    - name: Reboot the Windows system after instyalling NETFX
+      win_reboot:
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"

@@ -1,0 +1,41 @@
+---
+# tasks file for SSH_TO_LINUX
+
+- block:
+  - name: Get the status of the netstat log file
+    stat: 
+      path: /home/Ansible_Automation/Netstat_output_for_Linux
+    register: net_path
+
+  - name: Delete the file if already exists for Netstat logs 
+    file:
+     path: /home/Ansible_Automation/Netstat_output_for_Linux
+     state: absent
+    delegate_to: I2C-Ansible-01
+    when: net_path.stat.exists == True
+
+  - command: netstat -ntep 
+    register: netstat_out
+
+  - name: Prrint the output of the command
+    debug:
+      msg: "{{ netstat_out.stdout }} "
+
+  - name: Create a file for logs of Netstat
+    file:
+     path: /home/Ansible_Automation/Netstat_output_for_Linux
+     state: touch
+    delegate_to: I2C-Ansible-01
+   
+  - name: Save the output to the created file
+    lineinfile:
+      path: /home/Ansible_Automation/Netstat_output_for_Linux
+      line:  "{{ hostvars[inventory_hostname]['inventory_hostname'] }} {{  netstat_out.stdout }}"
+
+    delegate_to: I2C-Ansible-01
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
+   
+

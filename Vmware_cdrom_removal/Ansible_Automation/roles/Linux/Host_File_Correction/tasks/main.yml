@@ -1,0 +1,16 @@
+---
+# tasks file for Host_File_Correction
+
+- block:
+  - name: Change the FQDN from the old to new IP Address 
+    lineinfile:
+      path: "{{ Host_file_path }}"
+      regexp: "^{{ Old_IP_FQDN }} new ip address"
+      line: "{{ New_IP_FQDN }} new ip address"
+      backrefs: yes
+      state: present
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
+   

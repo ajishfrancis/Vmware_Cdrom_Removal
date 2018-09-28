@@ -1,0 +1,21 @@
+---
+# vars file for vmware_vnic
+
+
+hostname: 10.202.191.25
+username: a146619@atosfabricit.local
+password: 20Dollar$
+port: 443
+
+#VMNAME
+name: I2C-W2K12-01
+uuid: 4203ecbb-8a7b-e348-08ef-71f2284d9b26
+
+
+#nic_state: delete , connect , disconnect
+nic_state: delete
+
+#Network Adapter Number to be deleted
+nic_number: 2
+
+

@@ -1,0 +1,16 @@
+---
+# vars file for vmware_hw
+
+ vcenter_hostname: 192.168.202.20
+ vcenter_username: A637980@devdpc.local
+ vcenter_password: P@ssw0rd01ATOS123!
+ vmstate: present
+ vmstate_off: poweredoff
+ vmstate_on: poweredon
+ datacenter: DEVMEC3001
+ vmname: I2C-Ansible-02
+ memory_mb: 4096
+ num_cpus: 2
+ hotadd_cpu: True
+ hotadd_memory: True
+

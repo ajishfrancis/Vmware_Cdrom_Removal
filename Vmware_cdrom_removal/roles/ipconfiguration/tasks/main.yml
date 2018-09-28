@@ -1,0 +1,9 @@
+---
+# tasks file for ipconfiguration
+- nmcli:
+    conn_name: 014_bur
+    ifname: eth1
+    type: ethernet
+    ip4: 192.0.2.100/24
+    gw4: 192.0.2.1
+    state: present

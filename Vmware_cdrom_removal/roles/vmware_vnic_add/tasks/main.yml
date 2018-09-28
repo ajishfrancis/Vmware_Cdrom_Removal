@@ -1,0 +1,17 @@
+---
+- name: Adding  NIC's to VM
+  nic_add:
+      hostname: "{{hostname}}"
+      username: "{{username}}"
+      validate_certs: false
+      password: "{{password}}"
+      port: "{{port}}"
+      name: "{{name}}"
+      uuid: "{{uuid}}"
+      port_group: "{{port_group}}"
+      #nic_number: 1
+      #port_available: "{{port_available}}"
+  register: vnic_added
+  tags:
+    - added
+

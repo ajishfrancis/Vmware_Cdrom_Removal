@@ -1,0 +1,32 @@
+---
+# tasks file for McAfeeInstall
+
+- block:
+
+    - name: Create a Directory to copy Setup on Remote Server
+      win_file:
+         path: "{{path}}"
+         state: directory
+      tags:
+         - directory_created
+
+    - name: Copy the setup of McAfee VirusScan Enterprise 8.8
+      win_copy:
+         src: "{{src_path}}"
+         dest: "{{dest_path}}"
+      tags:
+         - setupcopied
+
+    - name: Install McAfee virus scan
+      win_shell: "{{setup_file_path}}"
+      tags:
+        - McAfeevirus_installed
+
+    - name: Reboot after installing MCaffe
+      win_reboot: 
+      tags:
+        - reboot 
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"

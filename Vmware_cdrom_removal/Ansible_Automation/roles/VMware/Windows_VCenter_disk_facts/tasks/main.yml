@@ -1,0 +1,14 @@
+---
+# VCenter details for Windows machines
+
+    - name: Gather disk information of the  required Windows vms
+      sonam_custom_module_for_disk:
+       hostname: "{{hostname}}"
+       username: "{{username}}"
+       password: "{{password}}"
+       name: "{{ hostvars[item]['inventory_hostname'] }}"
+       validate_certs: no
+      with_items: '{{groups["windows"]}}'
+      register: vcenter_disk_facts_of_windows
+
+

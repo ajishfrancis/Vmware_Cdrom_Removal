@@ -1,0 +1,13 @@
+---
+- name: cd rom
+  cdrom2ab: 
+       name: "{{ name }}"
+       hostname: "{{hostname }}"
+       username: "{{username }}"
+       password: "{{password }}"
+       datacenter: DEVMEC3001
+  #name: I2C-W2K12R2-01
+       port: 443
+       uuid: "{{uuid}}"
+   
+

@@ -1,0 +1,12 @@
+---
+    - name: Include variables from a file
+      include_vars:
+          file: /home/Umar/orchestration/orchestration_inventory_phase/host_vars/{{var_file_name}}.yml
+
+
+    - name: Setting Timezone for windows server
+      timezone:
+          name: "{{timezone}}"
+      register: new_tz
+      
+

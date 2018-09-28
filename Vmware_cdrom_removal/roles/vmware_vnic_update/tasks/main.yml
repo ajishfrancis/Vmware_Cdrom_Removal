@@ -1,0 +1,14 @@
+---
+
+- name: configure the NIC's
+  nic_updated:
+      hostname: "{{hostname}}" 
+      username: "{{username}}"
+      validate_certs: false
+      password: "{{password}}"
+      port: "{{port}}"
+      name: "{{name}}"      
+      uuid: "{{uuid}}"
+      nic_state: "{{nic_state}}"
+      nic_number: "{{nic_number}}"
+  register:  updated

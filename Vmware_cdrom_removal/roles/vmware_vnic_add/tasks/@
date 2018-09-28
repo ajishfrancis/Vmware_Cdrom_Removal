@@ -1,0 +1,20 @@
+---
+
+- name: configure the NIC's
+  sonal:
+      hostname: 10.202.191.25 
+      username: a146619@atosfabricit.local
+      validate_certs: false
+      password: 20Dollar$
+      nic_state: false
+      nic_number: 2
+      #port: 443
+      datacenter: Arlington
+      folder: /Ansible/VMs/Windows/
+      state: present
+      vm_name: I2C-W2K12-01
+      uuid: 4203ecbb-8a7b-e348-08ef-71f2284d9b26 
+      #networks:
+       # name: 011_Infr_mgmt
+        #vlan 11
+     

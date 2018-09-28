@@ -1,0 +1,303 @@
+;$Revision: 009 $
+;===============================================================
+; This file is only for dealing with Patch2/patch3 Combined Package
+; It does not apply to Later Patches
+;===============================================================
+; The following sections are called from UpdateMain.mcs
+;===============================================================
+
+;**********************************************
+;******************* Execution starts from here
+;******************* returns 1 on any error
+[ScriptMain]
+ReportStatus   ### VSE Inst: ScriptMain called
+
+; Hardcoding ProductVersion to send to CMA
+Set gVSE_ProductVersion = 8.8.0
+
+; Get Cookie for ExtraSettings
+XMLOpenGroup Ret = ExtraSettings, %%SiteCatalogCookie%%, %%gSiteCatalogLangPackageGroupId%%
+Set VSE_ExtraCookie = %%Ret%%
+
+; Check if P2/P3 package using WIN8 tag in xml file and also check OS to install P2 or P3.
+Call bWin8Files = CheckWin8Files
+Set bWin8 = FALSE
+CallIf bWin8Files == TRUE, bWin8 = CheckWin8
+CallIf bWin8 == FALSE, VSE_OSFlavorCookie = GetOSFlavorCookie
+CallIf bWin8 == TRUE, VSE_OSFlavorCookie = GetOSFlavorCookie_win8
+
+;Get appropriate files
+Call Ret = GetOSFiles
+ReportStatus ### VSE Inst: Ret = %%Ret%%
+ReturnIf %%Ret%% != TRUE, 1
+
+Call VSEInstaller = GetVSEInstaller
+Call CmdLine = GetCommandLine
+
+; Run installer
+SetWorkDir %%gCurrentPackagePath%%, TARGET
+RunAppWait Ret = %%VSEInstaller%%, /q %%CmdLine%%
+
+;** zap CMA global so any events they send have the Product version in it
+SetGlobal gSiteCatalogProductVersion = %%gVSE_ProductVersion%%
+
+; VSE installer returns several return codes, 0= success, 3010 = reboot required, others = Failure
+Return %%Ret%%
+
+;===============================================================
+; End of entry points called from UpdateMain.mcs
+;===============================================================
+
+;The install script is not aware of the cookies gCurrentPackagePath and gPkgParentGroupId, therefore we are getting them here.
+[GetPkgCatalogCookie]
+ReportStatus	GetPkgCatalogCookie
+FileExists      bRet = %%gCurrentPackagePath%%\PkgCatalog.xml
+ReturnIf        %%bRet%% == FALSE, %%bRet%%
+XMLOpen         PackageCookie = %%gCurrentPackagePath%%\PkgCatalog.xml, UTF_8
+CallIf          %%PackageCookie%% == FALSE, DisplayLoadError
+ReturnIf        %%PackageCookie%% == FALSE, FALSE
+SetGlobal       gCurrentPackageCookie = %%PackageCookie%%
+
+; PkgCatalog.xml contains only one product.  If we found the right product in
+; the site catalog, then we should have the right PkgCatalog file.  Assume
+; this is the case.
+
+Set             PkgInstallGroupPath = PkgCatalog\ProductPackage\LangPackage
+XMLOpenGroup    PkgParentGroupId = %%PkgInstallGroupPath%%, %%gCurrentPackageCookie%%
+ReturnIf        %%PkgParentGroupId%% == FALSE, %%PkgParentGroupId%%
+SetGlobal       gPkgParentGroupId = %%PkgParentGroupId%%
+ReportStatus	Exiting from GetPkgCatalogCookie
+
+[GetOSFlavorCookie]
+ReportStatus GetOSFlavorCookie
+XMLOpenGroup Ret = VSE_FileList, %%SiteCatalogCookie%%, %%VSE_ExtraCookie%%
+ReportStatus Exiting from GetOSFlavorCookie
+Return %%Ret%%
+
+[GetOSFlavorCookie_win8]
+ReportStatus GetOSFlavorCookie_win8
+XMLOpenGroup Ret = VSE_FileList_win8, %%SiteCatalogCookie%%, %%VSE_ExtraCookie%%
+ReportStatus Exiting from GetOSFlavorCookie_win8
+Return %%Ret%%
+
+;  ----------------------------------------------------------------------------
+;  ----------------------------------------------------------------------------
+[CheckWin8Files]
+ReportStatus	CheckWin8Files
+XMLGetItem	Ret = WIN8, %%NULL%%, ELEMENT, %%SiteCatalogCookie%%, %%VSE_ExtraCookie%%
+ReturnIf	%%Ret%% == FALSE || %%Ret%% == NOTFOUND || %%Ret%% == 0, FALSE
+Return		TRUE
+
+[CheckWin8]
+ReportStatus	CheckWin8
+Set		LowerThanWin8OS = 6.1
+Set		FindKey = HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion
+FindRegKey	Ret = %%FindKey%%
+ReturnIf	%%Ret%% == NOTFOUND || %%Ret%% == FALSE, FALSE
+GetRegValue	OSVersion = %%FindKey%%, CurrentVersion
+ReturnIf	%%OSVersion%% > %%LowerThanWin8OS%%, TRUE
+ReportStatus	Exiting from CheckWin8
+Return		FALSE
+
+;  ----------------------------------------------------------------------------
+;  ----------------------------------------------------------------------------
+[GetCommandLine]
+GetIniValue Ret = %%DATA_DIR%%\UpdateOptions.ini, Install\VIRUSCAN8800, InstallCommandLine
+ReportStatus ### VSE Inst: cmd line = %%Ret%%
+ReturnIf %%Ret%% == %%NULL%% || %%Ret%% == NOTFOUND || %%Ret%% == FALSE, %%NULL%%
+Return %%Ret%%
+
+[GetVSEInstaller]
+ReturnIf		%%bWin8%% == TRUE, setupvse_win8.exe
+Return			setupvse.exe
+
+;  ----------------------------------------------------------------------------
+;  ----------------------------------------------------------------------------
+
+[GetOSFiles]
+Set                     f = 0
+Set                     fRet = FALSE
+Set                     fFileFound = FILENOTFOUND
+LoopIf                  %%fRet%% != STOPLOOP, fRet = GetOsFile
+Return                  %%fFileFound%% == FILEFOUND
+
+[GetOsFile]
+Calculate               f = %%f%% + 1
+XMLEnumGroup            OsFileItemGroup = FileItem, %%f%%, %%SiteCatalogCookie%%, %%VSE_OSFlavorCookie%%
+ReturnIf                %%OsFileItemGroup%% == FALSE || %%OsFileItemGroup%% == NOTFOUND, STOPLOOP
+XMLGetItem              fFile = Name, %%NULL%%, ELEMENT, %%SiteCatalogCookie%%, %%OsFileItemGroup%%
+CallIf                  %%fFile%% == FALSE || %%fFile%% == NOTFOUND, fFileFound = SetFileNotFound
+ReturnIf                %%fFile%% == FALSE || %%fFile%% == NOTFOUND, STOPLOOP
+Set                     szFileToFind = %%fFile%%
+Call                    fRet = DownLoadInstallFile
+CallIf                  %%fRet%% == FALSE, fFileFound = SetFileNotFound
+ReturnIf                %%fRet%% == FALSE, STOPLOOP
+Set                     fFileFound = FILEFOUND 
+Return                  TRUE
+
+;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+;@@@@@@@@@@@@@@@@@@@@@ Cut and paste from sample install script @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+;  ----------------------------------------------------------------------------
+; This section searches PkgCatalog.Z for the plugin file name, downloads the
+; file and verifies the file by making sure the file hash matches the hash value
+; stored in PkgCatalog.Z.  It does this by calling FindFile and VerifyFile
+; respectively.  This section returns FALSE when FindFile or VerifyFile return
+; FALSE.  Otherwise, it returns TRUE.  szNewPluginFile is set in InitThisScript.
+; szFileToFind is used in SearchForFile.
+;  ----------------------------------------------------------------------------
+[DownLoadInstallFile]
+; Uncomment these next four lines to check for disk space
+;XMLGetItem             SpaceNeeded = TotalSize, %%NULL%%, ELEMENT, %%gCurrentProductCatalogCookie%%, %%gPkgParentGroupId%%
+;GetOSInfo              AvailableDiskSpace = DISKSPACE, %%DATA_DIR%%
+;CallIf                 %%SpaceNeeded%% > %%AvailableDiskSpace%%, SetNotEnoughDiskSpace
+;ReturnIf               %%SpaceNeeded%% > %%AvailableDiskSpace%%, FALSE
+Call                    bRet = FindFile
+ReturnIf                %%bRet%% == FALSE, FALSE
+Call                    bRet = VerifyFile
+Return                  %%bRet%% != FALSE
+
+
+;  ----------------------------------------------------------------------------
+; This section sets UpdateError to the error ERROR_NOTENOUGHSPACE and sends a
+; progress message to the user interface.  UpdateError is used by the detection
+; script when generating events.
+;  ----------------------------------------------------------------------------
+[SetNotEnoughDiskSpace]
+SetGlobal               UpdateError = ERROR_NOTENOUGHSPACE
+Progress                ERROR_NOTENOUGHSPACE, 12
+
+;  ----------------------------------------------------------------------------
+; This section initializes the variables for the LoopIf statment and calls
+; SearchForFile until SearchForFile returns STOPLOOP.  It returns FALSE if
+; FileFound remains FILENOTFOUND or TRUE when FileFound equals FILEFOUND.
+; SearchForFile sets FileFound to FILEFOUND when the file for which we're
+; searching is found in PkgCatalog.Z.
+;  ----------------------------------------------------------------------------
+[FindFile]
+Set                     n = 0
+Set                     bRet = FALSE
+Set                     FileFound = FILENOTFOUND
+LoopIf                  %%bRet%% != STOPLOOP, bRet = SearchForFile
+Return                  %%FileFound%% == FILEFOUND
+
+;  ----------------------------------------------------------------------------
+; This section enumerates through PkgCatalog.Z searching for the value stored
+; in szFileToFind.  It does the following:
+;   1) Increment n - the next file item group
+;   2) Get the next file item group
+;   3) If there are no more file item groups:
+;       Set FileFound equal to FILENOTFOUND
+;       Return STOPLOOP
+;   4) Get the name of the file in the file item group
+;   5) If the name of the file in the file item group is equal to the value
+;      stored in szFileToFind:
+;       Set FileFound equal to FILEFOUND
+;       Return STOPLOOP
+;   6) Otherwise, return FALSE to continue the loop
+; gCurrentPackageCookie and gPkgParentGroupId are set in the detection script.
+;  ----------------------------------------------------------------------------
+[SearchForFile]
+Calculate               n = %%n%% + 1
+XMLEnumGroup            PkgFileItemGroup = FileList\FileItem, %%n%%, %%gCurrentProductCatalogCookie%%, %%gProductCatalogLanguageGroupId%%
+CallIf                  %%PkgFileItemGroup%% == FALSE, FileFound = SetFileNotFound
+ReturnIf                %%PkgFileItemGroup%% == FALSE, STOPLOOP
+XMLGetItem              File = Name, %%NULL%%, ELEMENT, %%gCurrentProductCatalogCookie%%, %%PkgFileItemGroup%%
+Call                    bRet = IsThisTheFileWeAreLookingFor
+CallIf                  %%bRet%% == TRUE, FileFound = SetFileFound
+ReturnIf                %%bRet%% == TRUE, STOPLOOP
+Return                  %%bRet%% != FALSE
+
+;  ----------------------------------------------------------------------------
+; This section returns FILENOTFOUND and is used to set the variable FileFound
+; that is used in FindFile.
+;  ----------------------------------------------------------------------------
+[SetFileNotFound]
+Return                  FILENOTFOUND
+
+;  ----------------------------------------------------------------------------
+; This section returns TRUE when the value stored in File is equal to the value
+; stored in szFileToFind.  File is set in SearchForFile.  szFileToFind is set
+; in DownLoadNewPluginFile.
+;  ----------------------------------------------------------------------------
+[IsThisTheFileWeAreLookingFor]
+Return                  %%File%% == %%szFileToFind%%
+
+;  ----------------------------------------------------------------------------
+; This section returns FILEFOUND and is used to set the variable FileFound that
+; is used in FindFile.
+;  ----------------------------------------------------------------------------
+[SetFileFound]
+Return                  FILEFOUND
+
+;  ----------------------------------------------------------------------------
+; This section retrieves the hash value from PkgCatalog.Z and compares the
+; value to the file's hash value.  If does the following:
+;   1) Get the hash value from PkgCatalog.Z.  If for some reason we can't get
+;      the value, return FALSE.  gCurrentPackageCookie is set in the product
+;      detection script.  PkgFileItemGroup is set in the FindFile section.
+;   2) Get the file's date/time stamp from PkgCatalog.Z.  If for some reason we
+;      can't get the value, return FALSE.  gCurrentPackageCookie is set in the
+;      product detection script.  PkgFileItemGroup is set in the FindFile
+;      section.
+;   3) Send a progress message to the user interface stating that we're trying
+;      to verify the file
+;   4) Verify the file's hash code with the hash code in PkgCatalog.Z.  If this
+;      succeeds, return TRUE.  Note:  There are two main reasons why this could
+;      fail.  The first is that the file isn't on the machine.  The second is
+;      is that a PkgCatalog.Z/file mismatch has occurred.  This can happen when
+;      a new package containing an updated version of the file was checked into
+;      the repository.  gCurrentPackagePath is set in the product detection
+;      script.
+;   5) Create a directory using the value stored in gCurrentPackagePath.  It is
+;      set in the product detection script.
+;   6) Send a progress message to the user interface stating that we're trying
+;      to download the file.  If there is an error downloading the file,
+;      display an error message and return FALSE.  gCurrentRemotePackagePath is
+;      set in the product detection script.
+;   7) Restore the date/time stamp of the downloaded file to the one found in
+;      PkgCatalog.Z.  This needs to be done so the correct hash can be
+;      generated.
+;   8) Verify the file's hash code with the hash code in PkgCatalog.Z.  If this
+;      fails, display an error message and return FALSE.  Otherwise return TRUE.
+;  ----------------------------------------------------------------------------
+[VerifyFile]
+XMLGetItem              FileItemHash = Hash, %%NULL%%, ELEMENT, %%gCurrentProductCatalogCookie%%, %%PkgFileItemGroup%%
+ReturnIf                %%FileItemHash%% == FALSE || %%FileItemHash%% == NOTFOUND, FALSE
+XMLGetItem              szFileDateTime = DateTime, %%NULL%%, ELEMENT, %%gCurrentProductCatalogCookie%%, %%PkgFileItemGroup%%
+ReturnIf                %%szFileDateTime%% == FALSE || %%szFileDateTime%% == NOTFOUND, FALSE
+Progress                STATE_VERIFY, 11, %%File%%
+Verify                  bRet = %%gCurrentPackagePath%%\%%File%%, HASH, %%FileItemHash%%
+ReturnIf                %%bRet%% == TRUE, TRUE
+CreateDir               bRet = %%gCurrentPackagePath%%
+Progress                STATE_DOWNLOAD, 12, %%File%%
+GetFiles                bRet = %%gCurrentPackagePath%%, %%gCurrentRemotePackagePath%%, %%File%%
+CallIf                  %%bRet%% == FALSE, DisplayDownLoadError
+ReturnIf                %%bRet%% == FALSE, FALSE
+SetFileInfo             bSetOK = %%gCurrentPackagePath%%\%%File%%, %%szFileDateTime%%, TIMESTAMP
+Verify                  bRet = %%gCurrentPackagePath%%\%%File%%, HASH, %%FileItemHash%%, DOWNLOADED
+CallIf                  %%bRet%% == FALSE, DisplayVerifyError
+Return                  %%bRet%% != FALSE
+
+;  ----------------------------------------------------------------------------
+; This section sets UpdateError to the error ERROR_DOWNLOAD and sends a
+; progress message to the user interface.  UpdateError is used by the detection
+; script when generating events.
+;  ----------------------------------------------------------------------------
+[DisplayDownLoadError]
+SetGlobal               UpdateError = ERROR_DOWNLOAD
+Progress                ERROR_DOWNLOAD, 13, %%File%%
+Return 1
+
+;  ----------------------------------------------------------------------------
+; This section sets UpdateError to the error ERROR_VERIFY and sends a progress
+; message to the user interface.  UpdateError is used by the detection script
+; when generating events.
+;  ----------------------------------------------------------------------------
+[DisplayVerifyError]
+SetGlobal               UpdateError = ERROR_VERIFY
+Progress                ERROR_VERIFY, 13, %%File%%
+Return 1
+
+;
+

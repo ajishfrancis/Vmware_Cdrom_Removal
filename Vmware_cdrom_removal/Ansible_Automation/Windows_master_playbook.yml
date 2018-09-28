@@ -1,0 +1,22 @@
+---
+ - hosts: windows
+   gather_facts: false
+   ignore_errors: true
+   strategy: free
+   roles:
+   - Windows/Account_Validation
+   - Windows/Enabling_UAC
+   - Windows/Create_Local_Admin_Windows
+   - Windows/Hardware_driver_Removal
+   - Windows/Check_Software_Installation
+   - Windows/Install_NetFX
+   - Windows/Set_DNS_Suffix_On_Vnic
+   - Windows/Setting_Timezone
+   - Windows/Drive_Volume_Info
+   - Windows/Enable_RDP
+   - Windows/Fixing_Page_File_Size
+   - Windows/Delete_Windows_Update_Reg
+   - Windows/MCaffe_Install
+   - Windows/MCaffe_Uninstall
+   - Windows/Disabling_UAC
+

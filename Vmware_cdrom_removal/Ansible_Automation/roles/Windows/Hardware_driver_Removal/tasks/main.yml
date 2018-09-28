@@ -1,0 +1,16 @@
+---
+
+- block:
+
+  - name: Get the status of the hardware driver file whether it is present or not
+    win_stat:
+      path: C:\Windows\inf\oem0.inf
+    register: driver_status
+
+  - name: Remove the Hardware driver if file is present
+    win_command: pnputil.exe -f -d oem0.inf
+    when: driver_status.stat.exists == True
+
+  rescue:
+   - debug: 
+       msg: "The failed task was :  {{ ansible_failed_task.name }} for hostname  {{ hostvars[inventory_hostname]['inventory_hostname'] }}"
